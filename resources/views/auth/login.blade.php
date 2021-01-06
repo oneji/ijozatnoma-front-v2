@@ -17,7 +17,7 @@
 </head>
 <body>
     <div class="login-page" style="background-image: url({{ asset('images/bg/login.jpg') }})">
-        <div class="dotted-bg"></div>
+        <div class="dotted-bg" style="background-image: url({{ asset('images/bg/login-clip.png') }})"></div>
 
         <div class="form-container">
             <div class="form-container__title">

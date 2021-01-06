@@ -8,7 +8,8 @@ body {
   left: 0;
   right: 0;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-size: cover;
+  background-position: center;
 }
 
 .login-page {
@@ -25,7 +26,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
   padding: 20px;
   display: flex;
   justify-content: center;
@@ -48,7 +49,7 @@ body {
 
 .form-container__title i {
   font-size: 24px;
-  color: #000000;
+  color: #ffffff;
 }
 
 .form-container__title p {
