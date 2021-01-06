@@ -1,7 +1,3 @@
-body {
-  font-family: "Roboto", sans-serif;
-}
-
 .dotted-bg {
   position: absolute;
   top: 0;
@@ -47,9 +43,8 @@ body {
   text-align: center;
 }
 
-.form-container__title i {
-  font-size: 24px;
-  color: #ffffff;
+.form-container__title img {
+  width: 50px;
 }
 
 .form-container__title p {

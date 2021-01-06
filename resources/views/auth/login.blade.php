@@ -12,8 +12,6 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/login.css') }}" rel="stylesheet">
     <link href="{{ asset('plugins/fontawesome/css/all.min.css') }}" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="login-page" style="background-image: url({{ asset('images/bg/login.jpg') }})">
@@ -21,7 +19,7 @@
 
         <div class="form-container">
             <div class="form-container__title">
-                <i class="fas fa-lock"></i>
+                <img src="{{ asset('images/icons/key.png') }}" alt="">
                 <p>Даромад ба утоки шахси</p>
             </div>
             

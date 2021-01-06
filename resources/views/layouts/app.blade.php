@@ -9,73 +9,130 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
+    <link href="{{ asset('plugins/flag-icon-css/css/flag-icon.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('plugins/fontawesome/css/all.min.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <header class="app-header" style="background-image: url({{ asset('images/bg/header.png') }})">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <nav class="navbar py-0 px-0">
+                    <div class="user">
+                        <img src="{{ asset('images/user.png') }}" alt="user">
+                        
+                        <ul class="links-list">
+                            <li><a href="#">Ахбороти шахси</a></li>
+                            <li><a href="#">Баромад</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown language-selector">
+                        <a href="#" class="language-selector__anchor" id="dropdownLanguageSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="flag-icon flag-icon-tj mr-2"></span> Точ
+                            <i class="fas fa-angle-down ml-2"></i>
+                        </a>
+                        <div class="dropdown-menu language-menu" aria-labelledby="dropdownLanguageSelector">
+                            <a class="dropdown-item" href="#">
+                                <span class="flag-icon flag-icon-ru mr-2"></span> РУС
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <span class="flag-icon flag-icon-us mr-2"></span> ENG
+                            </a>
+                        </div>
+                    </div>
+                </nav>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
+                <div class="logos-container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="logo-box left">
+                                <div class="logo">
+                                    <img src="{{ asset('images/logo.png') }}" alt="Logo">
                                 </div>
-                            </li>
-                        @endguest
+                                <div class="text text-left">
+                                    <p>ВАЗОРАТИ САНОАТ <br> ВА ТЕХНОЛОГИЯҲОИ НАВИ ҶУМҲУРИИ <br> ТОҶИКИСТОН</p>
+                                    <p class="mb-0">РАЁСАТИ ИҶОЗАТНОМАДИҲӢ</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="logo-box right">
+                                <div class="text text-right">
+                                    <p>Министерство промышленности <br> и новых технологий Республики <br> Таджикистан</p>
+                                    <p class="mb-0">УПРАВЛЕНИЕ ПО ВЫДАЧЕ РАЗРЕШЕНИЙ</p>
+                                </div>
+                                <div class="logo">
+                                    <img src="{{ asset('images/gerb.png') }}" alt="Logo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-container">
+                    <ul class="faq-list">
+                        <li>
+                            <a href="#">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="#">ХАРИТАИ СОМОНА</a>
+                        </li>
+                        <li>
+                            <a href="#">ДИГАР СОМОНАХО</a>
+                        </li>
                     </ul>
                 </div>
+
+                <div class="menu">
+                    <ul>
+                        <li><a href="">Асоси</a></li>
+                        <li><a href="">Дархостхои ман</a></li>
+                        <li><a href="">Дархост кардан</a></li>
+                        <li><a href="">Намуди фаъолият бо хучатхо</a></li>
+                        <li><a href="">Конугузори</a></li>
+                        <li><a href="">Тамос ва сурога</a></li>
+                    </ul>
+                    <div class="search">
+                        <a href="#" class="search__icon">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mobile-menu">
+                    <div class="user">
+                        <img src="{{ asset('images/user.png') }}" alt="user">
+                        <ul class="links-list">
+                            <li><a href="#">Ахбороти шахси</a></li>
+                            <li><a href="#">Баромад</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown language-selector">
+                        <a href="#" class="language-selector__anchor" id="dropdownLanguageSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="flag-icon flag-icon-tj mr-2"></span> Точ
+                            <i class="fas fa-angle-down ml-2"></i>
+                        </a>
+                        <div class="dropdown-menu language-menu" aria-labelledby="dropdownLanguageSelector">
+                            <a class="dropdown-item" href="#">
+                                <span class="flag-icon flag-icon-ru mr-2"></span> РУС
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <span class="flag-icon flag-icon-us mr-2"></span> ENG
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </nav>
+        </header>
 
         <main class="py-4">
             @yield('content')
         </main>
     </div>
+
+    <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('plugins/bootstrap/js/bootstrap.min.js') }}"></script>
 </body>
 </html>
