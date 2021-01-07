@@ -89,11 +89,11 @@
                         <li><a href="">Дархост кардан</a></li>
                         <li><a href="">Намуди фаъолият бо хучатхо</a></li>
                         <li><a href="">Конугузори</a></li>
-                        <li><a href="">Тамос ва сурога</a></li>
+                        <li><a href="{{ route('contacts') }}">Тамос ва сурога</a></li>
                     </ul>
                     <div class="search">
                         <a href="#" class="search__icon">
-                            <i class="fas fa-search"></i>
+                            <img src="{{ asset('images/icons/lupa.png') }}" alt="">
                         </a>
                     </div>
                 </div>
@@ -167,6 +167,12 @@
         <main>
             <div class="container h-100">
                 <div class="main-wrapper">
+                    @if (isset($title))
+                        <div class="page-title">
+                            <h4>{{ $title }}</h4>
+                        </div>
+                    @endif
+
                     @yield('content')
                 </div>
             </div>
