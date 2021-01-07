@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class LegislatureController extends Controller
 {
     /**
-     * Show contacts view
+     * Show legislatures view
      * 
      * @param \Illuminate\Http\Response
      */

@@ -5,6 +5,14 @@
     color: $mainBlue !important;
 }
 
+.main-color-red {
+    color: $mainRed !important;
+}
+
+.main-color-green {
+    color: $mainGreen !important;
+}
+
 body {
     font-family: 'Calibri', sans-serif;
     font-size: 14px;
@@ -516,6 +524,13 @@ header.app-header {
             border-bottom: 1px solid $mainBlue;
         }
     }
+}
+
+// Datatables
+table.dataTable > thead {
+    background-color: $mainGreen;
+    color: $white;
+    text-transform: uppercase;
 }
 
 // Media

@@ -4,15 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class DocTypeController extends Controller
+class ApplicationController extends Controller
 {
     /**
-     * Show doc types view
+     * Show applications view
      * 
      * @param \Illuminate\Http\Response
      */
     public function index()
     {
-        return view('doc-types');
+        return view('applications');
     }
 }

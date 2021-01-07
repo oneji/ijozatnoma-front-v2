@@ -20,3 +20,4 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/contacts', 'ContactController@index')->name('contacts');
 Route::get('/legislature', 'LegislatureController@index')->name('legislature');
 Route::get('/doc-types', 'DocTypeController@index')->name('docTypes');
+Route::get('/applications', 'ApplicationController@index')->name('applications');

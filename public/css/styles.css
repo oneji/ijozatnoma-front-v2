@@ -2,6 +2,14 @@
   color: #2d74c4 !important;
 }
 
+.main-color-red {
+  color: #da4e53 !important;
+}
+
+.main-color-green {
+  color: #92cb34 !important;
+}
+
 body {
   font-family: "Calibri", sans-serif;
   font-size: 14px;
@@ -441,7 +449,7 @@ header.app-header {
 .links-table__item__title,
 .links-table__item__download {
   margin: 0 15px;
-  color: #9bd33b;
+  color: #92cb34;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-decoration: underline;
@@ -494,6 +502,12 @@ header.app-header {
 .custom-accordion .card-header {
   padding: 0;
   border-bottom: 1px solid #2d74c4;
+}
+
+table.dataTable > thead {
+  background-color: #92cb34;
+  color: #ffffff;
+  text-transform: uppercase;
 }
 
 @media (max-width: 991.98px) {

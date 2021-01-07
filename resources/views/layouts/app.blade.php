@@ -16,6 +16,7 @@
         <link href="{{ asset('plugins/flag-icon-css/css/flag-icon.min.css') }}" rel="stylesheet">
         <link href="{{ asset('plugins/fontawesome/css/all.min.css') }}" rel="stylesheet">
         <link href="{{ asset('plugins/hamburgers/dist/hamburgers.css') }}" rel="stylesheet">
+        <link href="{{ asset('plugins/datatables/datatables.min.css') }}" rel="stylesheet">
     @show
 </head>
 <body>
@@ -85,7 +86,7 @@
                 <div class="menu">
                     <ul>
                         <li class="{{ Route::currentRouteName() === 'home' ? 'active' : null }}"><a href="{{ route('home') }}">АСОСӢ</a></li>
-                        <li><a href="">Дархостхои ман</a></li>
+                        <li class="{{ Route::currentRouteName() === 'applications' ? 'active' : null }}"><a href="{{ route('applications') }}">ДАРХОСТҲОИ МАН</a></li>
                         <li><a href="">Дархост кардан</a></li>
                         <li class="{{ Route::currentRouteName() === 'docTypes' ? 'active' : null }}"><a href="{{ route('docTypes') }}">НАМУДИ ФАЪОЛИЯТҲО БО ҲУҶҶАТҲО</a></li>
                         <li class="{{ Route::currentRouteName() === 'legislature' ? 'active' : null }}"><a href="{{ route('legislature') }}">ҚОНУНГУЗОРӢ</a></li>
@@ -137,6 +138,7 @@
                         <div class="mobile-nav">
                             <ul>
                                 <li><a href="{{ route('home') }}">АСОСӢ</a></li>
+                                <li><a href="{{ route('applications') }}">ДАРХОСТҲОИ МАН</a></li>
                                 <li><a href="{{ route('docTypes') }}">НАМУДИ ФАЪОЛИЯТҲО БО ҲУҶҶАТҲО</a></li>
                                 <li><a href="{{ route('legislature') }}">ҚОНУНГУЗОРӢ</a></li>
                                 <li><a href="{{ route('contacts') }}">ТАМОС ВА СУРОҒА</a></li>
@@ -170,6 +172,7 @@
     @section('scripts')
         <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
         <script src="{{ asset('plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('plugins/datatables/datatables.min.js') }}"></script>
         <script>
             $(document).ready(function() {
                 $('.hamburger').on('click', function() {
