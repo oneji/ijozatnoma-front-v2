@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <title>{{ config('app.name', 'Laravel') }}</title>
-
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/login.css') }}" rel="stylesheet">
@@ -23,40 +21,35 @@
                 <p>Даромад ба утоки шахси</p>
             </div>
             
-            <div class="form-container__form">
-                <form action="#">
-                    <div class="form__header">
-                        <div class="logo-box">
-                            <div class="logo">
-                                <img src="{{ asset('images/logo.png') }}" alt="Logo">
-                            </div>
-                            <div class="text">
-                                <p>ВАЗОРАТИ САНОАТ ВА ТЕХНОЛОГИЯҲОИ НАВИ ҶУМҲУРИИ ТОҶИКИСТОН</p>
-                                <p class="mb-0">РАЁСАТИ ИҶОЗАТНОМАДИҲӢ</p>
-                            </div>
-                        </div>
+            <form action="#" class="form">
+                <div class="form__header">
+                    <img src="{{ asset('images/logo.png') }}" class="logo" alt="Logo">
+                    <div class="text">
+                        <p>ВАЗОРАТИ САНОАТ ВА ТЕХНОЛОГИЯҲОИ НАВИ ҶУМҲУРИИ ТОҶИКИСТОН</p>
+                        <p class="mb-0">РАЁСАТИ ИҶОЗАТНОМАДИҲӢ</p>
+                    </div>
+                </div>
+
+                <div class="form__body">
+                    <div class="form-group">
+                        <label for="phone_number" class="custom-form-control">Раками телефонро ворид кунед</label>
+                        <input type="text" class="custom-form-control" id="phone_number" placeholder="МИСОЛ: XX-XXX-XX-XX...">
                     </div>
 
-                    <div class="form__body">
-                        <div class="form-group">
-                            <label for="phone_number" class="login-label">Раками телефонро ворид кунед</label>
-                            <input type="text" class="login-input" id="phone_number" placeholder="МИСОЛ: XX-XXX-XX-XX...">
-                        </div>
-
-                        <div class="form-group">
-                            <button type="submit" class="login-button btn-block">
-                                Равон кардани СМС
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
+                    <div class="form-group">
+                        <button type="submit" class="login-button btn-block">
+                            Равон кардани СМС
+                            <img src="{{ asset('images/icons/fly.png') }}" alt="">
+                        </button>
                     </div>
-                </form>
-            </div>
+                </div>
+            </form>
         </div>
 
-        <div class="login-page__footer">
-            <a href="#">IJOZATNOMA.TJ</a> - ҲАМАИ ҲУҚУҚҲО ДАР ТАҲТИ ҲИМОЯ ҚАРОР ДОРАНД
-        </div>
+        <footer class="footer">
+            <span class="link">IJOZATNOMA.TJ</span> 
+            <span class="d-none d-sm-block">- ҲАМАИ ҲУҚУҚҲО ДАР ТАҲТИ ҲИМОЯ ҚАРОР ДОРАНД</span>
+        </footer>
     </div>
 </body>
 </html>

@@ -84,12 +84,12 @@
 
                 <div class="menu">
                     <ul>
-                        <li><a href="{{ route('home') }}">Асоси</a></li>
+                        <li class="{{ Route::currentRouteName() === 'home' ? 'active' : null }}"><a href="{{ route('home') }}">АСОСӢ</a></li>
                         <li><a href="">Дархостхои ман</a></li>
                         <li><a href="">Дархост кардан</a></li>
-                        <li><a href="">Намуди фаъолият бо хучатхо</a></li>
-                        <li><a href="">Конугузори</a></li>
-                        <li><a href="{{ route('contacts') }}">Тамос ва сурога</a></li>
+                        <li class="{{ Route::currentRouteName() === 'docTypes' ? 'active' : null }}"><a href="{{ route('docTypes') }}">НАМУДИ ФАЪОЛИЯТҲО БО ҲУҶҶАТҲО</a></li>
+                        <li class="{{ Route::currentRouteName() === 'legislature' ? 'active' : null }}"><a href="{{ route('legislature') }}">ҚОНУНГУЗОРӢ</a></li>
+                        <li class="{{ Route::currentRouteName() === 'contacts' ? 'active' : null }}"><a href="{{ route('contacts') }}">ТАМОС ВА СУРОҒА</a></li>
                     </ul>
                     <div class="search">
                         <a href="#" class="search__icon">
@@ -136,27 +136,10 @@
 
                         <div class="mobile-nav">
                             <ul>
-                                <li>
-                                    <a href="{{ route('home') }}">Асоси</a>
-                                </li>
-                                <li>
-                                    <a href="">Асоси</a>
-                                </li>
-                                <li>
-                                    <a href="">Асоси</a>
-                                </li>
-                                <li>
-                                    <a href="">Асоси</a>
-                                </li>
-                                <li>
-                                    <a href="">Асоси</a>
-                                </li>
-                                <li>
-                                    <a href="">Асоси</a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('contacts') }}">Тамос ва сурога</a>
-                                </li>
+                                <li><a href="{{ route('home') }}">АСОСӢ</a></li>
+                                <li><a href="{{ route('docTypes') }}">НАМУДИ ФАЪОЛИЯТҲО БО ҲУҶҶАТҲО</a></li>
+                                <li><a href="{{ route('legislature') }}">ҚОНУНГУЗОРӢ</a></li>
+                                <li><a href="{{ route('contacts') }}">ТАМОС ВА СУРОҒА</a></li>
                             </ul>
                         </div>
                     </div>
@@ -178,10 +161,10 @@
             </div>
         </main>
 
-        <div class="footer">
+        <footer class="footer">
             <span class="link">IJOZATNOMA.TJ</span> 
             <span class="d-none d-sm-block">- ҲАМАИ ҲУҚУҚҲО ДАР ТАҲТИ ҲИМОЯ ҚАРОР ДОРАНД</span>
-        </div>
+        </footer>
     </div>
 
     @section('scripts')

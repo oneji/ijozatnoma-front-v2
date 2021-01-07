@@ -1,5 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,3 +18,5 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/contacts', 'ContactController@index')->name('contacts');
+Route::get('/legislature', 'LegislatureController@index')->name('legislature');
+Route::get('/doc-types', 'DocTypeController@index')->name('docTypes');

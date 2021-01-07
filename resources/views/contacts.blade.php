@@ -1,5 +1,5 @@
 @extends('layouts.app', [
-    'title' => 'Тамос ва сурога'
+    'title' => 'ТАМОС ВА СУРОҒА'
 ])
 
 @section('content')

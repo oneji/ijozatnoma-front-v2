@@ -19,7 +19,7 @@
     background-position: center;
     background-size: cover;
 
-    &__footer {
+    footer {
         height: 25px;
         text-align: center;
         text-transform: uppercase;
@@ -32,6 +32,11 @@
         width: 100%;
         position: fixed;
         bottom: 0;
+
+        span.link {
+            color: #61b2f6;
+            margin-right: 5px;
+        }
     }
 }
 
@@ -56,18 +61,14 @@
         }
     }
 
-    &__form {
-        form {
-            background: rgb(248, 167, 0);
-            background: $gradient;
-            border-radius: 5px;
-            -webkit-box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.1);
-            -moz-box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.1);
-            box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.1);
-        }
-    }
-
     .form {
+        background: rgb(248, 167, 0);
+        background: $gradient;
+        border-radius: 5px;
+        -webkit-box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.1);
+        box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.1);
+
         &__header {
             height: 200px;
             background: rgb(255,177,63);
@@ -75,30 +76,23 @@
             padding: 30px;
             border-radius: 5px;
             clip-path: polygon(50% 100%, 100% 80%, 100% 0, 0 0, 0 80%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            img.logo {
+                width: 120px;
+                height: auto;
+                border: 10px solid rgba(255,255,255,0.1);
+                border-radius: 100%;
+                margin-right: 20px;
+            }
 
-            .logo-box {
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                .logo {
-                    margin-right: 20px;
-
-                    img {
-                        width: 120px;
-                        height: auto;
-                        border: 10px solid rgba(255,255,255,0.1);
-                        border-radius: 100%;
-                    }
-                }
-
-                .text {
-                    font-size: 12px;
-                    color: #fff;
-                    letter-spacing: 1px;
-                    font-weight: bold;
-                }
+            .text {
+                font-size: 12px;
+                color: #fff;
+                letter-spacing: 1px;
+                font-weight: bold;
             }
         }
 
@@ -108,7 +102,7 @@
     }
 }
 
-.login-label {
+label.custom-form-control {
     text-transform: uppercase;
     color: #fff;
     font-size: 11px;
@@ -118,16 +112,16 @@
     margin-bottom: 20px;
 }
 
-.login-input {
+input.custom-form-control {
     border: none;
     outline: none;
     width: 100%;
-    padding: 15px;
+    padding: 10px 15px;
     border-bottom: 3px solid #3E3E3E;
     background-color: rgba(0,0,0,.1);
     color: $white;
     transition: .3s all ease;
-    font-size: 12px;
+    font-size: 14px;
 
     // Change placeholder color
     &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -172,13 +166,14 @@
         box-shadow: 0 0 0 0.25rem rgba(49,132,253,.5);
     }
 
-    i {
-        font-size: 25px;
+    img {
+        width: 40px;
         position: absolute;
-        right: 30px;
+        right: 15px;
     }
 }
 
+// Media queries
 @media (max-width: 575.98px) {
     .form-container {
         max-width: 300px;
@@ -192,7 +187,7 @@
         width: 80px;
     }
 
-    .login-page__footer, .form-container .form__header .logo-box .text {
+    footer, .form-container .form__header .logo-box .text {
         font-size: 8px;
     }
 
