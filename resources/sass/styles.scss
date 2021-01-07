@@ -61,6 +61,7 @@ header.app-header {
 
 .logos-container {
     padding: 30px 0;
+    display: flex;
 }
 
 .user {
@@ -168,6 +169,7 @@ header.app-header {
     background-color: #3087da;
     border: 1px solid #2672d8;
     padding: 5px;
+    position: relative;
 
     .user {
         background-color: rgba(255, 255, 255, 0.2);
@@ -210,9 +212,6 @@ header.app-header {
 }
 
 .search {
-    border-left: 1px solid rgba(255, 255, 255, 0.5);
-    padding: 0 10px;
-
     &__icon {
         color: $white;
         font-size: 18px;
@@ -223,7 +222,49 @@ header.app-header {
     }
 }
 
+.menu .search {
+    padding: 0 10px;
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.mobile-menu .search {
+    padding: 0 15px;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.hamburger {
+    padding: 0 5px 0 5px !important;
+    margin-left: 10px !important;
+
+    .hamburger-box {
+        width: 27px !important;
+        height: 27px !important;
+    
+        .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+            background-color: #fff !important;
+            width: 27px !important;
+            height: 2px;
+        }
+    }
+}
+
 @media (max-width: 575.98px) {
+    .logos-container {
+        padding: 10px 0;
+
+        .logo-box {
+            justify-content: center;
+
+            .logo {
+                margin: 0;
+                
+                img {
+                    width: 100px;
+                }
+            }
+        }
+    }
+    
     .navbar, .faq-container {
         display: none;
     }
@@ -236,5 +277,47 @@ header.app-header {
 
     .menu {
         display: none;
+    }
+}
+
+.mobile-nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 95px;
+    width: 100%;
+    transition: .3s all ease;
+    display: none;
+
+    ul {
+        padding: 0 10px;
+        list-style-type: none;
+        margin-bottom: 0;
+        text-align: center;
+        text-transform: uppercase;
+        background-color: #125b95;
+
+        li {
+            transition: .3s all ease;
+
+            &:not(:last-child) a {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            &:hover {
+                background-color: #034579;
+            }
+
+            a {
+                color: $white;
+                display: block;
+                padding: 10px;
+                
+                &:hover {
+                    text-decoration: none;
+                    color: $white;
+                }
+            }
+        }
     }
 }

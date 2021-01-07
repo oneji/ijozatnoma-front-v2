@@ -9,11 +9,14 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Styles -->
-    <link href="{{ asset('plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
-    <link href="{{ asset('plugins/flag-icon-css/css/flag-icon.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('plugins/fontawesome/css/all.min.css') }}" rel="stylesheet">
+    @section('head')
+        <!-- Styles -->
+        <link href="{{ asset('plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
+        <link href="{{ asset('plugins/flag-icon-css/css/flag-icon.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('plugins/fontawesome/css/all.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('plugins/hamburgers/dist/hamburgers.css') }}" rel="stylesheet">
+    @show
 </head>
 <body>
     <div id="app">
@@ -45,28 +48,22 @@
                 </nav>
 
                 <div class="logos-container">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="logo-box left">
-                                <div class="logo">
-                                    <img src="{{ asset('images/logo.png') }}" alt="Logo">
-                                </div>
-                                <div class="text text-left">
-                                    <p>ВАЗОРАТИ САНОАТ <br> ВА ТЕХНОЛОГИЯҲОИ НАВИ ҶУМҲУРИИ <br> ТОҶИКИСТОН</p>
-                                    <p class="mb-0">РАЁСАТИ ИҶОЗАТНОМАДИҲӢ</p>
-                                </div>
-                            </div>
+                    <div class="logo-box left">
+                        <div class="logo">
+                            <img src="{{ asset('images/logo.png') }}" alt="Logo">
                         </div>
-                        <div class="col-sm-6">
-                            <div class="logo-box right">
-                                <div class="text text-right">
-                                    <p>Министерство промышленности <br> и новых технологий Республики <br> Таджикистан</p>
-                                    <p class="mb-0">УПРАВЛЕНИЕ ПО ВЫДАЧЕ РАЗРЕШЕНИЙ</p>
-                                </div>
-                                <div class="logo">
-                                    <img src="{{ asset('images/gerb.png') }}" alt="Logo">
-                                </div>
-                            </div>
+                        <div class="text text-left d-none d-sm-block">
+                            <p>ВАЗОРАТИ САНОАТ <br> ВА ТЕХНОЛОГИЯҲОИ НАВИ ҶУМҲУРИИ <br> ТОҶИКИСТОН</p>
+                            <p class="mb-0">РАЁСАТИ ИҶОЗАТНОМАДИҲӢ</p>
+                        </div>
+                    </div>
+                    <div class="logo-box right">
+                        <div class="text text-right d-none d-sm-block">
+                            <p>Министерство промышленности <br> и новых технологий Республики <br> Таджикистан</p>
+                            <p class="mb-0">УПРАВЛЕНИЕ ПО ВЫДАЧЕ РАЗРЕШЕНИЙ</p>
+                        </div>
+                        <div class="logo">
+                            <img src="{{ asset('images/gerb.png') }}" alt="Logo">
                         </div>
                     </div>
                 </div>
@@ -109,18 +106,58 @@
                             <li><a href="#">Баромад</a></li>
                         </ul>
                     </div>
-                    <div class="dropdown language-selector">
-                        <a href="#" class="language-selector__anchor" id="dropdownLanguageSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="flag-icon flag-icon-tj mr-2"></span> Точ
-                            <i class="fas fa-angle-down ml-2"></i>
-                        </a>
-                        <div class="dropdown-menu language-menu" aria-labelledby="dropdownLanguageSelector">
-                            <a class="dropdown-item" href="#">
-                                <span class="flag-icon flag-icon-ru mr-2"></span> РУС
+                    <div class="d-flex justify-content-between align-items-center pt-1">
+                        <div class="dropdown language-selector p-0">
+                            <a href="#" class="language-selector__anchor" id="dropdownLanguageSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="flag-icon flag-icon-tj mr-2"></span> Точ
+                                <i class="fas fa-angle-down ml-2"></i>
                             </a>
-                            <a class="dropdown-item" href="#">
-                                <span class="flag-icon flag-icon-us mr-2"></span> ENG
-                            </a>
+                            <div class="dropdown-menu language-menu" aria-labelledby="dropdownLanguageSelector">
+                                <a class="dropdown-item" href="#">
+                                    <span class="flag-icon flag-icon-ru mr-2"></span> РУС
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <span class="flag-icon flag-icon-us mr-2"></span> ENG
+                                </a>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="search">
+                                <a href="#" class="search__icon">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                            </div>
+                            <button class="hamburger hamburger--collapse" type="button">
+                                <span class="hamburger-box">
+                                  <span class="hamburger-inner"></span>
+                                </span>
+                            </button>
+
+                            <div class="mobile-nav">
+                                <ul>
+                                    <li>
+                                        <a href="">Асоси</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Асоси</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Асоси</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Асоси</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Асоси</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Асоси</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Асоси</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -132,7 +169,18 @@
         </main>
     </div>
 
-    <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
-    <script src="{{ asset('plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+    @section('scripts')
+        <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
+        <script src="{{ asset('plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+        <script>
+            $(document).ready(function() {
+                $('.hamburger').on('click', function() {
+                    $(this).toggleClass('is-active');
+
+                    $('.mobile-nav').toggle(0, 'display');
+                })
+            })
+        </script>
+    @show
 </body>
 </html>

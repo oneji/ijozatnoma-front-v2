@@ -58,6 +58,7 @@ header.app-header {
 
 .logos-container {
   padding: 30px 0;
+  display: flex;
 }
 
 .user {
@@ -163,6 +164,7 @@ header.app-header {
   background-color: #3087da;
   border: 1px solid #2672d8;
   padding: 5px;
+  position: relative;
 }
 
 .mobile-menu .user {
@@ -200,11 +202,6 @@ header.app-header {
   transition: 0.3s all ease;
 }
 
-.search {
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
-  padding: 0 10px;
-}
-
 .search__icon {
   color: #ffffff;
   font-size: 18px;
@@ -214,7 +211,51 @@ header.app-header {
   color: #ffffff;
 }
 
+.menu .search {
+  padding: 0 10px;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.mobile-menu .search {
+  padding: 0 15px;
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.hamburger {
+  padding: 0 5px 0 5px !important;
+  margin-left: 10px !important;
+}
+
+.hamburger .hamburger-box {
+  width: 27px !important;
+  height: 27px !important;
+}
+
+.hamburger .hamburger-box .hamburger-inner,
+.hamburger .hamburger-box .hamburger-inner::before,
+.hamburger .hamburger-box .hamburger-inner::after {
+  background-color: #fff !important;
+  width: 27px !important;
+  height: 2px;
+}
+
 @media (max-width: 575.98px) {
+  .logos-container {
+    padding: 10px 0;
+  }
+
+  .logos-container .logo-box {
+    justify-content: center;
+  }
+
+  .logos-container .logo-box .logo {
+    margin: 0;
+  }
+
+  .logos-container .logo-box .logo img {
+    width: 100px;
+  }
+
   .navbar,
   .faq-container {
     display: none;
@@ -229,5 +270,47 @@ header.app-header {
   .menu {
     display: none;
   }
+}
+
+.mobile-nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 95px;
+  width: 100%;
+  transition: 0.3s all ease;
+  display: none;
+}
+
+.mobile-nav ul {
+  padding: 0 10px;
+  list-style-type: none;
+  margin-bottom: 0;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #125b95;
+}
+
+.mobile-nav ul li {
+  transition: 0.3s all ease;
+}
+
+.mobile-nav ul li:not(:last-child) a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mobile-nav ul li:hover {
+  background-color: #034579;
+}
+
+.mobile-nav ul li a {
+  color: #ffffff;
+  display: block;
+  padding: 10px;
+}
+
+.mobile-nav ul li a:hover {
+  text-decoration: none;
+  color: #ffffff;
 }
 
