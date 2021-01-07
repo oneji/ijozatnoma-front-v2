@@ -4,85 +4,132 @@
 
 @section('content')
     <div class="row">
+        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+            <div class="custom-card">
+                <div class="custom-card__body">
+                    <div class="stat">
+                        <div class="stat__counter main-color">12</div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="stat__title">Қабулшуда</div>
+                            <div class="stat__icon">
+                                <i class="fas fa-clipboard-list"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+            <div class="custom-card">
+                <div class="custom-card__body">
+                    <div class="stat">
+                        <div class="stat__counter main-color">15</div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="stat__title">Рад кардашуда</div>
+                            <div class="stat__icon">
+                                <i class="fas fa-clipboard-list"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+            <div class="custom-card">
+                <div class="custom-card__body">
+                    <div class="stat">
+                        <div class="stat__counter main-color">22</div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="stat__title">Қабулшуда</div>
+                            <div class="stat__icon">
+                                <i class="fas fa-clipboard-list"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+
+    <div class="row">
         <div class="col-sm-12">
-            <table id="datatable" class="display" style="width:100%">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Tiger Nixon</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>61</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
-                    </tr>
-                    <tr>
-                        <td>Garrett Winters</td>
-                        <td>Accountant</td>
-                        <td>Tokyo</td>
-                        <td>63</td>
-                        <td>2011/07/25</td>
-                        <td>$170,750</td>
-                    </tr>
-                    <tr>
-                        <td>Ashton Cox</td>
-                        <td>Junior Technical Author</td>
-                        <td>San Francisco</td>
-                        <td>66</td>
-                        <td>2009/01/12</td>
-                        <td>$86,000</td>
-                    </tr>
-                    <tr>
-                        <td>Cedric Kelly</td>
-                        <td>Senior Javascript Developer</td>
-                        <td>Edinburgh</td>
-                        <td>22</td>
-                        <td>2012/03/29</td>
-                        <td>$433,060</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-responsive">
+                <table class="display datatable" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>РАЁСАТИ ИҶОЗАТНОМАДИҲӢ</th>
+                            <th>НОМ ВА НАСАБ</th>
+                            <th>НАМУДИ ФАЪОЛИЯТ</th>
+                            <th>САНАИ АРИЗА</th>
+                            <th>ҲОЛАТ</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>23</td>
+                            <td>Камилов Тимур</td>
+                            <td>АРАК</td>
+                            <td>01/01/2021</td>
+                            <td>
+                                <span class="custom-badge success">БАРРАСИ КАРДА ШУД</span>
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>23</td>
+                            <td>Камилов Тимур</td>
+                            <td>АРАК</td>
+                            <td>01/01/2021</td>
+                            <td>
+                                <span class="custom-badge">Барраси карда шуд</span>
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>23</td>
+                            <td>Камилов Тимур</td>
+                            <td>АРАК</td>
+                            <td>01/01/2021</td>
+                            <td>
+                                <span class="custom-badge primary">Барраси</span>
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>23</td>
+                            <td>Камилов Тимур</td>
+                            <td>АРАК</td>
+                            <td>01/01/2021</td>
+                            <td>
+                                <span class="custom-badge danger">Рад карда шуд</span>
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-
-    <div class="row mt-5">
-        <div class="col-sm-12 text-center">
-            <p class="main-color-green mb-1">ДАРХОСТҲОИ ҚАБУЛШУЛА ДАР МАҶМУЪ: 12</p>
-            <p class="main-color-red mb-1">ДАРХОСТҲОИ РАД КАРДА ДАР МАҶМУЪ: 15</p>
-            <p class="main-color mb-1">ДАРХОСТҲОИ ҚАБУЛШУЛА ДАР МАҶМУЪ: 22</p>
-        </div>
-    </div>
-@endsection
-
-@section('scripts')
-    @parent
-
-    <script>
-        $(document).ready(function() {
-            $('#datatable').DataTable({
-                language: {
-                    search: "",
-                    searchPlaceholder: "ҶУСТУҶӮ...",
-                    lengthMenu: "САБТИ _MENU_ -РО НИШОН ДИҲЕД",
-                    zeroRecords: "ЯГОН САБТҲО ДАСТРАС НЕСТ",
-                    info: "САБТҲОИ АЗ _PAGE_ ТО _PAGES_",
-                    infoEmpty: "ЯГОН САБТҲО ДАСТРАС НЕСТ",
-                    infoFiltered: "(Аз _MAX_ сабти умумӣ филтр карда шудааст)",
-                    paginate: {
-                        previous: "< Қаблӣ",
-                        next: "Баъдӣ >",
-                    }
-                }
-            });
-        });
-    </script>
 @endsection

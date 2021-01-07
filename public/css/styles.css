@@ -10,6 +10,50 @@
   color: #92cb34 !important;
 }
 
+.custom-badge {
+  color: #fff;
+  padding: 3px 6px;
+  border-radius: 5px;
+  background-color: #6c757d;
+  text-align: center;
+  display: block;
+}
+
+.custom-badge.success {
+  background-color: #92cb34;
+}
+
+.custom-badge.primary {
+  background-color: #2d74c4;
+}
+
+.custom-badge.danger {
+  background-color: #da4e53;
+}
+
+.custom-card {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.custom-card__body {
+  padding: 10px 20px;
+}
+
+.custom-card__body .stat__counter {
+  font-size: 30px;
+}
+
+.custom-card__body .stat__title {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.custom-card__body .stat__icon > i {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 25px;
+}
+
 body {
   font-family: "Calibri", sans-serif;
   font-size: 14px;

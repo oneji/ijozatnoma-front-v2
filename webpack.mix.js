@@ -13,6 +13,15 @@ const { min } = require('lodash');
  */
 
 mix.js('resources/js/app.js', 'public/js')
+   // JS files
+   .babel([
+      'resources/js/custom/plugins.init.js'
+   ], 'public/js/custom/plugins.init.js')
+   .minify([ 'public/js/custom/plugins.init.js' ])
+   // SCSS files
    .sass('resources/sass/app.scss', 'public/css')
    .sass('resources/sass/styles.scss', 'public/css')
    .sass('resources/sass/login.scss', 'public/css');
+
+mix.browserSync('http://localhost:8000');
+mix.disableNotifications();

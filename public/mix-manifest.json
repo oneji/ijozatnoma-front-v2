@@ -2,5 +2,7 @@
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/css/styles.css": "/css/styles.css",
-    "/css/login.css": "/css/login.css"
+    "/css/login.css": "/css/login.css",
+    "/js/custom/plugins.init.js": "/js/custom/plugins.init.js",
+    "/js/custom/plugins.init.min.js": "/js/custom/plugins.init.min.js"
 }

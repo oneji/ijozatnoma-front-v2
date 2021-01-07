@@ -7,10 +7,17 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>
+        @if (isset($title))
+            {{ $title }} &middot; РАЁСАТИ ИҶОЗАТНОМАДИҲӢ
+        @else
+            РАЁСАТИ ИҶОЗАТНОМАДИҲӢ
+        @endif
+    </title>
 
     @section('head')
         <!-- Styles -->
+        <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}" type="image/x-icon">
         <link href="{{ asset('plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
         <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
         <link href="{{ asset('plugins/flag-icon-css/css/flag-icon.min.css') }}" rel="stylesheet">
@@ -173,15 +180,7 @@
         <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
         <script src="{{ asset('plugins/bootstrap/js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('plugins/datatables/datatables.min.js') }}"></script>
-        <script>
-            $(document).ready(function() {
-                $('.hamburger').on('click', function() {
-                    $(this).toggleClass('is-active');
-
-                    $('.mobile-nav').toggle(0, 'display');
-                })
-            })
-        </script>
+        <script src="{{ asset('js/custom/plugins.init.min.js') }}"></script>
     @show
 </body>
 </html>
