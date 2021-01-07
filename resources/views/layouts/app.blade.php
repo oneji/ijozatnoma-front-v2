@@ -97,76 +97,84 @@
                         </a>
                     </div>
                 </div>
-
-                <div class="mobile-menu">
-                    <div class="user">
-                        <img src="{{ asset('images/user.png') }}" alt="user">
-                        <ul class="links-list">
-                            <li><a href="#">Ахбороти шахси</a></li>
-                            <li><a href="#">Баромад</a></li>
-                        </ul>
-                    </div>
-                    <div class="d-flex justify-content-between align-items-center pt-1">
-                        <div class="dropdown language-selector p-0">
-                            <a href="#" class="language-selector__anchor" id="dropdownLanguageSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="flag-icon flag-icon-tj mr-2"></span> Точ
-                                <i class="fas fa-angle-down ml-2"></i>
+            </div>
+            
+            <div class="mobile-menu">
+                <div class="user">
+                    <img src="{{ asset('images/user.png') }}" alt="user">
+                    <ul class="links-list">
+                        <li><a href="#">Ахбороти шахси</a></li>
+                        <li><a href="#">Баромад</a></li>
+                    </ul>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pt-1">
+                    <div class="dropdown language-selector p-0">
+                        <a href="#" class="language-selector__anchor" id="dropdownLanguageSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="flag-icon flag-icon-tj mr-2"></span> Точ
+                            <i class="fas fa-angle-down ml-2"></i>
+                        </a>
+                        <div class="dropdown-menu language-menu" aria-labelledby="dropdownLanguageSelector">
+                            <a class="dropdown-item" href="#">
+                                <span class="flag-icon flag-icon-ru mr-2"></span> РУС
                             </a>
-                            <div class="dropdown-menu language-menu" aria-labelledby="dropdownLanguageSelector">
-                                <a class="dropdown-item" href="#">
-                                    <span class="flag-icon flag-icon-ru mr-2"></span> РУС
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <span class="flag-icon flag-icon-us mr-2"></span> ENG
-                                </a>
-                            </div>
+                            <a class="dropdown-item" href="#">
+                                <span class="flag-icon flag-icon-us mr-2"></span> ENG
+                            </a>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="search">
-                                <a href="#" class="search__icon">
-                                    <i class="fas fa-search"></i>
-                                </a>
-                            </div>
-                            <button class="hamburger hamburger--collapse" type="button">
-                                <span class="hamburger-box">
-                                  <span class="hamburger-inner"></span>
-                                </span>
-                            </button>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="search">
+                            <a href="#" class="search__icon">
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </div>
+                        <button class="hamburger hamburger--collapse" type="button">
+                            <span class="hamburger-box">
+                              <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
 
-                            <div class="mobile-nav">
-                                <ul>
-                                    <li>
-                                        <a href="">Асоси</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Асоси</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Асоси</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Асоси</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Асоси</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Асоси</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Асоси</a>
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="mobile-nav">
+                            <ul>
+                                <li>
+                                    <a href="">Асоси</a>
+                                </li>
+                                <li>
+                                    <a href="">Асоси</a>
+                                </li>
+                                <li>
+                                    <a href="">Асоси</a>
+                                </li>
+                                <li>
+                                    <a href="">Асоси</a>
+                                </li>
+                                <li>
+                                    <a href="">Асоси</a>
+                                </li>
+                                <li>
+                                    <a href="">Асоси</a>
+                                </li>
+                                <li>
+                                    <a href="">Асоси</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
 
-        <main class="py-4">
-            @yield('content')
+        <main>
+            <div class="container h-100">
+                <div class="main-wrapper">
+                    @yield('content')
+                </div>
+            </div>
         </main>
+
+        <div class="footer">
+            <a href="#">IJOZATNOMA.TJ</a> - ҲАМАИ ҲУҚУҚҲО ДАР ТАҲТИ ҲИМОЯ ҚАРОР ДОРАНД
+        </div>
     </div>
 
     @section('scripts')
