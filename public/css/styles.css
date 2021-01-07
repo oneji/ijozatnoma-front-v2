@@ -555,6 +555,21 @@ table.dataTable > thead {
 }
 
 @media (max-width: 991.98px) {
+  .container {
+    padding: 0;
+  }
+
+  .container .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .container .row > .col,
+  .container .row > [class*=col-] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
   .links-wrapper {
     flex-direction: column;
     align-items: center;
@@ -592,7 +607,7 @@ table.dataTable > thead {
   }
 
   .main-wrapper {
-    padding: 0;
+    padding: 10px;
   }
 
   .main-wrapper .page-title {
