@@ -5,7 +5,7 @@
 @section('content')
     <div class="row">
         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <div class="contacts">
+            <div class="contacts left">
                 <img src="{{ asset('images/icons/location.png') }}" alt="">
                 <div class="contacts__text">
                     <strong>СУРОҒА:</strong> Хиёбони Рудаки 22,
@@ -16,13 +16,13 @@
         </div>
 
         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <div class="contacts justify-content-end">
+            <div class="contacts right">
+                <img src="{{ asset('images/icons/info.png') }}" alt="">
                 <div class="contacts__text">
                     <strong>Email:</strong> ijozatnoma.sanoat@mail.ru
                     <br>
                     <strong>Телефон:</strong> (+992 37) 227 71 91, 227 89 30
                 </div>
-                <img src="{{ asset('images/icons/info.png') }}" alt="">
             </div>
         </div>
 

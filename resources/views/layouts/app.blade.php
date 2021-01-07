@@ -52,13 +52,13 @@
                         <div class="logo">
                             <img src="{{ asset('images/logo.png') }}" alt="Logo">
                         </div>
-                        <div class="text text-left d-none d-sm-block">
+                        <div class="text text-left d-md-block">
                             <p>ВАЗОРАТИ САНОАТ <br> ВА ТЕХНОЛОГИЯҲОИ НАВИ ҶУМҲУРИИ <br> ТОҶИКИСТОН</p>
                             <p class="mb-0">РАЁСАТИ ИҶОЗАТНОМАДИҲӢ</p>
                         </div>
                     </div>
                     <div class="logo-box right">
-                        <div class="text text-right d-none d-sm-block">
+                        <div class="text text-right d-md-block">
                             <p>Министерство промышленности <br> и новых технологий Республики <br> Таджикистан</p>
                             <p class="mb-0">УПРАВЛЕНИЕ ПО ВЫДАЧЕ РАЗРЕШЕНИЙ</p>
                         </div>
@@ -84,7 +84,7 @@
 
                 <div class="menu">
                     <ul>
-                        <li><a href="">Асоси</a></li>
+                        <li><a href="{{ route('home') }}">Асоси</a></li>
                         <li><a href="">Дархостхои ман</a></li>
                         <li><a href="">Дархост кардан</a></li>
                         <li><a href="">Намуди фаъолият бо хучатхо</a></li>
@@ -125,7 +125,7 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="search">
                             <a href="#" class="search__icon">
-                                <i class="fas fa-search"></i>
+                                <img src="{{ asset('images/icons/lupa.png') }}" alt="">
                             </a>
                         </div>
                         <button class="hamburger hamburger--collapse" type="button">
@@ -137,7 +137,7 @@
                         <div class="mobile-nav">
                             <ul>
                                 <li>
-                                    <a href="">Асоси</a>
+                                    <a href="{{ route('home') }}">Асоси</a>
                                 </li>
                                 <li>
                                     <a href="">Асоси</a>
@@ -155,7 +155,7 @@
                                     <a href="">Асоси</a>
                                 </li>
                                 <li>
-                                    <a href="">Асоси</a>
+                                    <a href="{{ route('contacts') }}">Тамос ва сурога</a>
                                 </li>
                             </ul>
                         </div>
@@ -179,7 +179,8 @@
         </main>
 
         <div class="footer">
-            <a href="#">IJOZATNOMA.TJ</a> - ҲАМАИ ҲУҚУҚҲО ДАР ТАҲТИ ҲИМОЯ ҚАРОР ДОРАНД
+            <span class="link">IJOZATNOMA.TJ</span> 
+            <span class="d-none d-sm-block">- ҲАМАИ ҲУҚУҚҲО ДАР ТАҲТИ ҲИМОЯ ҚАРОР ДОРАНД</span>
         </div>
     </div>
 
