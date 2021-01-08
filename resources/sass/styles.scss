@@ -375,17 +375,14 @@ header.app-header {
     }
 }
 
-.faq-container {
+.faq {
+    padding: 0;
+    list-style-type: none;
+    margin-bottom: 0;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 0 140px 20px 20px;
-}
-
-.faq-list {
-    padding: 0;
-    list-style-type: none;
-    margin-bottom: 0;
 
     li {
         display: inline-block;

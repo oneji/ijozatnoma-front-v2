@@ -71,21 +71,13 @@
                     </div>
                 </div>
 
-                <div class="faq-container">
-                    <ul class="faq-list">
-                        <li>
-                            <a href="#">FAQ</a>
-                        </li>
-                        <li>
-                            <a href="#">ХАРИТАИ СОМОНА</a>
-                        </li>
-                        <li>
-                            <a href="#">ДИГАР СОМОНАХО</a>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="faq">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">ХАРИТАИ СОМОНА</a></li>
+                    <li><a href="#">ДИГАР СОМОНАХО</a></li>
+                </ul>
 
-                <div class="menu">
+                <nav class="menu">
                     <ul>
                         <li class="{{ Route::currentRouteName() === 'home' ? 'active' : null }}"><a href="{{ route('home') }}">АСОСӢ</a></li>
                         <li class="{{ Route::currentRouteName() === 'applications' ? 'active' : null }}"><a href="{{ route('applications') }}">ДАРХОСТҲОИ МАН</a></li>
@@ -94,12 +86,13 @@
                         <li class="{{ Route::currentRouteName() === 'legislature' ? 'active' : null }}"><a href="{{ route('legislature') }}">ҚОНУНГУЗОРӢ</a></li>
                         <li class="{{ Route::currentRouteName() === 'contacts' ? 'active' : null }}"><a href="{{ route('contacts') }}">ТАМОС ВА СУРОҒА</a></li>
                     </ul>
+
                     <div class="search">
                         <a href="#" class="search__icon">
                             <img src="{{ asset('images/icons/lupa.png') }}" alt="">
                         </a>
                     </div>
-                </div>
+                </nav>
             </div>
             
             <div class="mobile-menu">
@@ -125,15 +118,17 @@
                             </a>
                         </div>
                     </div>
+
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="search">
                             <a href="#" class="search__icon">
                                 <img src="{{ asset('images/icons/lupa.png') }}" alt="">
                             </a>
                         </div>
+
                         <button class="hamburger hamburger--collapse" type="button">
                             <span class="hamburger-box">
-                              <span class="hamburger-inner"></span>
+                                <span class="hamburger-inner"></span>
                             </span>
                         </button>
 
