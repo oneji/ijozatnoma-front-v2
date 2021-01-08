@@ -13,6 +13,16 @@ class ApplicationController extends Controller
      */
     public function index()
     {
-        return view('applications');
+        return view('applications.index');
+    }
+
+    /**
+     * Show form to create an application
+     * 
+     * @param \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        return view('applications.create');
     }
 }

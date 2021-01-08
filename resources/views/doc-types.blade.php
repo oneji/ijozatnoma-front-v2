@@ -55,11 +55,5 @@
                 </div>
             </div>
         </div>
-
-        <div class="col-sm-12">
-            <a href="#" class="h6 text-uppercase main-color mt-5 d-block">
-                <u>САВОЛ ДОРЕД? БА МО НАВИСЕД!</u>
-            </a>
-        </div>
     </div>
 @endsection

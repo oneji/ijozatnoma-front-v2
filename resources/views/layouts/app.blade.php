@@ -24,6 +24,7 @@
         <link href="{{ asset('plugins/fontawesome/css/all.min.css') }}" rel="stylesheet">
         <link href="{{ asset('plugins/hamburgers/dist/hamburgers.css') }}" rel="stylesheet">
         <link href="{{ asset('plugins/datatables/datatables.min.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('plugins/bootstrap-datepicker-1.9.0-dist/css/bootstrap-datepicker.min.css') }}">
     @show
 </head>
 <body>
@@ -94,7 +95,7 @@
                     <ul>
                         <li class="{{ Route::currentRouteName() === 'home' ? 'active' : null }}"><a href="{{ route('home') }}">АСОСӢ</a></li>
                         <li class="{{ Route::currentRouteName() === 'applications' ? 'active' : null }}"><a href="{{ route('applications') }}">ДАРХОСТҲОИ МАН</a></li>
-                        <li><a href="">Дархост кардан</a></li>
+                        <li class="{{ Route::currentRouteName() === 'applications.create' ? 'active' : null }}"><a href="{{ route('applications.create') }}">Дархост кардан</a></li>
                         <li class="{{ Route::currentRouteName() === 'docTypes' ? 'active' : null }}"><a href="{{ route('docTypes') }}">НАМУДИ ФАЪОЛИЯТҲО БО ҲУҶҶАТҲО</a></li>
                         <li class="{{ Route::currentRouteName() === 'legislature' ? 'active' : null }}"><a href="{{ route('legislature') }}">ҚОНУНГУЗОРӢ</a></li>
                         <li class="{{ Route::currentRouteName() === 'contacts' ? 'active' : null }}"><a href="{{ route('contacts') }}">ТАМОС ВА СУРОҒА</a></li>
@@ -146,6 +147,7 @@
                             <ul>
                                 <li><a href="{{ route('home') }}">АСОСӢ</a></li>
                                 <li><a href="{{ route('applications') }}">ДАРХОСТҲОИ МАН</a></li>
+                                <li><a href="{{ route('applications.create') }}">ДАРХОСТ КАРДАН</a></li>
                                 <li><a href="{{ route('docTypes') }}">НАМУДИ ФАЪОЛИЯТҲО БО ҲУҶҶАТҲО</a></li>
                                 <li><a href="{{ route('legislature') }}">ҚОНУНГУЗОРӢ</a></li>
                                 <li><a href="{{ route('contacts') }}">ТАМОС ВА СУРОҒА</a></li>
@@ -180,6 +182,8 @@
         <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
         <script src="{{ asset('plugins/bootstrap/js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('plugins/datatables/datatables.min.js') }}"></script>
+        <script src="{{ asset('plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js') }}"></script>
+        <script src="{{ asset('plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.ru.min.js') }}"></script>
         <script src="{{ asset('js/custom/plugins.init.min.js') }}"></script>
     @show
 </body>

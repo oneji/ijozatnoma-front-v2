@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .main-color {
   color: #2d74c4 !important;
 }
@@ -52,6 +54,150 @@
 .custom-card__body .stat__icon > i {
   color: rgba(0, 0, 0, 0.6);
   font-size: 25px;
+}
+
+.custom-control {
+  color: #717171 !important;
+}
+
+input.custom-control {
+  outline: none;
+  border: 2px solid #f2f2f2;
+  padding: 5px 10px;
+  width: 100%;
+  transition: 0.3s all ease;
+  border-radius: 0;
+}
+
+input.custom-control:focus {
+  border-color: #adb5bd;
+}
+
+input.custom-control::-moz-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #717171;
+  opacity: 1;
+  /* Firefox */
+}
+
+input.custom-control:-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #717171;
+  opacity: 1;
+  /* Firefox */
+}
+
+input.custom-control::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #717171;
+  opacity: 1;
+  /* Firefox */
+}
+
+input.custom-control:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #717171;
+}
+
+input.custom-control::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #717171;
+}
+
+input.custom-control.datepicker {
+  padding-right: 40px;
+}
+
+.datepicker-wrapper {
+  position: relative;
+}
+
+.datepicker-wrapper::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\F073";
+  position: absolute;
+  right: 15px;
+  top: 7px;
+  z-index: 2;
+  color: #2d74c4;
+}
+
+.custom-select-wrapper {
+  position: relative;
+}
+
+.custom-select-wrapper::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\F078";
+  position: absolute;
+  right: 15px;
+  top: 7px;
+  z-index: 2;
+  color: #2d74c4;
+}
+
+select.custom-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+  border: 2px solid #f2f2f2;
+  padding: 5px 10px;
+  width: 100%;
+  transition: 0.3s all ease;
+  border-radius: 0;
+  padding-right: 40px;
+}
+
+select.custom-control:focus {
+  outline: none;
+  border-color: #adb5bd;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+input[type=file] {
+  display: none;
+}
+
+.custom-file-input + label {
+  max-width: 100%;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  padding: 5px 13px 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #f2f2f2;
+  background-color: #fff;
+  transition: 0.3s all ease;
+}
+
+.custom-file-input + label:focus,
+.custom-file-input + label:active {
+  outline: none;
+  border: 2px solid #adb5bd;
+}
+
+.custom-file-input + label span {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #717171;
+}
+
+.custom-file-input + label > i {
+  color: red;
+  background-color: #fff;
+  transition: 0.3s all ease;
 }
 
 body {

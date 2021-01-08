@@ -21,3 +21,4 @@ Route::get('/contacts', 'ContactController@index')->name('contacts');
 Route::get('/legislature', 'LegislatureController@index')->name('legislature');
 Route::get('/doc-types', 'DocTypeController@index')->name('docTypes');
 Route::get('/applications', 'ApplicationController@index')->name('applications');
+Route::get('/applications/create', 'ApplicationController@create')->name('applications.create');
