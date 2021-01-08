@@ -3,10 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <title>
         @if (isset($title))
             {{ $title }} &middot; РАЁСАТИ ИҶОЗАТНОМАДИҲӢ
@@ -14,10 +12,9 @@
             РАЁСАТИ ИҶОЗАТНОМАДИҲӢ
         @endif
     </title>
-
-    @section('head')
-        <!-- Styles -->
-        <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}" type="image/x-icon">
+    
+    @section('head')        
         <link href="{{ asset('plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
         <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
         <link href="{{ asset('plugins/flag-icon-css/css/flag-icon.min.css') }}" rel="stylesheet">
@@ -36,7 +33,7 @@
                     <div class="user">
                         <img src="{{ asset('images/user.png') }}" alt="user">
                         
-                        <ul class="links-list">
+                        <ul class="user__links">
                             <li><a href="#">Ахбороти шахси</a></li>
                             <li><a href="#">Баромад</a></li>
                         </ul>
@@ -57,23 +54,19 @@
                     </div>
                 </nav>
 
-                <div class="logos-container">
-                    <div class="logo-box left">
-                        <div class="logo">
-                            <img src="{{ asset('images/logo.png') }}" alt="Logo">
-                        </div>
-                        <div class="text text-left d-md-block">
+                <div class="logos">
+                    <div class="logos__item left">
+                        <img src="{{ asset('images/logo.png') }}" class="logos__img" alt="Logo">
+                        <div class="logos__text">
                             <p>ВАЗОРАТИ САНОАТ <br> ВА ТЕХНОЛОГИЯҲОИ НАВИ ҶУМҲУРИИ <br> ТОҶИКИСТОН</p>
                             <p class="mb-0">РАЁСАТИ ИҶОЗАТНОМАДИҲӢ</p>
                         </div>
                     </div>
-                    <div class="logo-box right">
-                        <div class="text text-right d-md-block">
+                    <div class="logos__item right">
+                        <img src="{{ asset('images/gerb.png') }}" class="logos__img" alt="Logo">
+                        <div class="logos__text">
                             <p>Министерство промышленности <br> и новых технологий Республики <br> Таджикистан</p>
                             <p class="mb-0">УПРАВЛЕНИЕ ПО ВЫДАЧЕ РАЗРЕШЕНИЙ</p>
-                        </div>
-                        <div class="logo">
-                            <img src="{{ asset('images/gerb.png') }}" alt="Logo">
                         </div>
                     </div>
                 </div>
@@ -112,7 +105,7 @@
             <div class="mobile-menu">
                 <div class="user">
                     <img src="{{ asset('images/user.png') }}" alt="user">
-                    <ul class="links-list">
+                    <ul class="user__links">
                         <li><a href="#">Ахбороти шахси</a></li>
                         <li><a href="#">Баромад</a></li>
                     </ul>
@@ -174,7 +167,7 @@
         </main>
 
         <footer class="footer">
-            <span class="link">IJOZATNOMA.TJ</span> 
+            <span class="footer__link">IJOZATNOMA.TJ</span> 
             <span class="d-none d-sm-block">- ҲАМАИ ҲУҚУҚҲО ДАР ТАҲТИ ҲИМОЯ ҚАРОР ДОРАНД</span>
         </footer>
     </div>

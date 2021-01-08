@@ -48,22 +48,20 @@
         text-align: center;
     }
 
-    .logos-container {
+    .logos {
         padding: 10px 0;
 
-        .logo-box {
+        &__item {
             justify-content: center;
+        }
 
-            .text {
-                display: none;
-                font-size: 10px;
-            }
+        &__text {
+            display: none;
+            font-size: 10px;
+        }
 
-            .logo {
-                img {
-                    width: 100px;
-                }
-            }
+        &__img {
+            width: 100px;
         }
     }
     

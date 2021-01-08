@@ -15,9 +15,11 @@ const { min } = require('lodash');
 mix.js('resources/js/app.js', 'public/js')
    // JS files
    .babel([
-      'resources/js/custom/plugins.init.js'
+      'resources/js/custom/plugins.init.js',
    ], 'public/js/custom/plugins.init.js')
-   .minify([ 'public/js/custom/plugins.init.js' ])
+   .babel([
+      'resources/js/custom/login.js',
+   ], 'public/js/custom/login.js')
    // SCSS files
    .sass('resources/sass/app.scss', 'public/css')
    .sass('resources/sass/styles.scss', 'public/css')

@@ -250,7 +250,7 @@ main {
   color: #a5a5a5;
 }
 
-.footer span.link {
+.footer__link {
   color: #2d74c4;
   margin-right: 5px;
 }
@@ -308,9 +308,46 @@ header.app-header {
   text-decoration: none;
 }
 
-.logos-container {
+.logos {
   padding: 15px 0;
   display: flex;
+}
+
+.logos__item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.logos__item.right {
+  flex-direction: row-reverse;
+}
+
+.logos__item.right .logos__img {
+  margin-left: 30px;
+}
+
+.logos__item.left .logos__img {
+  margin-right: 30px;
+}
+
+.logos__item.right .logos__img {
+  margin-left: 30px;
+}
+
+.logos .logos__img {
+  width: 120px;
+  height: auto;
+  border: 10px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+}
+
+.logos .logos__text {
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: bold;
 }
 
 .user {
@@ -324,44 +361,7 @@ header.app-header {
   padding: 8px;
 }
 
-.logo-box {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  text-transform: uppercase;
-}
-
-.logo-box.left {
-  justify-content: flex-start;
-}
-
-.logo-box.left .logo {
-  margin-right: 30px;
-}
-
-.logo-box.right {
-  justify-content: flex-end;
-}
-
-.logo-box.right .logo {
-  margin-left: 30px;
-}
-
-.logo-box .logo img {
-  width: 120px;
-  height: auto;
-  border: 10px solid rgba(255, 255, 255, 0.1);
-  border-radius: 100%;
-}
-
-.logo-box .text {
-  font-size: 14px;
-  color: #fff;
-  letter-spacing: 1px;
-  font-weight: bold;
-}
-
-.links-list {
+.user__links {
   padding: 0;
   list-style-type: none;
   margin-bottom: 0;
@@ -370,13 +370,13 @@ header.app-header {
   font-weight: bold;
 }
 
-.links-list li {
+.user__links li {
   display: inline-block;
   text-transform: uppercase;
   margin: 0 10px;
 }
 
-.links-list li a {
+.user__links li a {
   color: #ffffff;
   letter-spacing: normal;
 }
@@ -423,7 +423,7 @@ header.app-header {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.mobile-menu .user .links-list a {
+.mobile-menu .user__links a {
   font-size: 13px;
 }
 
@@ -747,20 +747,20 @@ table.dataTable > thead {
     text-align: center;
   }
 
-  .logos-container {
+  .logos {
     padding: 10px 0;
   }
 
-  .logos-container .logo-box {
+  .logos__item {
     justify-content: center;
   }
 
-  .logos-container .logo-box .text {
+  .logos__text {
     display: none;
     font-size: 10px;
   }
 
-  .logos-container .logo-box .logo img {
+  .logos__img {
     width: 100px;
   }
 
