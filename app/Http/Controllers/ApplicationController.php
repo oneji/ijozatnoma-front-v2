@@ -25,4 +25,12 @@ class ApplicationController extends Controller
     {
         return view('applications.create');
     }
+
+    /**
+     * Store a newly created application
+     */
+    public function store(Request $request)
+    {
+        return $request->all();
+    }
 }

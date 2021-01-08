@@ -23,7 +23,7 @@ $(function () {
     });
 
     // Custom file uploader JS
-    $('.custom-file-input').each(function() {
+    $('.custom-file input').each(function() {
         let $input = $(this);
         let $label = $input.next('label');
         let labelVal = $label.html();

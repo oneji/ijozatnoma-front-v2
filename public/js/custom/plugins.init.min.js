@@ -20,7 +20,7 @@ $(function () {
     }
   }); // Custom file uploader JS
 
-  $('.custom-file-input').each(function () {
+  $('.custom-file input').each(function () {
     var $input = $(this);
     var $label = $input.next('label');
     var labelVal = $label.html();

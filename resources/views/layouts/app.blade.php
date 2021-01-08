@@ -24,7 +24,8 @@
         <link href="{{ asset('plugins/fontawesome/css/all.min.css') }}" rel="stylesheet">
         <link href="{{ asset('plugins/hamburgers/dist/hamburgers.css') }}" rel="stylesheet">
         <link href="{{ asset('plugins/datatables/datatables.min.css') }}" rel="stylesheet">
-        <link rel="stylesheet" href="{{ asset('plugins/bootstrap-datepicker-1.9.0-dist/css/bootstrap-datepicker.min.css') }}">
+        <link href="{{ asset('plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('plugins/parsleyjs/src/parsley.css') }}" rel="stylesheet">
     @show
 </head>
 <body>
@@ -182,9 +183,11 @@
         <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
         <script src="{{ asset('plugins/bootstrap/js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('plugins/datatables/datatables.min.js') }}"></script>
-        <script src="{{ asset('plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js') }}"></script>
-        <script src="{{ asset('plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.ru.min.js') }}"></script>
+        <script src="{{ asset('plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}"></script>
+        <script src="{{ asset('plugins/bootstrap-datepicker/locales/bootstrap-datepicker.ru.min.js') }}"></script>
         <script src="{{ asset('js/custom/plugins.init.min.js') }}"></script>
+        <script src="{{ asset('plugins/parsleyjs/dist/parsley.min.js') }}"></script>
+        <script src="{{ asset('plugins/parsleyjs/dist/i18n/ru.js') }}"></script>
     @show
 </body>
 </html>
