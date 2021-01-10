@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('login', 'AuthController@showLoginForm');
 Route::post('login', 'SmsController@send')->name('login');
-
-Route::get('verify', 'AuthController@showVerifyForm')->name('verifyForm');
+Route::get('verify', 'AuthController@showVerifyForm');
 Route::post('verify', 'SmsController@verify')->name('verify');
+Route::get('register', 'AuthController@showRegisterForm');
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('contacts', 'ContactController@index')->name('contacts');

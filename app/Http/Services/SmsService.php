@@ -4,6 +4,9 @@ namespace App\Http\Services;
 
 use App\SmsCode;
 use Carbon\Carbon;
+use GuzzleHttp\Exception\ClientException;
+use GuzzleHttp\Exception\RequestException;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
 class SmsService
@@ -26,16 +29,61 @@ class SmsService
         $smsCode = null;
         if($oldCodes->count() === 0) {
             $randomCode = mt_rand(100000, 999999);
-            # sms logic
             $smsCode = new SmsCode();
             $smsCode->phone_number = $phoneNumber;
             $smsCode->code = $randomCode;
             $smsCode->sent_at = $now;
             $smsCode->expires_at = $threeMinsLater;
             $smsCode->save();
+            
+            # sms logic
+            // $login = config('app.sms.login');
+            // $from = config('app.sms.sender');
+            // $smsApi =   config('app.sms.server');
+            // $pass_salt_hash = config('app.sms.hash');
+            // $msg = $smsCode->code;
+            // $txn_id = uniqid();
+            // $dlmr = ';';
+            // $str_hash = hash('sha256', $txn_id.$dlmr.$login.$dlmr.$from.$dlmr.$phoneNumber.$dlmr.$pass_salt_hash);
+
+            // // Create a client with a base URI
+            // $client = new \GuzzleHttp\Client();
+            // // API params
+            // $params = [
+            //     'query' => [
+            //         'from' => $from,
+            //         'phone_number' => $phoneNumber,
+            //         'msg' => $msg,
+            //         'login' => $login,
+            //         'str_hash' => $str_hash,
+            //         'txn_id' => $txn_id
+            //     ]
+            // ];
+            
+            // $response = $client->get($smsApi, $params);
         }
 
-        Session::put('phone', $phoneNumber);
+        // Check if user with such a phone number exists
+        $client = new \GuzzleHttp\Client([
+            'base_uri' => config('app.adminURL')
+        ]);
+        
+        $response = $client->request('GET', "checkClient/$phoneNumber", [ 'http_errors' => false ]);
+        $responseBody = json_decode($response->getBody()->getContents());
+
+        if($response->getStatusCode() === 200) {
+            Session::put('phone', $phoneNumber);
+
+            return [
+                'success' => true
+            ];
+        } else {
+            return [
+                'success' => false,
+                'code' => $responseBody->code,
+                'message' => $responseBody->message
+            ];
+        }
     }
 
     /**
@@ -64,8 +112,29 @@ class SmsService
         $smsCode->active = 0;
         $smsCode->save();
 
-        Session::remove('phone');
+        // Login user via user object
+        // Check if user with such a phone number exists
+        $client = new \GuzzleHttp\Client([
+            'base_uri' => config('app.adminURL')
+        ]);
         
+        $response = $client->request('GET', "checkClient/$phoneNumber", [ 'http_errors' => false ]);
+        $responseBody = json_decode($response->getBody()->getContents());
+
+        if($response->getStatusCode() === 200) {
+            Session::put('user', [
+                'id' => $responseBody->client->id,
+                'name' => $responseBody->client->name,
+                'phone_number' => $responseBody->client->phone_number
+            ]);
+        } else {
+            return [
+                'success' => false,
+                'code' => $responseBody->code,
+                'message' => $responseBody->message
+            ];
+        }
+
         return [
             'success' => true
         ];

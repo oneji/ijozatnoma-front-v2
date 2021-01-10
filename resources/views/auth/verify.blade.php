@@ -36,7 +36,7 @@
                         <label for="verification_code" class="custom-form-control">Коди тайидро ворид кунед</label>
                         <input
                             type="text"
-                            class="custom-form-control"
+                            class="custom-form-control text-center"
                             name="verification_code"
                             id="verification_code"
                             placeholder="МИСОЛ: 999999"

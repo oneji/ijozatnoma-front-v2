@@ -28,9 +28,15 @@ class SmsController extends Controller
      */
     public function send(SmsCodeRequest $request)
     {
-        $this->smsService->send($request->phone_number);
+        $data = $this->smsService->send($request->phone_number);
 
-        return redirect('verify');
+        if(!$data['success']) {
+            return redirect('/register');
+        } else {
+            return redirect('/verify');
+        }
+
+        return response()->json($data);
     }
 
     /**
@@ -48,6 +54,6 @@ class SmsController extends Controller
             ]);
         }
 
-        return $data;
+        return redirect()->back();
     }
 }

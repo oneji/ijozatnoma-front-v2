@@ -2,6 +2,15 @@
 
 return [
 
+    'sms' => [
+        'login' => env('SMS_LOGIN', null),
+        'hash' => env('SMS_HASH', null),
+        'sender' => env('SMS_SENDER', null),
+        'server' => env('SMS_SERVER', null)
+    ],
+
+    'adminURL' => env('ADMIN_URL', null),
+
     /*
     |--------------------------------------------------------------------------
     | Application Name

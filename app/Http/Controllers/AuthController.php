@@ -30,4 +30,14 @@ class AuthController extends Controller
 
         return view('auth.verify');
     }
+
+    /**
+     * Show register form
+     * 
+     * @return \Illuminate\Http\Response
+     */
+    public function showRegisterForm()
+    {
+        return view('auth.register');
+    }
 }

@@ -1,77 +1,54 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>Бақайдгири &middot; РАЁСАТИ ИҶОЗАТНОМАДИҲӢ</title>
+    <!-- Styles -->
+    <link href="{{ asset('images/favicon.ico') }}" rel="shortcut icon" type="image/x-icon">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="login-page" style="background-image: url({{ asset('images/bg/login.jpg') }})">
+        <div class="dotted-bg" style="background-image: url({{ asset('images/bg/login-clip.png') }})"></div>
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+        <div class="form-container">
+            <form action="{{ route('login') }}" method="POST" class="form" data-parsley-validate>
+                @csrf
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
+                <div class="form__body">
+                    <div class="form-group">
+                        <label for="phone_number" class="custom-form-control">Раками телефонро ворид кунед</label>
+                        <input
+                            type="text"
+                            class="custom-form-control"
+                            name="phone_number"
+                            id="phone_number"
+                            placeholder="МИСОЛ: 919-00-00-00"
+                            required
+                        >
+                    </div>
 
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+                    <div class="form-group">
+                        <button type="submit" class="login-button btn-block">Бақайдгири</button>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
+
+        <footer class="footer">
+            <span class="footer__link">IJOZATNOMA.TJ</span> 
+            <span class="d-none d-sm-block">- ҲАМАИ ҲУҚУҚҲО ДАР ТАҲТИ ҲИМОЯ ҚАРОР ДОРАНД</span>
+        </footer>
     </div>
-</div>
-@endsection
+
+    <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('plugins/inputmask/dist/jquery.inputmask.js') }}"></script>
+    <script src="{{ asset('plugins/parsleyjs/dist/parsley.min.js') }}"></script>
+    <script src="{{ asset('plugins/parsleyjs/dist/i18n/ru.js') }}"></script>
+    <script src="{{ asset('js/custom/login.js') }}"></script>
+</body>
+</html>
