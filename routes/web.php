@@ -14,13 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/login', 'Auth\LoginController@showLoginForm');
-Route::post('/login', 'SmsController@send')->name('login');
+Route::get('login', 'AuthController@showLoginForm');
+Route::post('login', 'SmsController@send')->name('login');
+
+Route::get('verify', 'AuthController@showVerifyForm')->name('verifyForm');
+Route::post('verify', 'SmsController@verify')->name('verify');
 
 Route::get('/', 'HomeController@index')->name('home');
-Route::get('/contacts', 'ContactController@index')->name('contacts');
-Route::get('/legislature', 'LegislatureController@index')->name('legislature');
-Route::get('/doc-types', 'DocTypeController@index')->name('docTypes');
-Route::get('/applications', 'ApplicationController@index')->name('applications');
-Route::get('/applications/create', 'ApplicationController@create')->name('applications.create');
-Route::post('/applications', 'ApplicationController@store')->name('applications.store');
+Route::get('contacts', 'ContactController@index')->name('contacts');
+Route::get('legislature', 'LegislatureController@index')->name('legislature');
+Route::get('doc-types', 'DocTypeController@index')->name('docTypes');
+Route::get('applications', 'ApplicationController@index')->name('applications');
+Route::get('applications/create', 'ApplicationController@create')->name('applications.create');
+Route::post('applications', 'ApplicationController@store')->name('applications.store');

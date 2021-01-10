@@ -4,6 +4,7 @@ namespace App\Http\Services;
 
 use App\SmsCode;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Session;
 
 class SmsService
 {
@@ -33,5 +34,40 @@ class SmsService
             $smsCode->expires_at = $threeMinsLater;
             $smsCode->save();
         }
+
+        Session::put('phone', $phoneNumber);
+    }
+
+    /**
+     * Verify sms code
+     * 
+     * @param int $smsCode
+     */
+    public function verify($smsCode)
+    {
+        $phoneNumber = Session::get('phone');
+
+        $smsCode = SmsCode::wherePhoneNumber($phoneNumber)
+            ->where('code', $smsCode)
+            ->where('active', 1)
+            ->first();
+
+        // Sms code is correct
+        if(!$smsCode) {
+            return [
+                'success' => false,
+                'message' => 'Введен неверный код подтверждения.'
+            ];
+        }
+
+        // TODO: Make API call to admin to get user credentials
+        $smsCode->active = 0;
+        $smsCode->save();
+
+        Session::remove('phone');
+        
+        return [
+            'success' => true
+        ];
     }
 }

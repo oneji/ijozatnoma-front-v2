@@ -4,4 +4,8 @@ $(function () {
     mask: '999-99-99-99',
     removeMaskOnSubmit: true
   });
+  $('#verification_code').inputmask({
+    mask: '999999',
+    removeMaskOnSubmit: true
+  });
 });

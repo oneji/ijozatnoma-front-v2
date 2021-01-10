@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\SmsCodeRequest;
 use App\Http\Services\SmsService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class SmsController extends Controller
 {
@@ -29,6 +30,24 @@ class SmsController extends Controller
     {
         $this->smsService->send($request->phone_number);
 
-        return $request->all();
+        return redirect('verify');
+    }
+
+    /**
+     * Verify sms code
+     * 
+     * @param \Illuminate\Http\Request $request
+     */
+    public function verify(Request $request)
+    {
+        $data = $this->smsService->verify($request->verification_code);
+
+        if(!$data['success']) {
+            return redirect()->back()->withErrors([
+                $data['message']
+            ]);
+        }
+
+        return $data;
     }
 }
