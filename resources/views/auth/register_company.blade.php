@@ -33,7 +33,7 @@
                                     <div class="row">
                                         <div class="form-group col-sm-12 col-md-12 col-lg-12 col-xl-12">
                                             <div class="register__type">
-                                                <a href="{{ route('registerCompany') }}" class="{{ Request::segment(2) === 'company' ? 'active' : null }}">Шахси хукуки</a>
+                                                <a href="{{ route('registerCompany') }}" class="{{ Request::segment(2) === 'company' ? 'active' : null }}">Шахси Ҳуқуқӣ</a>
                                                 <a href="{{ route('registerCitizen') }}" class="{{ Request::segment(2) === 'citizen' ? 'active' : null }}">Шахси инфироди</a>
                                             </div>
                                         </div>
@@ -47,8 +47,6 @@
                                                 id="name"
                                                 placeholder="Введите название"
                                                 required
-                                                max="100"
-                                                data-parsley-max="100"
                                             >
                                         </div>
 
