@@ -54,6 +54,6 @@ class SmsController extends Controller
             ]);
         }
 
-        return redirect()->back();
+        return redirect()->route('home');
     }
 }

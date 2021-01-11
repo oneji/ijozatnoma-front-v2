@@ -31,11 +31,19 @@
             <div class="container">
                 <nav class="navbar py-0 px-0">
                     <div class="user">
-                        <img src="{{ asset('images/user.png') }}" alt="user">
+                        <a href="{{ route('home') }}">
+                            <img src="{{ asset('images/user.png') }}" alt="user">
+                        </a>
                         
                         <ul class="user__links">
                             <li><a href="#">{{ __('menu.privateData') }}</a></li>
-                            <li><a href="#">{{ __('auth.logout') }}</a></li>
+                            <li>
+                                <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('auth.logout') }}</a>
+                                
+                                <form action="{{ route('logout') }}" method="POST" id="logout-form">
+                                    @csrf
+                                </form>
+                            </li>
                         </ul>
                     </div>
                     <div class="dropdown language-selector">
@@ -131,7 +139,9 @@
             
             <div class="mobile-menu">
                 <div class="user">
-                    <img src="{{ asset('images/user.png') }}" alt="user">
+                    <a href="{{ route('home') }}">
+                        <img src="{{ asset('images/user.png') }}" alt="user">
+                    </a>
                     <ul class="user__links">
                         <li><a href="#">{{ __('menu.privateData') }}</a></li>
                         <li><a href="#">{{ __('auth.logout') }}</a></li>

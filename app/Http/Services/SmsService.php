@@ -121,19 +121,19 @@ class SmsService
         $response = $client->request('GET', "checkClient/$phoneNumber", [ 'http_errors' => false ]);
         $responseBody = json_decode($response->getBody()->getContents());
 
-        if($response->getStatusCode() === 200) {
-            Session::put('user', [
-                'id' => $responseBody->client->id,
-                'name' => $responseBody->client->name,
-                'phone_number' => $responseBody->client->phone_number
-            ]);
-        } else {
+        if($response->getStatusCode() !== 200) {
             return [
                 'success' => false,
                 'code' => $responseBody->code,
                 'message' => $responseBody->message
-            ];
+            ];   
         }
+
+        Session::put('user', [
+            'id' => $responseBody->client->id,
+            'name' => $responseBody->client->name,
+            'phone_number' => $responseBody->client->phone_number
+        ]);
 
         return [
             'success' => true

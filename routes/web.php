@@ -31,12 +31,18 @@ Route::group([
     Route::post('register/company', 'AuthController@registerCompany')->name('registerCompany');
     Route::post('register/citizen', 'AuthController@registerCitizen')->name('registerCitizen');
     // Pages
-    Route::get('/', 'HomeController@index')->name('home');
-    Route::get('contacts', 'ContactController@index')->name('contacts');
-    Route::get('legislature', 'LegislatureController@index')->name('legislature');
-    Route::get('doc-types', 'DocTypeController@index')->name('docTypes');
-    Route::get('applications', 'ApplicationController@index')->name('applications');
-    Route::get('applications/create', 'ApplicationController@create')->name('applications.create');
-    Route::post('applications', 'ApplicationController@store')->name('applications.store');
+    Route::middleware('auth.session')->group(function() {
+        Route::get('/', 'HomeController@index')->name('home');
+        Route::get('contacts', 'ContactController@index')->name('contacts');
+        Route::get('legislature', 'LegislatureController@index')->name('legislature');
+        Route::get('doc-types', 'DocTypeController@index')->name('docTypes');
+        Route::get('applications', 'ApplicationController@index')->name('applications');
+        Route::get('applications/create', 'ApplicationController@create')->name('applications.create');
+        Route::post('applications', 'ApplicationController@store')->name('applications.store');
+
+        // Logout
+        Route::post('logout', 'AuthController@logout')->name('logout');
+    });
+    
 });
 

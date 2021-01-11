@@ -96,9 +96,19 @@ class AuthController extends Controller
      */
     public function registerCitizen(RegisterCitizenRequest $request)
     {
-        // return $request->all();
         $data = $this->authService->registerCitizen($request);
 
         return response()->json($data);
+    }
+
+    /**
+     * Logout user
+     */
+    public function logout()
+    {
+        Session::forget('user');
+        Session::forget('phone');
+
+        return redirect()->route('loginForm');
     }
 }
