@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,12 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('login', 'AuthController@showLoginForm');
+// Login
+Route::get('login', 'AuthController@showLoginForm')->name('loginForm');
 Route::post('login', 'SmsController@send')->name('login');
-Route::get('verify', 'AuthController@showVerifyForm');
+// Verify
+Route::get('verify', 'AuthController@showVerifyForm')->name('verifyForm');
 Route::post('verify', 'SmsController@verify')->name('verify');
-Route::get('register', 'AuthController@showRegisterForm');
-
+// Register
+Route::get('register/company', 'AuthController@showRegisterCompanyForm')->name('registerCompanyForm');
+Route::get('register/citizen', 'AuthController@showRegisterCitizenForm')->name('registerCitizenForm');
+Route::post('register/company', 'AuthController@registerCompany')->name('registerCompany');
+Route::post('register/citizen', 'AuthController@registerCitizen')->name('registerCitizen');
+// Pages
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('contacts', 'ContactController@index')->name('contacts');
 Route::get('legislature', 'LegislatureController@index')->name('legislature');

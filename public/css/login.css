@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .dotted-bg {
   background-size: contain;
   background-position: center;
@@ -15,6 +17,29 @@
   max-width: 800px;
 }
 
+.register__type {
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.register__type a {
+  width: 100%;
+  padding: 10px 20px;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: 0.3s all ease;
+}
+
+.register__type a:hover {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.register__type a.active {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .login {
   height: 100vh;
   background-position: center;
@@ -28,6 +53,8 @@
 .login .footer {
   position: fixed;
   bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .footer {
@@ -151,7 +178,7 @@
   font-size: 0.9em;
   line-height: 0.9em;
   opacity: 0;
-  color: #fff;
+  color: red;
   transition: all 0.3s ease-in;
   -o-transition: all 0.3s ease-in;
   -moz-transition: all 0.3s ease-in;
@@ -182,6 +209,11 @@ input.auth-form-control {
   color: #ffffff;
   transition: 0.3s all ease;
   font-size: 14px;
+  border-radius: 0;
+}
+
+input.auth-form-control:focus {
+  box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
 }
 
 input.auth-form-control::-moz-placeholder {
@@ -213,6 +245,26 @@ input.auth-form-control:-ms-input-placeholder {
 input.auth-form-control::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #ffffff;
+}
+
+input.auth-form-control.datepicker {
+  padding-right: 40px;
+}
+
+.datepicker-wrapper {
+  position: relative;
+}
+
+.datepicker-wrapper::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\F073";
+  position: absolute;
+  right: 20px;
+  top: 6px;
+  z-index: 2;
+  color: #ffffff;
+  font-size: 18px;
 }
 
 select.auth-form-control {

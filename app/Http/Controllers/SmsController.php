@@ -31,9 +31,9 @@ class SmsController extends Controller
         $data = $this->smsService->send($request->phone_number);
 
         if(!$data['success']) {
-            return redirect('/register');
+            return redirect()->route('registerCompany');
         } else {
-            return redirect('/verify');
+            return redirect()->route('verify');
         }
 
         return response()->json($data);
