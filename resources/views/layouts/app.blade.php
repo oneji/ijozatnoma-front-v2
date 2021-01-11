@@ -35,22 +35,56 @@
                         
                         <ul class="user__links">
                             <li><a href="#">Ахбороти шахси</a></li>
-                            <li><a href="#">Баромад</a></li>
+                            <li><a href="#">{{ __('auth.logout') }}</a></li>
                         </ul>
                     </div>
                     <div class="dropdown language-selector">
-                        <a href="#" class="language-selector__anchor" id="dropdownLanguageSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="flag-icon flag-icon-tj mr-2"></span> Точ
-                            <i class="fas fa-angle-down ml-2"></i>
-                        </a>
-                        <div class="dropdown-menu language-menu" aria-labelledby="dropdownLanguageSelector">
-                            <a class="dropdown-item" href="#">
-                                <span class="flag-icon flag-icon-ru mr-2"></span> РУС
-                            </a>
-                            <a class="dropdown-item" href="#">
-                                <span class="flag-icon flag-icon-us mr-2"></span> ENG
-                            </a>
-                        </div>
+                        @switch(App::getLocale())
+                            @case('tj')
+                                <a href="#" class="language-selector__anchor" id="dropdownLanguageSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="flag-icon flag-icon-tj mr-2"></span> Точ
+                                    <i class="fas fa-angle-down ml-2"></i>
+                                </a>
+                                <div class="dropdown-menu language-menu" aria-labelledby="dropdownLanguageSelector">
+                                    <a class="dropdown-item" href="{{ LaravelLocalization::localizeUrl(route('lang.switch', 'ru')) }}">
+                                        <span class="flag-icon flag-icon-ru mr-2"></span> РУС
+                                    </a>
+                                    <a class="dropdown-item" href="{{ LaravelLocalization::localizeUrl(route('lang.switch', 'en')) }}">
+                                        <span class="flag-icon flag-icon-us mr-2"></span> ENG
+                                    </a>
+                                </div>
+                                @break
+                            @case('ru')
+                                <a href="#" class="language-selector__anchor" id="dropdownLanguageSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="flag-icon flag-icon-ru mr-2"></span> РУС
+                                    <i class="fas fa-angle-down ml-2"></i>
+                                </a>
+                                <div class="dropdown-menu language-menu" aria-labelledby="dropdownLanguageSelector">
+                                    <a class="dropdown-item" href="{{ LaravelLocalization::localizeUrl(route('lang.switch', 'tj')) }}">
+                                        <span class="flag-icon flag-icon-tj mr-2"></span> ТОЧ
+                                    </a>
+                                    <a class="dropdown-item" href="{{ LaravelLocalization::localizeUrl(route('lang.switch', 'en')) }}">
+                                        <span class="flag-icon flag-icon-us mr-2"></span> ENG
+                                    </a>
+                                </div>
+                                @break
+                            @case('en')
+                                <a href="#" class="language-selector__anchor" id="dropdownLanguageSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="flag-icon flag-icon-us mr-2"></span> ENG
+                                    <i class="fas fa-angle-down ml-2"></i>
+                                </a>
+                                <div class="dropdown-menu language-menu" aria-labelledby="dropdownLanguageSelector">
+                                    <a class="dropdown-item" href="{{ LaravelLocalization::localizeUrl(route('lang.switch', 'tj')) }}">
+                                        <span class="flag-icon flag-icon-tj mr-2"></span> ТОЧ
+                                    </a>
+                                    <a class="dropdown-item" href="{{ LaravelLocalization::localizeUrl(route('lang.switch', 'ru')) }}">
+                                        <span class="flag-icon flag-icon-ru mr-2"></span> РУС
+                                    </a>
+                                </div>
+                                @break
+                            @default
+                                
+                        @endswitch
                     </div>
                 </nav>
 
@@ -100,7 +134,7 @@
                     <img src="{{ asset('images/user.png') }}" alt="user">
                     <ul class="user__links">
                         <li><a href="#">Ахбороти шахси</a></li>
-                        <li><a href="#">Баромад</a></li>
+                        <li><a href="#">{{ __('auth.logout') }}</a></li>
                     </ul>
                 </div>
                 <div class="d-flex justify-content-between align-items-center pt-1">
