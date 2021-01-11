@@ -20,7 +20,7 @@
                         <div class="form-container">
                             <div class="form-container__title">
                                 <img src="{{ asset('images/icons/key.png') }}" alt="">
-                                <p>Тасдиқи рамз</p>
+                                <p>{{ __('auth.verifyFormTitle') }}</p>
                             </div>
     
                             <form action="{{ route('verify') }}" method="POST" class="form" data-parsley-validate>
@@ -52,7 +52,7 @@
                 
                                     <div class="form-group">
                                         <button type="submit" class="auth-button btn-block">
-                                            Даромад
+                                            {{ __('auth.login') }}
                                             <img src="{{ asset('images/icons/fly.png') }}" alt="">
                                         </button>
                                     </div>

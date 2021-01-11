@@ -34,7 +34,7 @@
                         <img src="{{ asset('images/user.png') }}" alt="user">
                         
                         <ul class="user__links">
-                            <li><a href="#">Ахбороти шахси</a></li>
+                            <li><a href="#">{{ __('menu.privateData') }}</a></li>
                             <li><a href="#">{{ __('auth.logout') }}</a></li>
                         </ul>
                     </div>
@@ -107,25 +107,25 @@
 
                 <ul class="faq">
                     <li><a href="#">FAQ</a></li>
-                    <li><a href="#">ХАРИТАИ СОМОНА</a></li>
-                    <li><a href="#">ДИГАР СОМОНАХО</a></li>
+                    <li><a href="#">{{ __('menu.siteMap') }}</a></li>
+                    <li><a href="#">{{ __('menu.otherResources') }}</a></li>
                 </ul>
 
                 <nav class="menu">
                     <ul>
-                        <li class="{{ Route::currentRouteName() === 'home' ? 'active' : null }}"><a href="{{ route('home') }}">АСОСӢ</a></li>
-                        <li class="{{ Route::currentRouteName() === 'applications' ? 'active' : null }}"><a href="{{ route('applications') }}">ДАРХОСТҲОИ МАН</a></li>
-                        <li class="{{ Route::currentRouteName() === 'applications.create' ? 'active' : null }}"><a href="{{ route('applications.create') }}">Дархост кардан</a></li>
-                        <li class="{{ Route::currentRouteName() === 'docTypes' ? 'active' : null }}"><a href="{{ route('docTypes') }}">НАМУДИ ФАЪОЛИЯТҲО БО ҲУҶҶАТҲО</a></li>
-                        <li class="{{ Route::currentRouteName() === 'legislature' ? 'active' : null }}"><a href="{{ route('legislature') }}">ҚОНУНГУЗОРӢ</a></li>
-                        <li class="{{ Route::currentRouteName() === 'contacts' ? 'active' : null }}"><a href="{{ route('contacts') }}">ТАМОС ВА СУРОҒА</a></li>
+                        <li class="{{ Route::currentRouteName() === 'home' ? 'active' : null }}"><a href="{{ route('home') }}">{{ __('menu.home') }}</a></li>
+                        <li class="{{ Route::currentRouteName() === 'applications' ? 'active' : null }}"><a href="{{ route('applications') }}">{{ __('menu.myApplications') }}</a></li>
+                        <li class="{{ Route::currentRouteName() === 'applications.create' ? 'active' : null }}"><a href="{{ route('applications.create') }}">{{ __('menu.createApplication') }}</a></li>
+                        <li class="{{ Route::currentRouteName() === 'docTypes' ? 'active' : null }}"><a href="{{ route('docTypes') }}">{{ __('menu.docTypes') }}</a></li>
+                        <li class="{{ Route::currentRouteName() === 'legislature' ? 'active' : null }}"><a href="{{ route('legislature') }}">{{ __('menu.legislature') }}</a></li>
+                        <li class="{{ Route::currentRouteName() === 'contacts' ? 'active' : null }}"><a href="{{ route('contacts') }}">{{ __('menu.contacts') }}</a></li>
                     </ul>
 
-                    <div class="search">
+                    {{-- <div class="search">
                         <a href="#" class="search__icon">
                             <img src="{{ asset('images/icons/lupa.png') }}" alt="">
                         </a>
-                    </div>
+                    </div> --}}
                 </nav>
             </div>
             
@@ -133,7 +133,7 @@
                 <div class="user">
                     <img src="{{ asset('images/user.png') }}" alt="user">
                     <ul class="user__links">
-                        <li><a href="#">Ахбороти шахси</a></li>
+                        <li><a href="#">{{ __('menu.privateData') }}</a></li>
                         <li><a href="#">{{ __('auth.logout') }}</a></li>
                     </ul>
                 </div>
@@ -154,11 +154,11 @@
                     </div>
 
                     <div class="d-flex justify-content-between align-items-center">
-                        <div class="search">
+                        {{-- <div class="search">
                             <a href="#" class="search__icon">
                                 <img src="{{ asset('images/icons/lupa.png') }}" alt="">
                             </a>
-                        </div>
+                        </div> --}}
 
                         <button class="hamburger hamburger--collapse" type="button">
                             <span class="hamburger-box">
@@ -168,12 +168,12 @@
 
                         <div class="mobile-nav">
                             <ul>
-                                <li><a href="{{ route('home') }}">АСОСӢ</a></li>
-                                <li><a href="{{ route('applications') }}">ДАРХОСТҲОИ МАН</a></li>
-                                <li><a href="{{ route('applications.create') }}">ДАРХОСТ КАРДАН</a></li>
-                                <li><a href="{{ route('docTypes') }}">НАМУДИ ФАЪОЛИЯТҲО БО ҲУҶҶАТҲО</a></li>
-                                <li><a href="{{ route('legislature') }}">ҚОНУНГУЗОРӢ</a></li>
-                                <li><a href="{{ route('contacts') }}">ТАМОС ВА СУРОҒА</a></li>
+                                <li><a href="{{ route('home') }}">{{ __('menu.home') }}</a></li>
+                                <li><a href="{{ route('applications') }}">{{ __('menu.myApplications') }}</a></li>
+                                <li><a href="{{ route('applications.create') }}">{{ __('menu.createApplication') }}</a></li>
+                                <li><a href="{{ route('docTypes') }}">{{ __('menu.docTypes') }}</a></li>
+                                <li><a href="{{ route('legislature') }}">{{ __('menu.legislature') }}</a></li>
+                                <li><a href="{{ route('contacts') }}">{{ __('menu.contacts') }}</a></li>
                             </ul>
                         </div>
                     </div>

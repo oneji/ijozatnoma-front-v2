@@ -20,7 +20,7 @@
                         <div class="form-container">
                             <div class="form-container__title">
                                 <img src="{{ asset('images/icons/key.png') }}" alt="">
-                                <p>Даромад ба утоки шахси</p>
+                                <p>{{ __('auth.loginFormTitle') }}</p>
                             </div>
                             
                             <form action="{{ route('login') }}" method="POST" class="form" data-parsley-validate>
@@ -49,7 +49,7 @@
                 
                                     <div class="form-group">
                                         <button type="submit" class="auth-button btn-block">
-                                            Равон кардани СМС
+                                            {{ __('auth.sendSms') }}
                                             <img src="{{ asset('images/icons/fly.png') }}" alt="">
                                         </button>
                                     </div>

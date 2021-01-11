@@ -23,7 +23,7 @@
                         <div class="form-container">
                             <div class="form-container__title">
                                 <img src="{{ asset('images/icons/key.png') }}" alt="">
-                                <p>Сабти аккаунти нав</p>
+                                <p>{{ __('auth.registerFormTitle') }}</p>
                             </div>
                             
                             <form action="{{ route('registerCompany') }}" method="POST" class="form" data-parsley-validate>
@@ -32,10 +32,7 @@
                                 <div class="form__body">
                                     <div class="row">
                                         <div class="form-group col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                            <div class="register__type">
-                                                <a href="{{ route('registerCompany') }}" class="{{ Request::segment(2) === 'company' ? 'active' : null }}">Шахси Ҳуқуқӣ</a>
-                                                <a href="{{ route('registerCitizen') }}" class="{{ Request::segment(2) === 'citizen' ? 'active' : null }}">Шахси инфироди</a>
-                                            </div>
+                                            @include('auth.partials.__register_type')
                                         </div>
 
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
@@ -317,7 +314,7 @@
                                         </div>
 
                                         <div class="form-group col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                            <button type="submit" class="auth-button btn-block">Бақайдгири</button>
+                                            <button type="submit" class="auth-button btn-block">{{ __('auth.register') }}</button>
                                         </div>
                                     </div>
                                 </div>
