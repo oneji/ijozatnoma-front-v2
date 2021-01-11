@@ -3,6 +3,8 @@
     "/css/app.css": "/css/app.css",
     "/css/styles.css": "/css/styles.css",
     "/css/login.css": "/css/login.css",
+    "/css/auth_components.css": "/css/auth_components.css",
     "/js/custom/plugins.init.js": "/js/custom/plugins.init.js",
-    "/js/custom/login.js": "/js/custom/login.js"
+    "/js/custom/login.js": "/js/custom/login.js",
+    "/js/custom/register.js": "/js/custom/register.js"
 }

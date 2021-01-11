@@ -49879,6 +49879,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/auth_components.scss":
+/*!*********************************************!*\
+  !*** ./resources/sass/auth_components.scss ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: Undefined variable.\n   ╷\n18 │     color: $white;\r\n   │            ^^^^^^\n   ╵\n  D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\resources\\sass\\auth_components.scss 18:12  root stylesheet\n    at D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\webpack\\lib\\NormalModule.js:316:20\n    at D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\sass-loader\\dist\\index.js:73:7\n    at Function.call$2 (D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\sass\\sass.dart.js:90950:16)\n    at _render_closure1.call$2 (D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\sass\\sass.dart.js:79870:12)\n    at _RootZone.runBinary$3$3 (D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\sass\\sass.dart.js:27175:18)\n    at _FutureListener.handleError$1 (D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\sass\\sass.dart.js:25703:19)\n    at _Future__propagateToListeners_handleError.call$0 (D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\sass\\sass.dart.js:26000:49)\n    at Object._Future__propagateToListeners (D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\sass\\sass.dart.js:4539:77)\n    at _Future._completeError$2 (D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\sass\\sass.dart.js:25833:9)\n    at _AsyncAwaitCompleter.completeError$2 (D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\sass\\sass.dart.js:25176:12)\n    at Object._asyncRethrow (D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\sass\\sass.dart.js:4288:17)\n    at D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\sass\\sass.dart.js:13184:20\n    at _wrapJsFunctionForAsync_closure.$protected (D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\sass\\sass.dart.js:4313:15)\n    at _wrapJsFunctionForAsync_closure.call$2 (D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\sass\\sass.dart.js:25197:12)\n    at _awaitOnObject_closure0.call$2 (D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\sass\\sass.dart.js:25189:25)\n    at _RootZone.runBinary$3$3 (D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\sass\\sass.dart.js:27175:18)\n    at _FutureListener.handleError$1 (D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\sass\\sass.dart.js:25703:19)\n    at _Future__propagateToListeners_handleError.call$0 (D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\sass\\sass.dart.js:26000:49)\n    at Object._Future__propagateToListeners (D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\sass\\sass.dart.js:4539:77)\n    at _Future._completeError$2 (D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\sass\\sass.dart.js:25833:9)\n    at _AsyncAwaitCompleter.completeError$2 (D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\sass\\sass.dart.js:25176:12)\n    at Object._asyncRethrow (D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\sass\\sass.dart.js:4288:17)\n    at D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\sass\\sass.dart.js:17963:20\n    at _wrapJsFunctionForAsync_closure.$protected (D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\sass\\sass.dart.js:4313:15)\n    at _wrapJsFunctionForAsync_closure.call$2 (D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\sass\\sass.dart.js:25197:12)\n    at _awaitOnObject_closure0.call$2 (D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\sass\\sass.dart.js:25189:25)\n    at _RootZone.runBinary$3$3 (D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\sass\\sass.dart.js:27175:18)\n    at _FutureListener.handleError$1 (D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\sass\\sass.dart.js:25703:19)\n    at _Future__propagateToListeners_handleError.call$0 (D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\sass\\sass.dart.js:26000:49)\n    at Object._Future__propagateToListeners (D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\sass\\sass.dart.js:4539:77)\n    at _Future._completeError$2 (D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\sass\\sass.dart.js:25833:9)\n    at _AsyncAwaitCompleter.completeError$2 (D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\sass\\sass.dart.js:25176:12)\n    at Object._asyncRethrow (D:\\OpenServer\\domains\\localhost\\ijozatnoma-front-v2\\node_modules\\sass\\sass.dart.js:4288:17)");
+
+/***/ }),
+
 /***/ "./resources/sass/login.scss":
 /*!***********************************!*\
   !*** ./resources/sass/login.scss ***!
@@ -49902,16 +49913,17 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 0:
-/*!**********************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/styles.scss ./resources/sass/login.scss ***!
-  \**********************************************************************************************************************/
+/*!************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/styles.scss ./resources/sass/login.scss ./resources/sass/auth_components.scss ***!
+  \************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\OSPanel\domains\localhost\ijozatnoma-front-v2\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\OSPanel\domains\localhost\ijozatnoma-front-v2\resources\sass\app.scss */"./resources/sass/app.scss");
-__webpack_require__(/*! C:\OSPanel\domains\localhost\ijozatnoma-front-v2\resources\sass\styles.scss */"./resources/sass/styles.scss");
-module.exports = __webpack_require__(/*! C:\OSPanel\domains\localhost\ijozatnoma-front-v2\resources\sass\login.scss */"./resources/sass/login.scss");
+__webpack_require__(/*! D:\OpenServer\domains\localhost\ijozatnoma-front-v2\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! D:\OpenServer\domains\localhost\ijozatnoma-front-v2\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\OpenServer\domains\localhost\ijozatnoma-front-v2\resources\sass\styles.scss */"./resources/sass/styles.scss");
+__webpack_require__(/*! D:\OpenServer\domains\localhost\ijozatnoma-front-v2\resources\sass\login.scss */"./resources/sass/login.scss");
+module.exports = __webpack_require__(/*! D:\OpenServer\domains\localhost\ijozatnoma-front-v2\resources\sass\auth_components.scss */"./resources/sass/auth_components.scss");
 
 
 /***/ })
