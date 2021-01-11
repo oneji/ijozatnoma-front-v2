@@ -5,5 +5,6 @@
     "/css/login.css": "/css/login.css",
     "/js/custom/plugins.init.js": "/js/custom/plugins.init.js",
     "/js/custom/login.js": "/js/custom/login.js",
-    "/js/custom/plugins.init.min.js": "/js/custom/plugins.init.min.js"
+    "/js/custom/register.js": "/js/custom/register.js",
+    "/css/auth_components.css": "/css/auth_components.css"
 }

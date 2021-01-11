@@ -31,26 +31,68 @@
             <div class="container">
                 <nav class="navbar py-0 px-0">
                     <div class="user">
-                        <img src="{{ asset('images/user.png') }}" alt="user">
+                        <a href="{{ route('home') }}">
+                            <img src="{{ asset('images/user.png') }}" alt="user">
+                        </a>
                         
                         <ul class="user__links">
-                            <li><a href="#">Ахбороти шахси</a></li>
-                            <li><a href="#">Баромад</a></li>
+                            <li><a href="#">{{ __('menu.privateData') }}</a></li>
+                            <li>
+                                <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('auth.logout') }}</a>
+                                
+                                <form action="{{ route('logout') }}" method="POST" id="logout-form">
+                                    @csrf
+                                </form>
+                            </li>
                         </ul>
                     </div>
                     <div class="dropdown language-selector">
-                        <a href="#" class="language-selector__anchor" id="dropdownLanguageSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="flag-icon flag-icon-tj mr-2"></span> Точ
-                            <i class="fas fa-angle-down ml-2"></i>
-                        </a>
-                        <div class="dropdown-menu language-menu" aria-labelledby="dropdownLanguageSelector">
-                            <a class="dropdown-item" href="#">
-                                <span class="flag-icon flag-icon-ru mr-2"></span> РУС
-                            </a>
-                            <a class="dropdown-item" href="#">
-                                <span class="flag-icon flag-icon-us mr-2"></span> ENG
-                            </a>
-                        </div>
+                        @switch(App::getLocale())
+                            @case('tj')
+                                <a href="#" class="language-selector__anchor" id="dropdownLanguageSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="flag-icon flag-icon-tj mr-2"></span> Точ
+                                    <i class="fas fa-angle-down ml-2"></i>
+                                </a>
+                                <div class="dropdown-menu language-menu" aria-labelledby="dropdownLanguageSelector">
+                                    <a class="dropdown-item" href="{{ LaravelLocalization::localizeUrl(route('lang.switch', 'ru')) }}">
+                                        <span class="flag-icon flag-icon-ru mr-2"></span> РУС
+                                    </a>
+                                    <a class="dropdown-item" href="{{ LaravelLocalization::localizeUrl(route('lang.switch', 'en')) }}">
+                                        <span class="flag-icon flag-icon-us mr-2"></span> ENG
+                                    </a>
+                                </div>
+                                @break
+                            @case('ru')
+                                <a href="#" class="language-selector__anchor" id="dropdownLanguageSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="flag-icon flag-icon-ru mr-2"></span> РУС
+                                    <i class="fas fa-angle-down ml-2"></i>
+                                </a>
+                                <div class="dropdown-menu language-menu" aria-labelledby="dropdownLanguageSelector">
+                                    <a class="dropdown-item" href="{{ LaravelLocalization::localizeUrl(route('lang.switch', 'tj')) }}">
+                                        <span class="flag-icon flag-icon-tj mr-2"></span> ТОЧ
+                                    </a>
+                                    <a class="dropdown-item" href="{{ LaravelLocalization::localizeUrl(route('lang.switch', 'en')) }}">
+                                        <span class="flag-icon flag-icon-us mr-2"></span> ENG
+                                    </a>
+                                </div>
+                                @break
+                            @case('en')
+                                <a href="#" class="language-selector__anchor" id="dropdownLanguageSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="flag-icon flag-icon-us mr-2"></span> ENG
+                                    <i class="fas fa-angle-down ml-2"></i>
+                                </a>
+                                <div class="dropdown-menu language-menu" aria-labelledby="dropdownLanguageSelector">
+                                    <a class="dropdown-item" href="{{ LaravelLocalization::localizeUrl(route('lang.switch', 'tj')) }}">
+                                        <span class="flag-icon flag-icon-tj mr-2"></span> ТОЧ
+                                    </a>
+                                    <a class="dropdown-item" href="{{ LaravelLocalization::localizeUrl(route('lang.switch', 'ru')) }}">
+                                        <span class="flag-icon flag-icon-ru mr-2"></span> РУС
+                                    </a>
+                                </div>
+                                @break
+                            @default
+                                
+                        @endswitch
                     </div>
                 </nav>
 
@@ -73,34 +115,36 @@
 
                 <ul class="faq">
                     <li><a href="#">FAQ</a></li>
-                    <li><a href="#">ХАРИТАИ СОМОНА</a></li>
-                    <li><a href="#">ДИГАР СОМОНАХО</a></li>
+                    <li><a href="#">{{ __('menu.siteMap') }}</a></li>
+                    <li><a href="#">{{ __('menu.otherResources') }}</a></li>
                 </ul>
 
                 <nav class="menu">
                     <ul>
-                        <li class="{{ Route::currentRouteName() === 'home' ? 'active' : null }}"><a href="{{ route('home') }}">АСОСӢ</a></li>
-                        <li class="{{ Route::currentRouteName() === 'applications' ? 'active' : null }}"><a href="{{ route('applications') }}">ДАРХОСТҲОИ МАН</a></li>
-                        <li class="{{ Route::currentRouteName() === 'applications.create' ? 'active' : null }}"><a href="{{ route('applications.create') }}">Дархост кардан</a></li>
-                        <li class="{{ Route::currentRouteName() === 'docTypes' ? 'active' : null }}"><a href="{{ route('docTypes') }}">НАМУДИ ФАЪОЛИЯТҲО БО ҲУҶҶАТҲО</a></li>
-                        <li class="{{ Route::currentRouteName() === 'legislature' ? 'active' : null }}"><a href="{{ route('legislature') }}">ҚОНУНГУЗОРӢ</a></li>
-                        <li class="{{ Route::currentRouteName() === 'contacts' ? 'active' : null }}"><a href="{{ route('contacts') }}">ТАМОС ВА СУРОҒА</a></li>
+                        <li class="{{ Route::currentRouteName() === 'home' ? 'active' : null }}"><a href="{{ route('home') }}">{{ __('menu.home') }}</a></li>
+                        <li class="{{ Route::currentRouteName() === 'applications' ? 'active' : null }}"><a href="{{ route('applications') }}">{{ __('menu.myApplications') }}</a></li>
+                        <li class="{{ Route::currentRouteName() === 'applications.create' ? 'active' : null }}"><a href="{{ route('applications.create') }}">{{ __('menu.createApplication') }}</a></li>
+                        <li class="{{ Route::currentRouteName() === 'docTypes' ? 'active' : null }}"><a href="{{ route('docTypes') }}">{{ __('menu.docTypes') }}</a></li>
+                        <li class="{{ Route::currentRouteName() === 'legislature' ? 'active' : null }}"><a href="{{ route('legislature') }}">{{ __('menu.legislature') }}</a></li>
+                        <li class="{{ Route::currentRouteName() === 'contacts' ? 'active' : null }}"><a href="{{ route('contacts') }}">{{ __('menu.contacts') }}</a></li>
                     </ul>
 
-                    <div class="search">
+                    {{-- <div class="search">
                         <a href="#" class="search__icon">
                             <img src="{{ asset('images/icons/lupa.png') }}" alt="">
                         </a>
-                    </div>
+                    </div> --}}
                 </nav>
             </div>
             
             <div class="mobile-menu">
                 <div class="user">
-                    <img src="{{ asset('images/user.png') }}" alt="user">
+                    <a href="{{ route('home') }}">
+                        <img src="{{ asset('images/user.png') }}" alt="user">
+                    </a>
                     <ul class="user__links">
-                        <li><a href="#">Ахбороти шахси</a></li>
-                        <li><a href="#">Баромад</a></li>
+                        <li><a href="#">{{ __('menu.privateData') }}</a></li>
+                        <li><a href="#">{{ __('auth.logout') }}</a></li>
                     </ul>
                 </div>
                 <div class="d-flex justify-content-between align-items-center pt-1">
@@ -120,11 +164,11 @@
                     </div>
 
                     <div class="d-flex justify-content-between align-items-center">
-                        <div class="search">
+                        {{-- <div class="search">
                             <a href="#" class="search__icon">
                                 <img src="{{ asset('images/icons/lupa.png') }}" alt="">
                             </a>
-                        </div>
+                        </div> --}}
 
                         <button class="hamburger hamburger--collapse" type="button">
                             <span class="hamburger-box">
@@ -134,12 +178,12 @@
 
                         <div class="mobile-nav">
                             <ul>
-                                <li><a href="{{ route('home') }}">АСОСӢ</a></li>
-                                <li><a href="{{ route('applications') }}">ДАРХОСТҲОИ МАН</a></li>
-                                <li><a href="{{ route('applications.create') }}">ДАРХОСТ КАРДАН</a></li>
-                                <li><a href="{{ route('docTypes') }}">НАМУДИ ФАЪОЛИЯТҲО БО ҲУҶҶАТҲО</a></li>
-                                <li><a href="{{ route('legislature') }}">ҚОНУНГУЗОРӢ</a></li>
-                                <li><a href="{{ route('contacts') }}">ТАМОС ВА СУРОҒА</a></li>
+                                <li><a href="{{ route('home') }}">{{ __('menu.home') }}</a></li>
+                                <li><a href="{{ route('applications') }}">{{ __('menu.myApplications') }}</a></li>
+                                <li><a href="{{ route('applications.create') }}">{{ __('menu.createApplication') }}</a></li>
+                                <li><a href="{{ route('docTypes') }}">{{ __('menu.docTypes') }}</a></li>
+                                <li><a href="{{ route('legislature') }}">{{ __('menu.legislature') }}</a></li>
+                                <li><a href="{{ route('contacts') }}">{{ __('menu.contacts') }}</a></li>
                             </ul>
                         </div>
                     </div>

@@ -49879,6 +49879,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/auth_components.scss":
+/*!*********************************************!*\
+  !*** ./resources/sass/auth_components.scss ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/login.scss":
 /*!***********************************!*\
   !*** ./resources/sass/login.scss ***!
@@ -49902,16 +49913,17 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 0:
-/*!**********************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/styles.scss ./resources/sass/login.scss ***!
-  \**********************************************************************************************************************/
+/*!************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/styles.scss ./resources/sass/login.scss ./resources/sass/auth_components.scss ***!
+  \************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! D:\OpenServer\domains\localhost\ijozatnoma-front-v2\resources\js\app.js */"./resources/js/app.js");
 __webpack_require__(/*! D:\OpenServer\domains\localhost\ijozatnoma-front-v2\resources\sass\app.scss */"./resources/sass/app.scss");
 __webpack_require__(/*! D:\OpenServer\domains\localhost\ijozatnoma-front-v2\resources\sass\styles.scss */"./resources/sass/styles.scss");
-module.exports = __webpack_require__(/*! D:\OpenServer\domains\localhost\ijozatnoma-front-v2\resources\sass\login.scss */"./resources/sass/login.scss");
+__webpack_require__(/*! D:\OpenServer\domains\localhost\ijozatnoma-front-v2\resources\sass\login.scss */"./resources/sass/login.scss");
+module.exports = __webpack_require__(/*! D:\OpenServer\domains\localhost\ijozatnoma-front-v2\resources\sass\auth_components.scss */"./resources/sass/auth_components.scss");
 
 
 /***/ })

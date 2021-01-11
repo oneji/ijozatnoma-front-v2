@@ -2,6 +2,15 @@
 
 return [
 
+    'sms' => [
+        'login' => env('SMS_LOGIN', null),
+        'hash' => env('SMS_HASH', null),
+        'sender' => env('SMS_SENDER', null),
+        'server' => env('SMS_SERVER', null)
+    ],
+
+    'adminURL' => env('ADMIN_URL', null),
+
     /*
     |--------------------------------------------------------------------------
     | Application Name
@@ -80,7 +89,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'tj',
 
     /*
     |--------------------------------------------------------------------------
@@ -93,7 +102,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'ru',
 
     /*
     |--------------------------------------------------------------------------

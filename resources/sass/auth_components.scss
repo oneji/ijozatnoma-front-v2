@@ -1,0 +1,111 @@
+// Variables
+@import 'variables';
+
+label.auth-form-control {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: 1px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input.auth-form-control {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px 15px;
+    border-bottom: 3px solid #3E3E3E;
+    background-color: rgba(0,0,0,.1);
+    color: $white;
+    transition: .3s all ease;
+    font-size: 14px;
+    border-radius: 0;
+
+    &:focus {
+        box-shadow: 0 3px 3px -2px rgba(0,0,0,.2),0 3px 4px 0 rgba(0,0,0,.14),0 1px 8px 0 rgba(0, 0, 0, .12);
+    }
+
+    // Change placeholder color
+    &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: $white;
+        opacity: 1; /* Firefox */
+    }
+      
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: $white;
+    }
+      
+    &::-ms-input-placeholder { /* Microsoft Edge */
+        color: $white;
+    }
+
+    &.datepicker {
+        padding-right: 40px;
+    }
+}
+
+.datepicker-wrapper {
+    position: relative;
+
+    &::after {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f073";
+        position: absolute;
+        right: 20px;
+        top: 6px;
+        z-index: 2;
+        color: $white;
+        font-size: 18px;
+    }
+}
+
+select.auth-form-control {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px 15px;
+    border-bottom: 3px solid #3E3E3E;
+    background-color: rgba(0,0,0,.1);
+    color: $white;
+    transition: .3s all ease;
+    font-size: 14px;
+    display: block;
+}
+
+.auth-button {
+    border: none;
+    outline: none;
+    padding: 15px;
+    background-color:  #3E3E3E;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: .3s all ease;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    -webkit-box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+        background-color: #333232;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 0.25rem rgba(49,132,253,.5);
+    }
+
+    img {
+        width: 40px;
+        position: absolute;
+        right: 15px;
+    }
+}
