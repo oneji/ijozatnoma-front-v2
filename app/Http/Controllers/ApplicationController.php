@@ -26,7 +26,9 @@ class ApplicationController extends Controller
      */
     public function index()
     {
-        return view('applications.index');
+        $data = $this->applicationService->all();
+
+        return view('applications.index', $data);
     }
 
     /**

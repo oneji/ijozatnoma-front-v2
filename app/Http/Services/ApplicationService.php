@@ -19,6 +19,23 @@ class ApplicationService
     }
 
     /**
+     * Get all applications
+     */
+    public function all()
+    {
+        $user = session('user');
+        $data = [];
+
+        if($user['type'] === 'company') {
+            $data = $this->httpClient->request('GET', 'requests/companies/getRequests/'. $user['phone_number']);
+        } else {
+            $data = $this->httpClient->request('GET', 'requests/citizens/getRequests/'. $user['phone_number']);
+        }
+
+        return $data;
+    }
+
+    /**
      * Get company application list data
      * 
      * @return array $data
@@ -29,7 +46,7 @@ class ApplicationService
         $data = [];
 
         if($user['type'] === 'company') {
-            $data = $this->httpClient->request('GET', "requests/companies/getListInfo/". $user['phone_number']);
+            $data = $this->httpClient->request('GET', 'requests/companies/getListInfo/'. $user['phone_number']);
         } else {
             $data = $this->httpClient->request('GET', 'requests/citizens/getListInfo');
         }
