@@ -78,11 +78,30 @@ input.auth-form-control.datepicker {
   font-size: 18px;
 }
 
+.auth-select-wrapper {
+  position: relative;
+}
+
+.auth-select-wrapper::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\F078";
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  z-index: 2;
+  color: #ffffff;
+}
+
 select.auth-form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
   border: none;
   outline: none;
   width: 100%;
-  padding: 10px 15px;
+  padding: 10px 40px 10px 15px;
   border-bottom: 3px solid #3E3E3E;
   background-color: rgba(0, 0, 0, 0.1);
   color: #ffffff;

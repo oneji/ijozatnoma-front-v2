@@ -49,11 +49,13 @@
 
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
                                             <label for="company_type_id" class="mb-0 text-white">Тип компании</label>
-                                            <select class="auth-form-control" name="company_type_id" required>
-                                                @foreach ($lists['types'] as $type)
-                                                    <option value="{{ $type->id }}">{{ $type->title }} ({{ $type->short_title }})</option>
-                                                @endforeach
-                                            </select>
+                                            <div class="auth-select-wrapper">
+                                                <select class="auth-form-control" name="company_type_id" required>
+                                                    @foreach ($lists['types'] as $type)
+                                                        <option value="{{ $type->id }}">{{ $type->title }} ({{ $type->short_title }})</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
                                         </div>
                     
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
@@ -108,20 +110,24 @@
                     
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
                                             <label for="region_id" class="mb-0 text-white">Регион</label>
-                                            <select class="auth-form-control" name="region_id" required>
-                                                @foreach ($lists['regions'] as $region)
-                                                    <option value="{{ $region->id }}">{{ $region->name }}</option>
-                                                @endforeach
-                                            </select>
+                                            <div class="auth-select-wrapper">
+                                                <select class="auth-form-control" name="region_id" required>
+                                                    @foreach ($lists['regions'] as $region)
+                                                        <option value="{{ $region->id }}">{{ $region->name }}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
                                         </div>
                     
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
                                             <label for="city_id" class="mb-0 text-white">Город</label>
-                                            <select class="auth-form-control" name="city_id" required>
-                                                @foreach ($lists['cities'] as $city)
-                                                    <option value="{{ $city->id }}">{{ $city->name }}</option>
-                                                @endforeach
-                                            </select>
+                                            <div class="auth-select-wrapper">
+                                                <select class="auth-form-control" name="city_id" required>
+                                                    @foreach ($lists['cities'] as $city)
+                                                        <option value="{{ $city->id }}">{{ $city->name }}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
                                         </div>
                     
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">

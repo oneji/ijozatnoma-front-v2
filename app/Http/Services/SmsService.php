@@ -132,7 +132,8 @@ class SmsService
         Session::put('user', [
             'id' => $responseBody->client->id,
             'name' => $responseBody->client->name,
-            'phone_number' => $responseBody->client->phone_number
+            'phone_number' => $responseBody->client->phone_number,
+            'type' => $responseBody->client->type
         ]);
 
         return [
