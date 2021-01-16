@@ -218,7 +218,7 @@
         <script src="{{ asset('plugins/datatables/datatables.min.js') }}"></script>
         <script src="{{ asset('plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}"></script>
         <script src="{{ asset('plugins/bootstrap-datepicker/locales/bootstrap-datepicker.ru.min.js') }}"></script>
-        <script src="{{ asset('js/custom/plugins.init.min.js') }}"></script>
+        <script src="{{ asset('js/custom/plugins.init.js') }}"></script>
         <script src="{{ asset('plugins/parsleyjs/dist/parsley.min.js') }}"></script>
         <script src="{{ asset('plugins/parsleyjs/dist/i18n/ru.js') }}"></script>
         <script src="{{ asset('plugins/toastr/build/toastr.min.js') }}"></script>

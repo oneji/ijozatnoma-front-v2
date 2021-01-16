@@ -2,6 +2,16 @@
     'title' => 'ДАРХОСТ КАРДАН БАРОИ ДАРЁФТИ ИҶОЗАТНОМА'
 ])
 
+@section('head')
+    @parent
+
+    <style>
+        #addApplicationForm {
+            font-size: 16px;
+        }
+    </style>
+@endsection
+
 @section('content')
     <form action="{{ route('applications.store') }}" method="POST" data-parsley-validate enctype="multipart/form-data" id="addApplicationForm">
         @csrf
@@ -11,6 +21,14 @@
                 {{-- <div class="form-group">
                     <input type="text" name="input" class="custom-control" placeholder="НОМ ВА НАСАБ..." required>
                 </div> --}}
+                
+                <div class="form-group">
+                    <div class="custom-select-wrapper">
+                        <select name="term" class="custom-control" required>
+                            <option value="" selected disabled>Сколько лет?</option>
+                        </select>
+                    </div>
+                </div>
                 
                 <div class="form-group">
                     <div class="custom-select-wrapper">
@@ -60,6 +78,11 @@
                         <div class="error-box"></div>
                     </div>
                 </div> --}}
+
+                <div class="docs" style="display: none">
+                    <hr class="docs__divider">
+                    <div class="docs__files"></div>
+                </div>
                 
                 <div class="form-group">
                     <div class="form-group">
@@ -87,47 +110,65 @@
 
     <script>
         $(function() {
-            $('#addApplicationForm').on('submit', function(e) {
+            $('#addApplicationForm').find('button[type=submit]').on('click', function(e) {
                 e.preventDefault();
                 
                 const spinnerClass = 'fa-spin fa-spinner';
-                const form = $(this);
-                const submitBtn = form.find('button[type=submit]');
-                let formData = form.serialize();
-
+                const form = $('#addApplicationForm');
+                const submitBtn = $(this);
 
                 submitBtn.attr('disabled', true);
                 submitBtn.find('i').toggleClass(spinnerClass);
+            
+                form.submit();
+            });
 
-                $.ajax({
-                    url: "{{ route('applications.store') }}",
-                    type: 'POST',
-                    data: formData,
-                    success: function(response) {
-                        submitBtn.removeAttr('disabled');
-                        submitBtn.find('i').toggleClass(spinnerClass);
-                        // Display an info toast with no title
-                        toastr.success('Заявка успешно отправлена!', 'Успешно', {
-                            "closeButton": false,
-                            "debug": false,
-                            "newestOnTop": false,
-                            "progressBar": true,
-                            "positionClass": "toast-bottom-right",
-                            "preventDuplicates": false,
-                            "onclick": null,
-                            "showDuration": "300",
-                            "hideDuration": "1000",
-                            "timeOut": "5000",
-                            "showEasing": "swing",
-                            "hideEasing": "linear",
-                            "showMethod": "fadeIn",
-                            "hideMethod": "fadeOut"
+            // Years selector
+            for (let year = 1; year <= 6; year++) {
+                let yearCaption = 
+                    year === 1 ? 'год' : year < 5 && year > 1 ? 'года' : 'лет';
+
+                $('#addApplicationForm').find('select[name=term]').append(`
+                    <option value="${year}">${year} ${yearCaption}</option>
+                `);
+            }
+
+            // Activities
+            const activities = @json($activities);
+            console.log(activities)
+
+            $('#addApplicationForm').find('select[name=activity_id]').on('change', function() {
+                let activityId = $(this).val();
+
+                activities.map(activity => {
+                    if(activity.id == activityId) {
+                        $('.docs__files').html('');
+                        activity.document_types.map(doc => {
+                            $('.docs__files').append(`
+                                <div class="form-group">
+                                    <div class="custom-file">
+                                        <input
+                                            data-type="${doc.id}"
+                                            type="file"
+                                            name="docs[${doc.id}][]"
+                                            id="document_type_${doc.id}"
+                                            data-multiple-caption="{count} файлро интихоб кард"
+                                            required
+                                            multiple
+                                            data-parsley-errors-container=".error-box-${doc.id}"
+                                        >
+                                        <label for="document_type_${doc.id}">
+                                            <span>Выберите файл: ${doc.title}</span>
+                                            <i class="fas fa-plus"></i>
+                                        </label>
+                                        <div class="error-box-${doc.id}"></div>
+                                    </div>
+                                </div>
+                            `);
                         })
-                    },
-                    error: function(error) {
-                        console.log(error)
+                        $('.docs').show();
                     }
-                });
+                })
             });
         });
     </script>

@@ -3,6 +3,7 @@
 namespace App\Http\Services;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ApplicationService
 {
@@ -63,13 +64,62 @@ class ApplicationService
     {
         $user = session('user');
         $data = [];
+        $formData = [];
+
+        $i = 0;
+        foreach ($request->docs as $documentTypeId => $innerDocs) {
+            foreach ($innerDocs as $doc) {
+                $files[] = [
+                    'document_type_id' => $documentTypeId,
+                    'file' => $doc->store('docs', ['disk' => 'public']),
+                    'extension' => $doc->clientExtension()
+                ];
+            }
+        }
 
         if($user['type'] === 'company') {
             $formData = [
+                'term' => $request->term,
                 'branch_id' => $request->branch_id,
-                'activity_id' => $request->activity_id
+                'activity_id' => $request->activity_id,
+                'docs' => $files
             ];
-            $data = $this->httpClient->request('POST', 'requests/companies/', $formData);
+            
+            $data = $this->httpClient->request('POST', 'requests/companies', $formData);
+
+            $client = new \GuzzleHttp\Client([
+                'base_uri' => config('app.adminURL')
+            ]);
+
+            $body = [];
+            
+            foreach ($files as $doc) {
+                $body[] = [
+                    'name' => 'docs[]',
+                    'contents' => fopen(storage_path('app/public/'.$doc['file']), 'r')
+                    // 'contents' => Storage::disk('public')->get($doc['file'])
+                ];
+            }
+
+            $response = $client->request('POST', 'requests/uploadFiles', [
+                'headers' => [
+                    'Accept' => 'application/json'
+                ],
+                'http_errors' => false,
+                'multipart' => $body
+            ]);
+
+            $responseBody = json_decode($response->getBody()->getContents());
+    
+            if($response->getStatusCode() !== 200) {
+                return [
+                    'success' => false,
+                    'code' => $response->getStatusCode(),
+                    'message' => $responseBody->message
+                ];   
+            }
+    
+            return collect($responseBody);
         } else {
             $formData = [
                 'activity_id' => $request->activity_id
