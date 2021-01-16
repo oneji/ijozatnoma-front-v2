@@ -2,10 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Services\ApplicationService;
 use Illuminate\Http\Request;
 
 class ApplicationController extends Controller
 {
+    protected $applicationService;
+
+    /**
+     * ApplicationController constructor
+     * 
+     * @param \App\Http\Services\ApplicationService $applicationService
+     */
+    public function __construct(ApplicationService $applicationService)
+    {
+        $this->applicationService = $applicationService;
+    }
+
     /**
      * Show applications view
      * 
@@ -13,7 +26,9 @@ class ApplicationController extends Controller
      */
     public function index()
     {
-        return view('applications.index');
+        $data = $this->applicationService->all();
+
+        return view('applications.index', $data);
     }
 
     /**
@@ -23,7 +38,9 @@ class ApplicationController extends Controller
      */
     public function create()
     {
-        return view('applications.create');
+        $data = $this->applicationService->companyListData();
+
+        return view('applications.create', $data);
     }
 
     /**
@@ -31,6 +48,8 @@ class ApplicationController extends Controller
      */
     public function store(Request $request)
     {
-        return $request->all();
+        $data = $this->applicationService->store($request);
+
+        return response()->json($data);
     }
 }

@@ -189,20 +189,24 @@
 
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
                                             <label for="job_region_id" class="mb-0 text-white">Место работы (регион)</label>
-                                            <select class="auth-form-control" name="job_region_id" required>
-                                                @foreach ($lists['regions'] as $region)
-                                                    <option value="{{ $region->id }}">{{ $region->name }}</option>
-                                                @endforeach
-                                            </select>
+                                            <div class="auth-select-wrapper">
+                                                <select class="auth-form-control" name="job_region_id" required>
+                                                    @foreach ($lists['regions'] as $region)
+                                                        <option value="{{ $region->id }}">{{ $region->name }}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
                                         </div>
                     
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
                                             <label for="job_city_id" class="mb-0 text-white">Место работы (город)</label>
-                                            <select class="auth-form-control" name="job_city_id" required>
-                                                @foreach ($lists['cities'] as $city)
-                                                    <option value="{{ $city->id }}">{{ $city->name }}</option>
-                                                @endforeach
-                                            </select>
+                                            <div class="auth-select-wrapper">
+                                                <select class="auth-form-control" name="job_city_id" required>
+                                                    @foreach ($lists['cities'] as $city)
+                                                        <option value="{{ $city->id }}">{{ $city->name }}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
                                         </div>
                     
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">

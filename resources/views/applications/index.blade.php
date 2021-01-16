@@ -57,7 +57,7 @@
                 <table class="display datatable" style="width:100%">
                     <thead>
                         <tr>
-                            <th>№</th>
+                            <th class="text-center">№</th>
                             <th>РАЁСАТИ ИҶОЗАТНОМАДИҲӢ</th>
                             <th>НОМ ВА НАСАБ</th>
                             <th>НАМУДИ ФАЪОЛИЯТ</th>
@@ -67,66 +67,23 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>23</td>
-                            <td>Камилов Тимур</td>
-                            <td>АРАК</td>
-                            <td>01/01/2021</td>
-                            <td>
-                                <span class="custom-badge success">БАРРАСИ КАРДА ШУД</span>
-                            </td>
-                            <td>
-                                <a href="#" class="btn btn-primary btn-sm">
-                                    <i class="fas fa-pencil-alt"></i>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>23</td>
-                            <td>Камилов Тимур</td>
-                            <td>АРАК</td>
-                            <td>01/01/2021</td>
-                            <td>
-                                <span class="custom-badge">Барраси карда шуд</span>
-                            </td>
-                            <td>
-                                <a href="#" class="btn btn-primary btn-sm">
-                                    <i class="fas fa-pencil-alt"></i>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>23</td>
-                            <td>Камилов Тимур</td>
-                            <td>АРАК</td>
-                            <td>01/01/2021</td>
-                            <td>
-                                <span class="custom-badge primary">Барраси</span>
-                            </td>
-                            <td>
-                                <a href="#" class="btn btn-primary btn-sm">
-                                    <i class="fas fa-pencil-alt"></i>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>23</td>
-                            <td>Камилов Тимур</td>
-                            <td>АРАК</td>
-                            <td>01/01/2021</td>
-                            <td>
-                                <span class="custom-badge danger">Рад карда шуд</span>
-                            </td>
-                            <td>
-                                <a href="#" class="btn btn-primary btn-sm">
-                                    <i class="fas fa-pencil-alt"></i>
-                                </a>
-                            </td>
-                        </tr>
+                        @foreach ($requests as $idx => $item)
+                            <tr>
+                                <td class="text-center">{{ $idx + 1 }}</td>
+                                <td>23</td>
+                                <td>{{ $item->branch_name }}</td>
+                                <td>{{ $item->activity_title }}</td>
+                                <td>{{ \Carbon\Carbon::parse($item->created_at)->format('d/m/Y') }}</td>
+                                <td>
+                                    <span class="custom-badge success">{{ $item->status }}</span>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn btn-primary btn-sm">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

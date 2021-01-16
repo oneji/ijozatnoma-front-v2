@@ -72,7 +72,7 @@ class AuthController extends Controller
     {
         $data = $this->authService->registerCompany($request);
 
-        return response()->json($data);
+        return redirect()->route('loginForm');
     }
     
     /**
@@ -98,7 +98,7 @@ class AuthController extends Controller
     {
         $data = $this->authService->registerCitizen($request);
 
-        return response()->json($data);
+        return redirect()->route('loginForm');
     }
 
     /**
