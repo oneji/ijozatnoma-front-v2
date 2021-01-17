@@ -71,7 +71,7 @@ class ApplicationService
             foreach ($innerDocs as $doc) {
                 $files[] = [
                     'document_type_id' => $documentTypeId,
-                    'file' => $doc->store('docs', ['disk' => 'public']),
+                    'file' => $doc->store('', ['disk' => 'public']),
                     'extension' => $doc->clientExtension()
                 ];
             }

@@ -37,7 +37,7 @@
                                 @endif
                 
                                 <div class="form__body">
-                                    <p class="text-white text-uppercase text-center">Раками телефон: {{ Session::get('phone') }}</p>
+                                    <p class="text-white text-uppercase text-center">Раками телефон: {{ Session::get('phone') }} &middot; {{ Session::get('smsCode')['code'] }}</p>
                                     <div class="form-group">
                                         <label for="verification_code" class="auth-form-control">Коди тайидро ворид кунед</label>
                                         <input

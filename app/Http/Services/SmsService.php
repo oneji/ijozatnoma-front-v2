@@ -76,6 +76,7 @@ class SmsService
         $data = $this->httpClient->request('GET', "checkClient/$phoneNumber");
 
         Session::put('phone', $phoneNumber);
+        Session::put('smsCode', $smsCode);
 
         return $data;
     }

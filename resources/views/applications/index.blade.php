@@ -50,6 +50,7 @@
             </div>
         </div>  
     </div>
+    
     @if (Session::get('user')['type'] === 'company')
         <div class="row">
             <div class="col-sm-12">
