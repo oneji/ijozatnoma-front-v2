@@ -55,4 +55,16 @@ class ApplicationController extends Controller
 
         return redirect()->back();
     }
+
+    /**
+     * Remove request
+     * 
+     * @param int $id
+     */
+    public function remove($id)
+    {
+        $data = $this->applicationService->remove($id);
+
+        return redirect()->back();
+    }
 }

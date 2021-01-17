@@ -135,7 +135,6 @@
 
             // Activities
             const activities = @json($activities);
-            console.log(activities)
 
             $('#addApplicationForm').find('select[name=activity_id]').on('change', function() {
                 let activityId = $(this).val();

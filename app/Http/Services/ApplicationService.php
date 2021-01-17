@@ -3,6 +3,7 @@
 namespace App\Http\Services;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
 
 class ApplicationService
@@ -160,6 +161,24 @@ class ApplicationService
             }
     
             return collect($responseBody);
+        }
+
+        return $data;
+    }
+
+    /**
+     * Remove request
+     * 
+     * @param int $id
+     */
+    public function remove($id)
+    {
+        $phoneNumber = Session::get('user')['phone_number'];
+
+        $data = $this->httpClient->request('GET', "requests/remove/$id/$phoneNumber");
+
+        if($data['code'] !== 200) {
+            Session::flash('error', $data['message']);
         }
 
         return $data;

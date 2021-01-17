@@ -39,6 +39,7 @@ Route::group([
         Route::get('applications', 'ApplicationController@index')->name('applications');
         Route::get('applications/create', 'ApplicationController@create')->name('applications.create');
         Route::post('applications', 'ApplicationController@store')->name('applications.store');
+        Route::get('applications/remove/{id}', 'ApplicationController@remove')->name('applications.remove');
 
         // Logout
         Route::post('logout', 'AuthController@logout')->name('logout');

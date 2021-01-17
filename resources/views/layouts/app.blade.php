@@ -210,6 +210,16 @@
                             </div>
                         </div>
                     @endif
+                    
+                    @if (Session::has('error'))
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="alert alert-danger">
+                                    {{ Session::get('error') }}
+                                </div>
+                            </div>
+                        </div>
+                    @endif
 
                     @yield('content')
                 </div>

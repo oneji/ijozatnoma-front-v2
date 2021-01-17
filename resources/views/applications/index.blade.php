@@ -51,67 +51,46 @@
         </div>  
     </div>
     
-    @if (Session::get('user')['type'] === 'company')
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="table-responsive">
-                    <table class="display datatable" style="width:100%">
-                        <thead>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="table-responsive">
+                <table class="display datatable" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th class="text-center">№</th>
+                            <th>НОМ ВА НАСАБ</th>
+                            <th>НАМУДИ ФАЪОЛИЯТ</th>
+                            <th>САНАИ АРИЗА</th>
+                            <th>ҲОЛАТ</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($requests as $idx => $item)
                             <tr>
-                                <th class="text-center">№</th>
-                                <th>НОМ ВА НАСАБ</th>
-                                <th>НАМУДИ ФАЪОЛИЯТ</th>
-                                <th>САНАИ АРИЗА</th>
-                                <th>ҲОЛАТ</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($requests as $idx => $item)
-                                <tr>
-                                    <td class="text-center">{{ $idx + 1 }}</td>
+                                <td class="text-center">{{ $idx + 1 }}</td>
+                                @if (Session::get('user')['type'] === 'company')
                                     <td>{{ $item->branch_name }}</td>
-                                    <td>{{ $item->activity_title }}</td>
-                                    <td>{{ \Carbon\Carbon::parse($item->created_at)->format('d/m/Y') }}</td>
-                                    <td>
-                                        <span class="custom-badge success">{{ $item->status }}</span>
-                                    </td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    @else
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="table-responsive">
-                    <table class="display datatable" style="width:100%">
-                        <thead>
-                            <tr>
-                                <th class="text-center">№</th>
-                                <th>НОМ ВА НАСАБ</th>
-                                <th>НАМУДИ ФАЪОЛИЯТ</th>
-                                <th>САНАИ АРИЗА</th>
-                                <th>ҲОЛАТ</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($requests as $idx => $item)
-                                <tr>
-                                    <td class="text-center">{{ $idx + 1 }}</td>
+                                @else
                                     <td>{{ $item->citizen_name .' '. $item->citizen_s_name }}</td>
-                                    <td>{{ $item->activity_title }}</td>
-                                    <td>{{ \Carbon\Carbon::parse($item->created_at)->format('d/m/Y') }}</td>
-                                    <td>
-                                        <span class="custom-badge success">{{ $item->status }}</span>
-                                    </td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                </div>
+                                @endif
+                                <td>{{ $item->activity_title }}</td>
+                                <td>{{ \Carbon\Carbon::parse($item->created_at)->format('d/m/Y') }}</td>
+                                <td>
+                                    <span class="custom-badge success">{{ $item->status }}</span>
+                                </td>
+                                <td>
+                                    @if ($item->status === 'new' || $item->status === 'seen')
+                                        <a href="{{ route('applications.remove', [$item->id]) }}" class="btn btn-danger btn-sm">
+                                            <i class="fas fa-trash"></i>
+                                        </a>
+                                    @endif
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
             </div>
         </div>
-    @endif
+    </div>
 @endsection
