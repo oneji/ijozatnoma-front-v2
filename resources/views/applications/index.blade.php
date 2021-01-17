@@ -8,9 +8,9 @@
             <div class="custom-card">
                 <div class="custom-card__body">
                     <div class="stat">
-                        <div class="stat__counter main-color">12</div>
+                        <div class="stat__counter main-color">{{ $stats->new }}</div>
                         <div class="d-flex justify-content-between align-items-center">
-                            <div class="stat__title">Қабулшуда</div>
+                            <div class="stat__title">Нав</div>
                             <div class="stat__icon">
                                 <i class="fas fa-clipboard-list"></i>
                             </div>
@@ -23,7 +23,7 @@
             <div class="custom-card">
                 <div class="custom-card__body">
                     <div class="stat">
-                        <div class="stat__counter main-color">15</div>
+                        <div class="stat__counter main-color">{{ $stats->refuse }}</div>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="stat__title">Рад кардашуда</div>
                             <div class="stat__icon">
@@ -38,7 +38,7 @@
             <div class="custom-card">
                 <div class="custom-card__body">
                     <div class="stat">
-                        <div class="stat__counter main-color">22</div>
+                        <div class="stat__counter main-color">{{ $stats->accept }}</div>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="stat__title">Қабулшуда</div>
                             <div class="stat__icon">

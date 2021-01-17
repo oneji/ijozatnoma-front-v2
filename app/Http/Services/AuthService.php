@@ -7,6 +7,16 @@ use App\Http\JsonRequests\RegisterCompanyRequest;
 
 class AuthService
 {
+    protected $httpClient;
+
+    /**
+     * SmsService constructor
+     */
+    public function __construct(HttpClientService $httpClient)
+    {
+        $this->httpClient = $httpClient;
+    }
+
     /**
      * Store a newly created company
      * 
@@ -15,20 +25,9 @@ class AuthService
      */
     public function registerCompany(RegisterCompanyRequest $request)
     {
-        $client = new \GuzzleHttp\Client([
-            'base_uri' => config('app.adminURL')
-        ]);
-        
-        $response = $client->request('POST', 'register/company', [
-            'headers' => [
-                'Accept'     => 'application/json'
-            ],
-            'http_errors' => false,
-            'form_params' => $request->all()
-        ]);
-        $responseBody = json_decode($response->getBody()->getContents());
+        $data = $this->httpClient->request('POST', 'register/company', $request->all());
 
-        return $responseBody;
+        return $data;
     }
     
     /**
@@ -39,19 +38,8 @@ class AuthService
      */
     public function registerCitizen(RegisterCitizenRequest $request)
     {
-        $client = new \GuzzleHttp\Client([
-            'base_uri' => config('app.adminURL')
-        ]);
+        $data = $this->httpClient->request('POST', 'register/citizen', $request->all());
         
-        $response = $client->request('POST', 'register/citizen', [
-            'headers' => [
-                'Accept'     => 'application/json'
-            ],
-            'http_errors' => false,
-            'form_params' => $request->all()
-        ]);
-        $responseBody = json_decode($response->getBody()->getContents());
-
-        return $responseBody;
+        return $data;
     }
 }

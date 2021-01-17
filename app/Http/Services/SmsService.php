@@ -11,6 +11,16 @@ use Illuminate\Support\Facades\Session;
 
 class SmsService
 {
+    protected $httpClient;
+
+    /**
+     * SmsService constructor
+     */
+    public function __construct(HttpClientService $httpClient)
+    {
+        $this->httpClient = $httpClient;
+    }
+
     /**
      * Send verification code by sms
      * 
@@ -63,27 +73,11 @@ class SmsService
             // $response = $client->get($smsApi, $params);
         }
 
-        // Check if user with such a phone number exists
-        $client = new \GuzzleHttp\Client([
-            'base_uri' => config('app.adminURL')
-        ]);
-        
-        $response = $client->request('GET', "checkClient/$phoneNumber", [ 'http_errors' => false ]);
-        $responseBody = json_decode($response->getBody()->getContents());
+        $data = $this->httpClient->request('GET', "checkClient/$phoneNumber");
 
         Session::put('phone', $phoneNumber);
 
-        if($response->getStatusCode() !== 200) {
-            return [
-                'success' => false,
-                'code' => $responseBody->code,
-                'message' => $responseBody->message
-            ];
-        }
-
-        return [
-            'success' => true
-        ];
+        return $data;
     }
 
     /**

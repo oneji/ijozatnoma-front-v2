@@ -72,6 +72,8 @@ class AuthController extends Controller
     {
         $data = $this->authService->registerCompany($request);
 
+        return $data;
+
         return redirect()->route('loginForm');
     }
     
