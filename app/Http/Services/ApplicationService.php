@@ -97,7 +97,6 @@ class ApplicationService
                 $body[] = [
                     'name' => 'docs[]',
                     'contents' => fopen(storage_path('app/public/'.$doc['file']), 'r')
-                    // 'contents' => Storage::disk('public')->get($doc['file'])
                 ];
             }
 
@@ -122,10 +121,45 @@ class ApplicationService
             return collect($responseBody);
         } else {
             $formData = [
-                'activity_id' => $request->activity_id
+                'term' => $request->term,
+                'activity_id' => $request->activity_id,
+                'docs' => $files
             ];
 
             $data = $this->httpClient->request('POST', 'requests/citizens/'.$user['phone_number'], $formData);
+
+            $client = new \GuzzleHttp\Client([
+                'base_uri' => config('app.adminURL')
+            ]);
+
+            $body = [];
+            
+            foreach ($files as $doc) {
+                $body[] = [
+                    'name' => 'docs[]',
+                    'contents' => fopen(storage_path('app/public/'.$doc['file']), 'r')
+                ];
+            }
+
+            $response = $client->request('POST', 'requests/uploadFiles', [
+                'headers' => [
+                    'Accept' => 'application/json'
+                ],
+                'http_errors' => false,
+                'multipart' => $body
+            ]);
+
+            $responseBody = json_decode($response->getBody()->getContents());
+    
+            if($response->getStatusCode() !== 200) {
+                return [
+                    'success' => false,
+                    'code' => $response->getStatusCode(),
+                    'message' => $responseBody->message
+                ];   
+            }
+    
+            return collect($responseBody);
         }
 
         return $data;

@@ -19,9 +19,9 @@
             <div class="contacts right">
                 <img src="{{ asset('images/icons/info.png') }}" alt="">
                 <div class="contacts__text">
-                    <strong>Email:</strong> ijozatnoma.sanoat@mail.ru
+                    <strong>Email:</strong> info@sanoat.tj
                     <br>
-                    <strong>Телефон:</strong> (+992 37) 227 71 91, 227 89 30
+                    <strong>Телефон:</strong> (+992 37) 227 71 91, 221 88 89
                 </div>
             </div>
         </div>

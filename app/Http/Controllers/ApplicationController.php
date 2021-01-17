@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Services\ApplicationService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class ApplicationController extends Controller
 {
@@ -50,6 +51,8 @@ class ApplicationController extends Controller
     {
         $data = $this->applicationService->store($request);
 
-        return response()->json($data);
+        $request->session()->flash('success', 'Успешно!');
+
+        return redirect()->back();
     }
 }

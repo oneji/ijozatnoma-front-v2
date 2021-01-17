@@ -50,43 +50,72 @@
             </div>
         </div>  
     </div>
-
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="table-responsive">
-                <table class="display datatable" style="width:100%">
-                    <thead>
-                        <tr>
-                            <th class="text-center">№</th>
-                            <th>РАЁСАТИ ИҶОЗАТНОМАДИҲӢ</th>
-                            <th>НОМ ВА НАСАБ</th>
-                            <th>НАМУДИ ФАЪОЛИЯТ</th>
-                            <th>САНАИ АРИЗА</th>
-                            <th>ҲОЛАТ</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($requests as $idx => $item)
+    @if (Session::get('user')['type'] === 'company')
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="table-responsive">
+                    <table class="display datatable" style="width:100%">
+                        <thead>
                             <tr>
-                                <td class="text-center">{{ $idx + 1 }}</td>
-                                <td>23</td>
-                                <td>{{ $item->branch_name }}</td>
-                                <td>{{ $item->activity_title }}</td>
-                                <td>{{ \Carbon\Carbon::parse($item->created_at)->format('d/m/Y') }}</td>
-                                <td>
-                                    <span class="custom-badge success">{{ $item->status }}</span>
-                                </td>
-                                <td>
-                                    <a href="#" class="btn btn-primary btn-sm">
-                                        <i class="fas fa-pencil-alt"></i>
-                                    </a>
-                                </td>
+                                <th class="text-center">№</th>
+                                <th>НОМ ВА НАСАБ</th>
+                                <th>НАМУДИ ФАЪОЛИЯТ</th>
+                                <th>САНАИ АРИЗА</th>
+                                <th>ҲОЛАТ</th>
                             </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            @foreach ($requests as $idx => $item)
+                                <tr>
+                                    <td class="text-center">{{ $idx + 1 }}</td>
+                                    <td>{{ $item->branch_name }}</td>
+                                    <td>{{ $item->activity_title }}</td>
+                                    <td>{{ \Carbon\Carbon::parse($item->created_at)->format('d/m/Y') }}</td>
+                                    <td>
+                                        <span class="custom-badge success">{{ $item->status }}</span>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="btn btn-primary btn-sm">
+                                            <i class="fas fa-pencil-alt"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-    </div>
+    @else
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="table-responsive">
+                    <table class="display datatable" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th class="text-center">№</th>
+                                <th>НОМ ВА НАСАБ</th>
+                                <th>НАМУДИ ФАЪОЛИЯТ</th>
+                                <th>САНАИ АРИЗА</th>
+                                <th>ҲОЛАТ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($requests as $idx => $item)
+                                <tr>
+                                    <td class="text-center">{{ $idx + 1 }}</td>
+                                    <td>{{ $item->citizen_name .' '. $item->citizen_s_name }}</td>
+                                    <td>{{ $item->activity_title }}</td>
+                                    <td>{{ \Carbon\Carbon::parse($item->created_at)->format('d/m/Y') }}</td>
+                                    <td>
+                                        <span class="custom-badge success">{{ $item->status }}</span>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    @endif
 @endsection
