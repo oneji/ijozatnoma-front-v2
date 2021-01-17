@@ -74,11 +74,6 @@
                                     <td>
                                         <span class="custom-badge success">{{ $item->status }}</span>
                                     </td>
-                                    <td>
-                                        <a href="#" class="btn btn-primary btn-sm">
-                                            <i class="fas fa-pencil-alt"></i>
-                                        </a>
-                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
