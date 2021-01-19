@@ -37,7 +37,7 @@
                         </a>
                         
                         <ul class="user__links">
-                            <li><a href="#">{{ __('menu.privateData') }}</a></li>
+                            <li><a href="#">{{ Session::get('user')['phone_number'] }}</a></li>
                             <li>
                                 <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('auth.logout') }}</a>
                                 
