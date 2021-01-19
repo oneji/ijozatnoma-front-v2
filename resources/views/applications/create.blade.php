@@ -110,18 +110,29 @@
 
     <script>
         $(function() {
-            $('#addApplicationForm').find('button[type=submit]').on('click', function(e) {
-                e.preventDefault();
+            // $('#addApplicationForm').find('button[type=submit]').on('click', function(e) {
+            //     e.preventDefault();
                 
-                const spinnerClass = 'fa-spin fa-spinner';
-                const form = $('#addApplicationForm');
-                const submitBtn = $(this);
+            //     const spinnerClass = 'fa-spin fa-spinner';
+            //     const form = $('#addApplicationForm');
+            //     const submitBtn = $(this);
 
+                
+            //     let formIsValid = form.parsley().isValid();
+            //     if(formIsValid) {
+            //         submitBtn.attr('disabled', true);
+            //         submitBtn.find('i').toggleClass(spinnerClass);
+                    
+            //         form.submit();
+            //     }
+            // });
+
+            $('#addApplicationForm').on('submit', function() {
+                const submitBtn = $(this).find('button[type=submit]');
+                const spinnerClass = 'fa-spin fa-spinner';
                 submitBtn.attr('disabled', true);
                 submitBtn.find('i').toggleClass(spinnerClass);
-            
-                form.submit();
-            });
+            })
 
             // Years selector
             for (let year = 1; year <= 6; year++) {
