@@ -77,7 +77,9 @@
                                 <td>{{ $item->activity_title }}</td>
                                 <td>{{ \Carbon\Carbon::parse($item->created_at)->format('d/m/Y') }}</td>
                                 <td>
-                                    <span class="custom-badge success">{{ $item->status }}</span>
+                                    <span class="custom-badge {{ $item->status === 'removed' ? 'danger' : 'success'  }}">
+                                        {{ __("application_statuses.$item->status") }}
+                                    </span>
                                 </td>
                                 <td>
                                     @if ($item->status === 'new' || $item->status === 'seen')
