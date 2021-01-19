@@ -1,5 +1,5 @@
 @extends('layouts.app', [
-    'title' => 'ДАРХОСТҲОИ МАН / АРИЗА'
+    'title' => __('page_headers.myApplications')
 ])
 
 @section('content')
@@ -10,7 +10,7 @@
                     <div class="stat">
                         <div class="stat__counter main-color">{{ $stats->new }}</div>
                         <div class="d-flex justify-content-between align-items-center">
-                            <div class="stat__title">Нав</div>
+                            <div class="stat__title">{{ __('form.newApplications') }}</div>
                             <div class="stat__icon">
                                 <i class="fas fa-clipboard-list"></i>
                             </div>
@@ -25,7 +25,7 @@
                     <div class="stat">
                         <div class="stat__counter main-color">{{ $stats->refuse }}</div>
                         <div class="d-flex justify-content-between align-items-center">
-                            <div class="stat__title">Рад кардашуда</div>
+                            <div class="stat__title">{{ __('form.refusedApplications') }}</div>
                             <div class="stat__icon">
                                 <i class="fas fa-clipboard-list"></i>
                             </div>
@@ -40,7 +40,7 @@
                     <div class="stat">
                         <div class="stat__counter main-color">{{ $stats->accept }}</div>
                         <div class="d-flex justify-content-between align-items-center">
-                            <div class="stat__title">Қабулшуда</div>
+                            <div class="stat__title">{{ __('form.acceptedApplications') }}</div>
                             <div class="stat__icon">
                                 <i class="fas fa-clipboard-list"></i>
                             </div>

@@ -1,5 +1,5 @@
 @extends('layouts.app', [
-    'title' => 'ДАРХОСТ КАРДАН БАРОИ ДАРЁФТИ ИҶОЗАТНОМА'
+    'title' => __('page_headers.createApplication')
 ])
 
 @section('head')
@@ -18,14 +18,11 @@
 
         <div class="row">
             <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 offset-lg-3">
-                {{-- <div class="form-group">
-                    <input type="text" name="input" class="custom-control" placeholder="НОМ ВА НАСАБ..." required>
-                </div> --}}
                 
                 <div class="form-group">
                     <div class="custom-select-wrapper">
                         <select name="term" class="custom-control" required>
-                            <option value="" selected disabled>Сколько лет?</option>
+                            <option value="" selected disabled>{{ __('form.term') }}</option>
                         </select>
                     </div>
                 </div>
@@ -33,7 +30,7 @@
                 <div class="form-group">
                     <div class="custom-select-wrapper">
                         <select name="activity_id" class="custom-control" required>
-                            <option value="" selected disabled>Типы деятельности</option>
+                            <option value="" selected disabled>{{ __('form.activity') }}</option>
                             @foreach ($activities as $item)
                                 <option value="{{ $item->id }}">{{ $item->title }}</option>
                             @endforeach
@@ -45,7 +42,7 @@
                     <div class="form-group">
                         <div class="custom-select-wrapper">
                             <select name="branch_id" class="custom-control" required>
-                                <option value="" selected disabled>Точка получения лицензии</option>
+                                <option value="" selected disabled>{{ __('form.branch') }}</option>
                                 @foreach ($branches as $item)
                                     <option value="{{ $item->id }}">{{ $item->name }} ({{ $item->address }})</option>
                                 @endforeach
@@ -60,25 +57,6 @@
                     </div>
                 </div> --}}
 
-                {{-- <div class="form-group">
-                    <div class="custom-file">
-                        <input
-                            type="file"
-                            name="file-7[]"
-                            id="file-7"
-                            data-multiple-caption="{count} файлро интихоб кард"
-                            required
-                            multiple
-                            data-parsley-errors-container=".error-box"
-                        >
-                        <label for="file-7">
-                            <span>САБТИ ҲУҶҶАТ</span>
-                            <i class="fas fa-plus"></i>
-                        </label>
-                        <div class="error-box"></div>
-                    </div>
-                </div> --}}
-
                 <div class="docs" style="display: none">
                     <hr class="docs__divider">
                     <div class="docs__files"></div>
@@ -87,12 +65,12 @@
                 <div class="form-group">
                     <div class="form-group">
                         <button class="btn btn-success btn-sm btn-block text-uppercase" type="submit">
-                            Сабт кардан
+                            {{ __('form.submitBtn') }}
                             <i class="fas fa-share ml-2"></i>
                         </button>
                         {{-- <button class="btn btn-primary btn-sm text-uppercase" type="reset">
                             <i class="fas fa-reply mr-2"></i>
-                            Бозгашт
+                            { __('form.backBtn') }}
                         </button> --}}
                     </div>
                 </div>

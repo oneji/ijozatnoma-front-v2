@@ -4,9 +4,6 @@ namespace App\Http\Services;
 
 use App\SmsCode;
 use Carbon\Carbon;
-use GuzzleHttp\Exception\ClientException;
-use GuzzleHttp\Exception\RequestException;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
 class SmsService
@@ -31,13 +28,14 @@ class SmsService
         $now = Carbon::now();
         $threeMinsLater = Carbon::parse($now)->addMinutes(3);
 
-        $oldCodes = SmsCode::wherePhoneNumber($phoneNumber)
+        $oldCode = SmsCode::wherePhoneNumber($phoneNumber)
             ->whereActive(1)
             ->where('expires_at', '>', $now)
-            ->get();
+            ->first();
         
-        $smsCode = null;
-        if($oldCodes->count() === 0) {
+        $smsCode = $oldCode;
+
+        if(!$oldCode) {
             $randomCode = mt_rand(100000, 999999);
             $smsCode = new SmsCode();
             $smsCode->phone_number = $phoneNumber;

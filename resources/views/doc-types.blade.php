@@ -1,5 +1,5 @@
 @extends('layouts.app', [
-'title' => 'НАМУДИ ФАЪОЛИЯТҲО БО ҲУҶҶАТҲО'
+'title' => __('page_headers.docTypes')
 ])
 
 @section('content')

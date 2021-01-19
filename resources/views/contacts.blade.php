@@ -1,5 +1,5 @@
 @extends('layouts.app', [
-    'title' => 'ТАМОС ВА СУРОҒА'
+    'title' => __('page_headers.contacts')
 ])
 
 @section('content')

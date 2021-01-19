@@ -1,5 +1,5 @@
 @extends('layouts.app', [
-    'title' => 'ҚОНУНГУЗОРӢ - РУЙХАТИ ҚОНУНҲОИ ҶТ ДАХЛДОР'
+    'title' => __('page_headers.legislature')
 ])
 
 @section('content')

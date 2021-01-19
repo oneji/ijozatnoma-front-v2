@@ -228,7 +228,7 @@
 
         <footer class="footer">
             <span class="footer__link">IJOZATNOMA.TJ</span> 
-            <span class="d-none d-sm-block">- ҲАМАИ ҲУҚУҚҲО ДАР ТАҲТИ ҲИМОЯ ҚАРОР ДОРАНД</span>
+            <span class="d-none d-sm-block">- {{ __('form.rights') }}</span>
         </footer>
     </div>
 
