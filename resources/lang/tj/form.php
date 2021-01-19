@@ -11,6 +11,7 @@ return [
     'newApplications'           => 'Нав',
     'refusedApplications'       => 'Рад кардашуда',
     'acceptedApplications'      => 'Қабулшуда',
-    'rights'                    => 'ҲАМАИ ҲУҚУҚҲО ДАР ТАҲТИ ҲИМОЯ ҚАРОР ДОРАНД'
+    'rights'                    => 'ҲАМАИ ҲУҚУҚҲО ДАР ТАҲТИ ҲИМОЯ ҚАРОР ДОРАНД',
+    'applicationSuccess'        => 'Бомуваффақият! Дархост бомуваффақият фиристода шуд.'
     
 ];

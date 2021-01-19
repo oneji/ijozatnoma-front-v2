@@ -11,6 +11,7 @@ return [
     'newApplications'           => 'Новые',
     'refusedApplications'       => 'Отклоненные',
     'acceptedApplications'      => 'Принятые',
-    'rights'                    => 'Все права защищены'
+    'rights'                    => 'Все права защищены',
+    'applicationSuccess'        => 'Успешно! Заявка была успешно отправлена.'
 
 ];

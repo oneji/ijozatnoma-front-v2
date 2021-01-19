@@ -81,9 +81,13 @@
                                 </td>
                                 <td>
                                     @if ($item->status === 'new' || $item->status === 'seen')
-                                        <a href="{{ route('applications.remove', [$item->id]) }}" class="btn btn-danger btn-sm">
+                                        <a href="#" class="btn btn-danger btn-sm remove-btn" data-id="{{ $item->id }}">
                                             <i class="fas fa-trash"></i>
                                         </a>
+
+                                        <form style="display: none" action="{{ route('applications.remove', [$item->id]) }}" method="post" id="removeForm{{ $item->id }}">
+                                            @csrf
+                                        </form>
                                     @endif
                                 </td>
                             </tr>
@@ -93,4 +97,21 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+    @parent
+
+    <script>
+        $(function() {
+            $('.remove-btn').on('click', function() {
+                let id = $(this).data('id');
+                let sure = confirm('Вы точно хотите удалить заявку?');
+
+                if(sure) {
+                    $(`#removeForm${id}`).submit();
+                }
+            });
+        })
+    </script>
 @endsection

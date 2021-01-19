@@ -51,7 +51,7 @@ class ApplicationController extends Controller
     {
         $data = $this->applicationService->store($request);
 
-        $request->session()->flash('success', 'Успешно!');
+        $request->session()->flash('success', __('form.applicationSuccess'));
 
         return redirect()->back();
     }

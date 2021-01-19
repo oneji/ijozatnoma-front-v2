@@ -11,6 +11,7 @@ return [
     'newApplications'           => 'New',
     'refusedApplications'       => 'Refused',
     'acceptedApplications'      => 'Accepted',
-    'rights'                    => 'All rights reserved'
+    'rights'                    => 'All rights reserved',
+    'applicationSuccess'        => 'Success! Application has been successfully sent.'
 
 ];
