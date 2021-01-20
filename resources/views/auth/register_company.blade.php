@@ -36,7 +36,7 @@
                                         </div>
 
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="name" class="mb-0 text-white">Название</label>
+                                            <label for="name" class="mb-0 text-white">{{ __('form.companyName') }}</label>
                                             <input
                                                 type="text"
                                                 class="auth-form-control"
@@ -48,7 +48,7 @@
                                         </div>
 
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="company_type_id" class="mb-0 text-white">Тип компании</label>
+                                            <label for="company_type_id" class="mb-0 text-white">{{ __('form.companyType') }}</label>
                                             <div class="auth-select-wrapper">
                                                 <select class="auth-form-control" name="company_type_id" required>
                                                     @foreach ($lists['types'] as $type)
@@ -59,7 +59,7 @@
                                         </div>
                     
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="director" class="mb-0 text-white">Директор (руководитель)</label>
+                                            <label for="director" class="mb-0 text-white">{{ __('form.director') }}</label>
                                             <input
                                                 type="text"
                                                 class="auth-form-control"
@@ -71,7 +71,7 @@
                                         </div>
                                         
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="founder" class="mb-0 text-white">Основатель</label>
+                                            <label for="founder" class="mb-0 text-white">{{ __('form.founder') }}</label>
                                             <input
                                                 type="text"
                                                 class="auth-form-control"
@@ -83,7 +83,7 @@
                                         </div>
                                         
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="phone_number" class="mb-0 text-white">Номер телефона</label>
+                                            <label for="phone_number" class="mb-0 text-white">{{ __('form.phoneNumber') }}</label>
                                             <input
                                                 type="text"
                                                 class="auth-form-control"
@@ -96,7 +96,7 @@
                                         </div>
                                         
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="email" class="mb-0 text-white">Email адрес</label>
+                                            <label for="email" class="mb-0 text-white">{{ __('form.email') }}</label>
                                             <input
                                                 type="email"
                                                 class="auth-form-control"
@@ -109,7 +109,7 @@
                                         </div>
                     
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="region_id" class="mb-0 text-white">Регион</label>
+                                            <label for="region_id" class="mb-0 text-white">{{ __('form.region') }}</label>
                                             <div class="auth-select-wrapper">
                                                 <select class="auth-form-control" name="region_id" required>
                                                     @foreach ($lists['regions'] as $region)
@@ -120,7 +120,7 @@
                                         </div>
                     
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="city_id" class="mb-0 text-white">Город</label>
+                                            <label for="city_id" class="mb-0 text-white">{{ __('form.city') }}</label>
                                             <div class="auth-select-wrapper">
                                                 <select class="auth-form-control" name="city_id" required>
                                                     @foreach ($lists['cities'] as $city)
@@ -131,7 +131,7 @@
                                         </div>
                     
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="address" class="mb-0 text-white">Адрес</label>
+                                            <label for="address" class="mb-0 text-white">{{ __('form.address') }}</label>
                                             <input
                                                 type="text"
                                                 class="auth-form-control"
@@ -143,7 +143,7 @@
                                         </div>
                                         
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="registration_document_number" class="mb-0 text-white">Номер документа регистрации</label>
+                                            <label for="registration_document_number" class="mb-0 text-white">{{ __('form.registerDocumentNumber') }}</label>
                                             <input
                                                 type="text"
                                                 class="auth-form-control"
@@ -155,7 +155,7 @@
                                         </div>
                                         
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="registration_document_date" class="mb-0 text-white">Дата документа регистрации</label>
+                                            <label for="registration_document_date" class="mb-0 text-white">{{ __('form.registerDocumentDate') }}</label>
                                             <div class="datepicker-wrapper">
                                                 <input
                                                     type="text"
@@ -169,7 +169,7 @@
                                         </div>
                                         
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="itpn_address" class="mb-0 text-white">ИНН (место выдачи)</label>
+                                            <label for="itpn_address" class="mb-0 text-white">{{ __('form.innAddress') }}</label>
                                             <input
                                                 type="text"
                                                 class="auth-form-control"
@@ -181,7 +181,7 @@
                                         </div>
                                         
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="itpn_number" class="mb-0 text-white">ИНН (номер)</label>
+                                            <label for="itpn_number" class="mb-0 text-white">{{ __('form.innNumber') }}</label>
                                             <input
                                                 type="number"
                                                 class="auth-form-control"
@@ -193,7 +193,7 @@
                                         </div>
                                         
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="itpn_date" class="mb-0 text-white">ИНН (дата выдачи)</label>
+                                            <label for="itpn_date" class="mb-0 text-white">{{ __('form.innDate') }}</label>
                                             <div class="datepicker-wrapper">
                                                 <input
                                                     type="text"
@@ -207,7 +207,7 @@
                                         </div>
                                         
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="passport_number" class="mb-0 text-white">Паспорт (номер)</label>
+                                            <label for="passport_number" class="mb-0 text-white">{{ __('form.passportNumber') }}</label>
                                             <input
                                                 type="text"
                                                 class="auth-form-control"
@@ -219,7 +219,7 @@
                                         </div>
                                         
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="passport_date" class="mb-0 text-white">Паспорт (дата выдачи)</label>
+                                            <label for="passport_date" class="mb-0 text-white">{{ __('form.passportDate') }}</label>
                                             <div class="datepicker-wrapper">
                                                 <input
                                                     type="text"
@@ -233,7 +233,7 @@
                                         </div>
                                         
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="passport_address" class="mb-0 text-white">Паспорт (место выдачи)</label>
+                                            <label for="passport_address" class="mb-0 text-white">{{ __('form.passportAddress') }}</label>
                                             <input
                                                 type="text"
                                                 class="auth-form-control"
@@ -245,7 +245,7 @@
                                         </div>
                                         
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="district_decision_date" class="mb-0 text-white">Решение районного совета (дата выдачи)</label>
+                                            <label for="district_decision_date" class="mb-0 text-white">{{ __('form.districtDecisionDate') }}</label>
                                             <div class="datepicker-wrapper">
                                                 <input
                                                     type="text"
@@ -259,7 +259,7 @@
                                         </div>
                                         
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="district_decision_number" class="mb-0 text-white">Решение районного совета (номер)</label>
+                                            <label for="district_decision_number" class="mb-0 text-white">{{ __('form.districtDecisionNumber') }}</label>
                                             <input
                                                 type="text"
                                                 class="auth-form-control"
@@ -271,7 +271,7 @@
                                         </div>
                     
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="district_decision_address" class="mb-0 text-white">Решение районного совета (место выдачи)</label>
+                                            <label for="district_decision_address" class="mb-0 text-white">{{ __('form.districtDecisionAddress') }}</label>
                                             <input
                                                 type="text"
                                                 class="auth-form-control"
@@ -283,7 +283,7 @@
                                         </div>
                                         
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="registration_number" class="mb-0 text-white">Регистрационный номер</label>
+                                            <label for="registration_number" class="mb-0 text-white">{{ __('form.registrationNumber') }}</label>
                                             <input
                                                 type="text"
                                                 class="auth-form-control"
@@ -295,7 +295,7 @@
                                         </div>
                                         
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="client_name" class="mb-0 text-white">Ваше имя</label>
+                                            <label for="client_name" class="mb-0 text-white">{{ __('form.yourName') }}</label>
                                             <input
                                                 type="text"
                                                 class="auth-form-control"
@@ -307,7 +307,7 @@
                                         </div>
                                         
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="client_phone_number" class="mb-0 text-white">Ваш номер телефона</label>
+                                            <label for="client_phone_number" class="mb-0 text-white">{{ __('form.yourPhoneNumber') }}</label>
                                             <input
                                                 type="text"
                                                 class="auth-form-control"
@@ -332,7 +332,7 @@
     
             <footer class="footer">
                 <span class="footer__link">IJOZATNOMA.TJ</span> 
-                <span class="d-none d-sm-block">- ҲАМАИ ҲУҚУҚҲО ДАР ТАҲТИ ҲИМОЯ ҚАРОР ДОРАНД</span>
+                <span class="d-none d-sm-block">- {{ __('form.rights') }}</span>
             </footer>
         </div>
     </div>
