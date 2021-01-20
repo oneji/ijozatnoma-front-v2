@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>РАЁСАТИ ИҶОЗАТНОМАДИҲӢ</title>
+    <title>{{ __('page_headers.main') }}</title>
     <!-- Styles -->
     <link href="{{ asset('images/favicon.ico') }}" rel="shortcut icon" type="image/x-icon">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -37,15 +37,15 @@
                                 @endif
                 
                                 <div class="form__body">
-                                    <p class="text-white text-uppercase text-center">Раками телефон: {{ Session::get('phone') }} &middot; {{ Session::get('smsCode')['code'] }}</p>
+                                    <p class="text-white text-uppercase text-center">{{ __('form.phoneNumber') }}: {{ Session::get('phone') }} &middot; {{ Session::get('smsCode')['code'] }}</p>
                                     <div class="form-group">
-                                        <label for="verification_code" class="auth-form-control">Коди тайидро ворид кунед</label>
+                                        <label for="verification_code" class="auth-form-control">{{ __('form_placeholders.verificationCode') }}</label>
                                         <input
                                             type="text"
                                             class="auth-form-control text-center"
                                             name="verification_code"
                                             id="verification_code"
-                                            placeholder="МИСОЛ: 999999"
+                                            placeholder="{{ __('form_placeholders.example') }}: 999999"
                                             required
                                         >
                                     </div>

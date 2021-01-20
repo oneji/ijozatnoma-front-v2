@@ -42,7 +42,7 @@
                                                 class="auth-form-control"
                                                 name="name"
                                                 id="name"
-                                                placeholder="Введите название"
+                                                placeholder="{{ __('form_placeholders.companyName') }}"
                                                 required
                                             >
                                         </div>
@@ -65,7 +65,7 @@
                                                 class="auth-form-control"
                                                 name="director"
                                                 id="director"
-                                                placeholder="Введите ФИО директора"
+                                                placeholder="{{ __('form_placeholders.director') }}"
                                                 required
                                             >
                                         </div>
@@ -77,7 +77,7 @@
                                                 class="auth-form-control"
                                                 name="founder"
                                                 id="founder"
-                                                placeholder="Введите ФИО основателя"
+                                                placeholder="{{ __('form_placeholders.founder') }}"
                                                 required
                                             >
                                         </div>
@@ -89,7 +89,7 @@
                                                 class="auth-form-control"
                                                 name="phone_number"
                                                 id="phone_number"
-                                                placeholder="Введите номер телефона"
+                                                placeholder="{{ __('form_placeholders.phoneNumber') }}"
                                                 required
                                                 value="{{ Session::get('phone') }}"
                                             >
@@ -102,7 +102,7 @@
                                                 class="auth-form-control"
                                                 name="email"
                                                 id="email"
-                                                placeholder="Введите email адрес"
+                                                placeholder="{{ __('form_placeholders.email') }}"
                                                 required
                                                 data-parsley-type="email"
                                             >
@@ -137,32 +137,32 @@
                                                 class="auth-form-control"
                                                 name="address"
                                                 id="address"
-                                                placeholder="Введите адрес"
+                                                placeholder="{{ __('form_placeholders.address') }}"
                                                 required
                                             >
                                         </div>
                                         
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="registration_document_number" class="mb-0 text-white">{{ __('form.registerDocumentNumber') }}</label>
+                                            <label for="registration_document_number" class="mb-0 text-white">{{ __('form.registrationDocumentNumber') }}</label>
                                             <input
                                                 type="text"
                                                 class="auth-form-control"
                                                 name="registration_document_number"
                                                 id="registration_document_number"
-                                                placeholder="Введите номер number"
+                                                placeholder="{{ __('form_placeholders.registrationDocumentNumber') }}"
                                                 required
                                             >
                                         </div>
                                         
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="registration_document_date" class="mb-0 text-white">{{ __('form.registerDocumentDate') }}</label>
+                                            <label for="registration_document_date" class="mb-0 text-white">{{ __('form.registrationDocumentDate') }}</label>
                                             <div class="datepicker-wrapper">
                                                 <input
                                                     type="text"
                                                     class="auth-form-control datepicker"
                                                     name="registration_document_date"
                                                     id="registration_document_date"
-                                                    placeholder="Выберите дату"
+                                                    placeholder="{{ __('form_placeholders.registrationDocumentDate') }}"
                                                     required
                                                 >
                                             </div>
@@ -175,7 +175,7 @@
                                                 class="auth-form-control"
                                                 name="itpn_address"
                                                 id="itpn_address"
-                                                placeholder="Введие место выдачи ИНН"
+                                                placeholder="{{ __('form_placeholders.innAddress') }}"
                                                 required
                                             >
                                         </div>
@@ -187,7 +187,7 @@
                                                 class="auth-form-control"
                                                 name="itpn_number"
                                                 id="itpn_number"
-                                                placeholder="Введите номер ИНН"
+                                                placeholder="{{ __('form_placeholders.innNumber') }}"
                                                 required
                                             >
                                         </div>
@@ -200,7 +200,7 @@
                                                     class="auth-form-control datepicker"
                                                     name="itpn_date"
                                                     id="itpn_date"
-                                                    placeholder="Выберите дату"
+                                                    placeholder="{{ __('form_placeholders.innDate') }}"
                                                     required
                                                 >
                                             </div>
@@ -213,7 +213,7 @@
                                                 class="auth-form-control"
                                                 name="passport_number"
                                                 id="passport_number"
-                                                placeholder="Введите номер паспорта"
+                                                placeholder="{{ __('form_placeholders.passportNumber') }}"
                                                 required
                                             >
                                         </div>
@@ -226,7 +226,7 @@
                                                     class="auth-form-control datepicker"
                                                     name="passport_date"
                                                     id="passport_date"
-                                                    placeholder="Выберите дату"
+                                                    placeholder="{{ __('form_placeholders.passportDate') }}"
                                                     required
                                                 >
                                             </div>
@@ -239,7 +239,7 @@
                                                 class="auth-form-control"
                                                 name="passport_address"
                                                 id="passport_address"
-                                                placeholder="Введите место выдачи паспорта"
+                                                placeholder="{{ __('form_placeholders.passportAddress') }}"
                                                 required
                                             >
                                         </div>
@@ -252,7 +252,7 @@
                                                     class="auth-form-control datepicker"
                                                     name="district_decision_date"
                                                     id="district_decision_date"
-                                                    placeholder="Выберите дату"
+                                                    placeholder="{{ __('form_placeholders.districtDecisionDate') }}"
                                                     required
                                                 >
                                             </div>
@@ -265,7 +265,7 @@
                                                 class="auth-form-control"
                                                 name="district_decision_number"
                                                 id="district_decision_number"
-                                                placeholder="Введите номер"
+                                                placeholder="{{ __('form_placeholders.districtDecisionNumber') }}"
                                                 required
                                             >
                                         </div>
@@ -277,7 +277,7 @@
                                                 class="auth-form-control"
                                                 name="district_decision_address"
                                                 id="district_decision_address"
-                                                placeholder="Введите адрес"
+                                                placeholder="{{ __('form_placeholders.districtDecisionAddress') }}"
                                                 required
                                             >
                                         </div>
@@ -289,7 +289,7 @@
                                                 class="auth-form-control"
                                                 name="registration_number"
                                                 id="registration_number"
-                                                placeholder="Введите номер"
+                                                placeholder="{{ __('form_placeholders.registrationNumber') }}"
                                                 required
                                             >
                                         </div>
@@ -301,7 +301,7 @@
                                                 class="auth-form-control"
                                                 name="client_name"
                                                 id="client_name"
-                                                placeholder="Введите ваше имя"
+                                                placeholder="{{ __('form_placeholders.yourName') }}"
                                                 required
                                             >
                                         </div>
@@ -313,7 +313,7 @@
                                                 class="auth-form-control"
                                                 name="client_phone_number"
                                                 id="client_phone_number"
-                                                placeholder="Введите ваш номер телефона"
+                                                placeholder="{{ __('form_placeholders.youePhoneNumber') }}"
                                                 required
                                                 value="{{ Session::get('phone') }}"
                                             >

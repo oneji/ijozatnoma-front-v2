@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>ДАРОМАД &middot; РАЁСАТИ ИҶОЗАТНОМАДИҲӢ</title>
+    <title>{{ __('page_headers.login') }} &middot; {{ __('page_headers.main') }}</title>
     <!-- Styles -->
     <link href="{{ asset('images/favicon.ico') }}" rel="shortcut icon" type="image/x-icon">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -30,19 +30,19 @@
                                     <img src="{{ asset('images/logo.png') }}" class="logo" alt="Logo">
                                     <div class="text">
                                         <p>ВАЗОРАТИ САНОАТ ВА ТЕХНОЛОГИЯҲОИ НАВИ ҶУМҲУРИИ ТОҶИКИСТОН</p>
-                                        <p class="mb-0">РАЁСАТИ ИҶОЗАТНОМАДИҲӢ</p>
+                                        <p class="mb-0">{{ __('page_headers.main') }}</p>
                                     </div>
                                 </div>
                 
                                 <div class="form__body">
                                     <div class="form-group">
-                                        <label for="phone_number" class="auth-form-control">Раками телефонро ворид кунед</label>
+                                        <label for="phone_number" class="auth-form-control">{{ __('form_placeholders.phoneNumber') }}</label>
                                         <input
                                             type="text"
                                             class="auth-form-control"
                                             name="phone_number"
                                             id="phone_number"
-                                            placeholder="МИСОЛ: 919-00-00-00"
+                                            placeholder="{{ __('form_placeholders.example') }}: 919-00-00-00"
                                             required
                                         >
                                     </div>

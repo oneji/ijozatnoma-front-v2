@@ -7,9 +7,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>
         @if (isset($title))
-            {{ $title }} &middot; РАЁСАТИ ИҶОЗАТНОМАДИҲӢ
+            {{ $title }} &middot; {{ __('page_headers.main') }}
         @else
-            РАЁСАТИ ИҶОЗАТНОМАДИҲӢ
+            {{ __('page_headers.main') }}
         @endif
     </title>
     <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}" type="image/x-icon">

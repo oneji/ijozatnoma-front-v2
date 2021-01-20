@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Бақайдгири &middot; РАЁСАТИ ИҶОЗАТНОМАДИҲӢ</title>
+    <title>{{ __('page_headers.register') }} &middot; {{ __('page_headers.main') }}</title>
     <!-- Styles -->
     <link href="{{ asset('images/favicon.ico') }}" rel="shortcut icon" type="image/x-icon">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -42,7 +42,7 @@
                                                 class="auth-form-control"
                                                 name="name"
                                                 id="name"
-                                                placeholder="Введите имя"
+                                                placeholder="{{ __('form_placeholders.name') }}"
                                                 required
                                             >
                                         </div>
@@ -54,7 +54,7 @@
                                                 class="auth-form-control"
                                                 name="s_name"
                                                 id="s_name"
-                                                placeholder="Введите фамилию"
+                                                placeholder="{{ __('form_placeholders.sName') }}"
                                                 required
                                             >
                                         </div>
@@ -66,7 +66,7 @@
                                                 class="auth-form-control"
                                                 name="f_name"
                                                 id="f_name"
-                                                placeholder="Введите отчество"
+                                                placeholder="{{ __('form_placeholders.fName') }}"
                                                 required
                                             >
                                         </div>
@@ -78,7 +78,7 @@
                                                 class="auth-form-control"
                                                 name="phone_number"
                                                 id="phone_number"
-                                                placeholder="Введите номер телефона"
+                                                placeholder="{{ __('form_placeholders.phoneNumber') }}"
                                                 required
                                                 value="{{ Session::get('phone') }}"
                                             >
@@ -91,7 +91,7 @@
                                                 class="auth-form-control"
                                                 name="email"
                                                 id="email"
-                                                placeholder="Введите email адрес"
+                                                placeholder="{{ __('form_placeholders.email') }}"
                                                 required
                                                 data-parsley-type="email"
                                             >
@@ -105,7 +105,7 @@
                                                     class="auth-form-control datepicker"
                                                     name="birthday"
                                                     id="birthday"
-                                                    placeholder="Выберите дату"
+                                                    placeholder="{{ __('form_placeholders.birthday') }}"
                                                     required
                                                 >
                                             </div>
@@ -118,7 +118,7 @@
                                                 class="auth-form-control"
                                                 name="itpn_address"
                                                 id="itpn_address"
-                                                placeholder="Введие место выдачи ИНН"
+                                                placeholder="{{ __('form_placeholders.innAddress') }}"
                                                 required
                                             >
                                         </div>
@@ -130,7 +130,7 @@
                                                 class="auth-form-control"
                                                 name="itpn_number"
                                                 id="itpn_number"
-                                                placeholder="Введите номер ИНН"
+                                                placeholder="{{ __('form_placeholders.innNumber') }}"
                                                 required
                                             >
                                         </div>
@@ -143,7 +143,7 @@
                                                     class="auth-form-control datepicker"
                                                     name="itpn_date"
                                                     id="itpn_date"
-                                                    placeholder="Выберите дату"
+                                                    placeholder="{{ __('form_placeholders.innDate') }}"
                                                     required
                                                 >
                                             </div>
@@ -156,7 +156,7 @@
                                                 class="auth-form-control"
                                                 name="passport_number"
                                                 id="passport_number"
-                                                placeholder="Введите номер паспорта"
+                                                placeholder="{{ __('form_placeholders.passportNumber') }}"
                                                 required
                                             >
                                         </div>
@@ -169,7 +169,7 @@
                                                     class="auth-form-control datepicker"
                                                     name="passport_date"
                                                     id="passport_date"
-                                                    placeholder="Выберите дату"
+                                                    placeholder="{{ __('form_placeholders.passportDate') }}"
                                                     required
                                                 >
                                             </div>
@@ -182,7 +182,7 @@
                                                 class="auth-form-control"
                                                 name="passport_address"
                                                 id="passport_address"
-                                                placeholder="Введите место выдачи паспорта"
+                                                placeholder="{{ __('form_placeholders.passportAddress') }}"
                                                 required
                                             >
                                         </div>
@@ -216,7 +216,7 @@
                                                 class="auth-form-control"
                                                 name="job_address"
                                                 id="job_address"
-                                                placeholder="Введите адрес"
+                                                placeholder="{{ __('form_placeholders.jobAddress') }}"
                                                 required
                                             >
                                         </div>
@@ -228,7 +228,7 @@
                                                 class="auth-form-control"
                                                 name="client_name"
                                                 id="client_name"
-                                                placeholder="Введите ваше имя"
+                                                placeholder="{{ __('form_placeholders.yourName') }}"
                                                 required
                                             >
                                         </div>
@@ -240,7 +240,7 @@
                                                 class="auth-form-control"
                                                 name="client_phone_number"
                                                 id="client_phone_number"
-                                                placeholder="Введите ваш номер телефона"
+                                                placeholder="{{ __('form_placeholders.phoneNumber') }}"
                                                 required
                                                 value="{{ Session::get('phone') }}"
                                             >

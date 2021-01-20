@@ -6,6 +6,9 @@ return [
     'createApplication'     => 'Create an application',
     'docTypes'              => 'Document types',
     'legislature'           => 'Legislature',
-    'contacts'              => 'Contacts and address'
+    'contacts'              => 'Contacts and address',
+    'login'                 => 'Log In',
+    'register'              => 'Register',
+    'main'                  => 'AUTHORIZATION OFFICE'
 
 ];
