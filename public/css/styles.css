@@ -647,6 +647,13 @@ header.app-header {
   list-style-type: none;
   margin-bottom: 0;
   padding: 0;
+  width: 100%;
+}
+
+.links-table__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .links-table__item:not(:last-child) {

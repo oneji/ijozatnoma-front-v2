@@ -18,7 +18,7 @@ $(function() {
             __CITIES__.map(city => {
                 if(city.region_id == region.id) {
                     $('#registerForm select#city_id').append(`
-                        <option value$="${city.id}">${city.name}</option>
+                        <option value="${city.id}">${city.name}</option>
                     `);
                 }
             })
@@ -37,7 +37,7 @@ $(function() {
         __CITIES__.map(city => {
             if(city.region_id == region) {
                 $('#registerForm select#city_id').append(`
-                    <option value$="${city.id}">${city.name}</option>
+                    <option value="${city.id}">${city.name}</option>
                 `);
             }
         })

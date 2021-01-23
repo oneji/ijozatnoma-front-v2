@@ -657,8 +657,13 @@ header.app-header {
     list-style-type: none;
     margin-bottom: 0;
     padding: 0;
+    width: 100%;
 
     &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
         &:not(:last-child) {
             margin-bottom: 15px;
         }
