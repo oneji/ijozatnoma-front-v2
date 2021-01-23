@@ -26,7 +26,7 @@
                                 <p>{{ __('auth.registerFormTitle') }}</p>
                             </div>
                             
-                            <form action="{{ route('registerCompany') }}" method="POST" class="form" data-parsley-validate>
+                            <form action="{{ route('registerCompany') }}" method="POST" class="form" data-parsley-validate id="registerForm">
                                 @csrf
                 
                                 <div class="form__body">
@@ -108,25 +108,19 @@
                                             >
                                         </div>
                     
+                                        {{-- Control data from JS --}}
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
                                             <label for="region_id" class="mb-0 text-white">{{ __('form.region') }}</label>
                                             <div class="auth-select-wrapper">
-                                                <select class="auth-form-control" name="region_id" required>
-                                                    @foreach ($lists['regions'] as $region)
-                                                        <option value="{{ $region->id }}">{{ $region->name }}</option>
-                                                    @endforeach
-                                                </select>
+                                                <select class="auth-form-control" name="region_id" required id="region_id"></select>
                                             </div>
                                         </div>
                     
+                                        {{-- Control data from JS --}}
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
                                             <label for="city_id" class="mb-0 text-white">{{ __('form.city') }}</label>
                                             <div class="auth-select-wrapper">
-                                                <select class="auth-form-control" name="city_id" required>
-                                                    @foreach ($lists['cities'] as $city)
-                                                        <option value="{{ $city->id }}">{{ $city->name }}</option>
-                                                    @endforeach
-                                                </select>
+                                                <select class="auth-form-control" name="city_id" required id="city_id"></select> 
                                             </div>
                                         </div>
                     
@@ -343,6 +337,10 @@
     <script src="{{ asset('plugins/parsleyjs/dist/i18n/ru.js') }}"></script>
     <script src="{{ asset('plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}"></script>
     <script src="{{ asset('plugins/bootstrap-datepicker/locales/bootstrap-datepicker.ru.min.js') }}"></script>
+    <script>
+        let __REGIONS__ = @json($lists['regions']);
+        let __CITIES__ = @json($lists['cities']);
+    </script>
     <script src="{{ asset('js/custom/register.js') }}"></script>
 </body>
 </html>

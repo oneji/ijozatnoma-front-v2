@@ -58,6 +58,7 @@ class AuthController extends Controller
     {
         $dataLists = $this->listService->all();
 
+
         return view('auth.register_company', [
             'lists' => $dataLists
         ]);
@@ -70,7 +71,7 @@ class AuthController extends Controller
      */
     public function registerCompany(RegisterCompanyRequest $request)
     {
-        $data = $this->authService->registerCompany($request);
+        $this->authService->registerCompany($request);
 
         return redirect()->route('loginForm');
     }
@@ -96,7 +97,7 @@ class AuthController extends Controller
      */
     public function registerCitizen(RegisterCitizenRequest $request)
     {
-        $data = $this->authService->registerCitizen($request);
+        $this->authService->registerCitizen($request);
 
         return redirect()->route('loginForm');
     }
