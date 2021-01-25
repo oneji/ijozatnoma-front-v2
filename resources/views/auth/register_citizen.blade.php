@@ -150,6 +150,18 @@
                                         </div>
                                         
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                            <label for="passport_series" class="mb-0 text-white">{{ __('form.passportSeries') }}</label>
+                                            <input
+                                                type="text"
+                                                class="auth-form-control"
+                                                name="passport_series"
+                                                id="passport_series"
+                                                placeholder="{{ __('form_placeholders.passportSeries') }}"
+                                                required
+                                            >
+                                        </div>
+                                        
+                                        <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
                                             <label for="passport_number" class="mb-0 text-white">{{ __('form.passportNumber') }}</label>
                                             <input
                                                 type="text"
@@ -189,7 +201,34 @@
 
                                         {{-- Control data from JS --}}
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="job_region_id" class="mb-0 text-white">{{ __('form.jobRegion') }}</label>
+                                            <label for="residence_region_id" class="mb-0 text-white">{{ __('form.residenceRegion') }}</label>
+                                            <div class="auth-select-wrapper">
+                                                <select class="auth-form-control" name="residence_region_id" required id="residence_region_id"></select>
+                                            </div>
+                                        </div>
+                    
+                                        {{-- Control data from JS --}}
+                                        <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                            <label for="residence_city_id" class="mb-0 text-white">{{ __('form.residenceCity') }}</label>
+                                            <div class="auth-select-wrapper">
+                                                <select class="auth-form-control" name="residence_city_id" required id="residence_city_id"></select>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                            <label for="residence_address" class="mb-0 text-white">{{ __('form.residenceAddress') }}</label>
+                                            <input
+                                                type="text"
+                                                class="auth-form-control"
+                                                name="residence_address"
+                                                id="residence_address"
+                                                placeholder="{{ __('form_placeholders.residenceAddress') }}"
+                                                required
+                                            >
+                                        </div>
+
+                                        <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                            <label for="region_id" class="mb-0 text-white">{{ __('form.jobRegion') }}</label>
                                             <div class="auth-select-wrapper">
                                                 <select class="auth-form-control" name="job_region_id" required id="region_id"></select>
                                             </div>
@@ -197,7 +236,7 @@
                     
                                         {{-- Control data from JS --}}
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="job_city_id" class="mb-0 text-white">{{ __('form.jobCity') }}</label>
+                                            <label for="city_id" class="mb-0 text-white">{{ __('form.jobCity') }}</label>
                                             <div class="auth-select-wrapper">
                                                 <select class="auth-form-control" name="job_city_id" required id="city_id"></select>
                                             </div>

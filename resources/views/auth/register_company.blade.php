@@ -201,6 +201,18 @@
                                         </div>
                                         
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                            <label for="passport_series" class="mb-0 text-white">{{ __('form.passportSeries') }}</label>
+                                            <input
+                                                type="text"
+                                                class="auth-form-control"
+                                                name="passport_series"
+                                                id="passport_series"
+                                                placeholder="{{ __('form_placeholders.passportSeries') }}"
+                                                required
+                                            >
+                                        </div>
+
+                                        <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
                                             <label for="passport_number" class="mb-0 text-white">{{ __('form.passportNumber') }}</label>
                                             <input
                                                 type="text"
@@ -307,7 +319,7 @@
                                                 class="auth-form-control"
                                                 name="client_phone_number"
                                                 id="client_phone_number"
-                                                placeholder="{{ __('form_placeholders.youePhoneNumber') }}"
+                                                placeholder="{{ __('form_placeholders.yourPhoneNumber') }}"
                                                 required
                                                 value="{{ Session::get('phone') }}"
                                             >
