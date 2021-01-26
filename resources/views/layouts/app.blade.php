@@ -109,7 +109,7 @@
                         <img src="{{ asset('images/gerb.png') }}" class="logos__img" alt="Logo">
                         <div class="logos__text">
                             <p>Министерство промышленности <br> и новых технологий Республики <br> Таджикистан</p>
-                            <p class="mb-0">УПРАВЛЕНИЕ ПО ВЫДАЧЕ РАЗРЕШЕНИЙ</p>
+                            <p class="mb-0">УПРАВЛЕНИЕ ЛИЦЕНЗИРОВАНИЯ</p>
                         </div>
                     </div>
                 </div>
