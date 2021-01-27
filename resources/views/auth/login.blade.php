@@ -6,16 +6,67 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ __('page_headers.login') }} &middot; {{ __('page_headers.main') }}</title>
-    <!-- Styles -->
     <link href="{{ asset('images/favicon.ico') }}" rel="shortcut icon" type="image/x-icon">
+
+    <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+    <link href="{{ asset('plugins/flag-icon-css/css/flag-icon.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('plugins/fontawesome/css/all.min.css') }}" rel="stylesheet">
 </head>
 <body>
     <div class="login" style="background-image: url({{ asset('images/bg/login.jpg') }})">
         <div class="dotted-bg" style="background-image: url({{ asset('images/bg/login-clip.png') }})">
             <div class="container">
                 <div class="row">
+                    <div class="dropdown language-selector">
+                        @switch(App::getLocale())
+                            @case('tj')
+                                <a href="#" class="language-selector__anchor" id="dropdownLanguageSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="flag-icon flag-icon-tj mr-2"></span> Точ
+                                    <i class="fas fa-angle-down ml-2"></i>
+                                </a>
+                                <div class="dropdown-menu language-menu" aria-labelledby="dropdownLanguageSelector">
+                                    <a class="dropdown-item" href="{{ LaravelLocalization::localizeUrl(route('lang.switch', 'ru')) }}">
+                                        <span class="flag-icon flag-icon-ru mr-2"></span> РУС
+                                    </a>
+                                    <a class="dropdown-item" href="{{ LaravelLocalization::localizeUrl(route('lang.switch', 'en')) }}">
+                                        <span class="flag-icon flag-icon-us mr-2"></span> ENG
+                                    </a>
+                                </div>
+                                @break
+                            @case('ru')
+                                <a href="#" class="language-selector__anchor" id="dropdownLanguageSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="flag-icon flag-icon-ru mr-2"></span> РУС
+                                    <i class="fas fa-angle-down ml-2"></i>
+                                </a>
+                                <div class="dropdown-menu language-menu" aria-labelledby="dropdownLanguageSelector">
+                                    <a class="dropdown-item" href="{{ LaravelLocalization::localizeUrl(route('lang.switch', 'tj')) }}">
+                                        <span class="flag-icon flag-icon-tj mr-2"></span> ТОЧ
+                                    </a>
+                                    <a class="dropdown-item" href="{{ LaravelLocalization::localizeUrl(route('lang.switch', 'en')) }}">
+                                        <span class="flag-icon flag-icon-us mr-2"></span> ENG
+                                    </a>
+                                </div>
+                                @break
+                            @case('en')
+                                <a href="#" class="language-selector__anchor" id="dropdownLanguageSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="flag-icon flag-icon-us mr-2"></span> ENG
+                                    <i class="fas fa-angle-down ml-2"></i>
+                                </a>
+                                <div class="dropdown-menu language-menu" aria-labelledby="dropdownLanguageSelector">
+                                    <a class="dropdown-item" href="{{ LaravelLocalization::localizeUrl(route('lang.switch', 'tj')) }}">
+                                        <span class="flag-icon flag-icon-tj mr-2"></span> ТОЧ
+                                    </a>
+                                    <a class="dropdown-item" href="{{ LaravelLocalization::localizeUrl(route('lang.switch', 'ru')) }}">
+                                        <span class="flag-icon flag-icon-ru mr-2"></span> РУС
+                                    </a>
+                                </div>
+                                @break
+                            @default
+                                
+                        @endswitch
+                    </div>
                     <div class="col-sm-12">
                         <div class="form-container">
                             <div class="form-container__title">
@@ -68,6 +119,8 @@
     </div>
 
     <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="{{ asset('plugins/bootstrap/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('plugins/inputmask/dist/jquery.inputmask.js') }}"></script>
     <script src="{{ asset('plugins/parsleyjs/dist/parsley.min.js') }}"></script>
     <script src="{{ asset('plugins/parsleyjs/dist/i18n/ru.js') }}"></script>

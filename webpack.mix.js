@@ -29,5 +29,5 @@ mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/login.scss', 'public/css')
    .sass('resources/sass/auth_components.scss', 'public/css');
 
-mix.browserSync('http://ijozatnoma.front.loc/');
+// mix.browserSync('http://ijozatnoma.front.loc/');
 mix.disableNotifications();

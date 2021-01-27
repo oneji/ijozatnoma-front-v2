@@ -112,6 +112,6 @@ class AuthController extends Controller
         Session::forget('user');
         Session::forget('phone');
 
-        return redirect()->route('loginForm');
+        return redirect()->route('home');
     }
 }

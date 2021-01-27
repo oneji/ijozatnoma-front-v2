@@ -37,14 +37,18 @@
                         </a>
                         
                         <ul class="user__links">
-                            <li><a href="#">{{ Session::get('user')['phone_number'] }}</a></li>
-                            <li>
-                                <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('auth.logout') }}</a>
-                                
-                                <form action="{{ route('logout') }}" method="POST" id="logout-form">
-                                    @csrf
-                                </form>
-                            </li>
+                            @if (Session::has('user'))
+                                <li><a href="#">{{ Session::get('user')['phone_number'] }}</a></li>
+                                <li>
+                                    <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('auth.logout') }}</a>
+                                    
+                                    <form action="{{ route('logout') }}" method="POST" id="logout-form">
+                                        @csrf
+                                    </form>
+                                </li>
+                            @else
+                                <li><a href="{{ route('login') }}">{{ __('auth.login') }}</a></li>
+                            @endif
                         </ul>
                     </div>
                     <div class="dropdown language-selector">
@@ -144,8 +148,12 @@
                         <img src="{{ asset('images/user.png') }}" alt="user">
                     </a>
                     <ul class="user__links">
-                        <li><a href="#">{{ __('menu.privateData') }}</a></li>
-                        <li><a href="#">{{ __('auth.logout') }}</a></li>
+                        @if (Session::has('user'))
+                            <li><a href="#">{{ Session::get('user')['phone_number'] }}</a></li>
+                            <li><a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('auth.logout') }}</a></li>
+                        @else
+                            <li><a href="{{ route('login') }}">{{ __('auth.login') }}</a></li>
+                        @endif
                     </ul>
                 </div>
                 <div class="d-flex justify-content-between align-items-center pt-1">
@@ -234,6 +242,7 @@
 
     @section('scripts')
         <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
         <script src="{{ asset('plugins/bootstrap/js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('plugins/datatables/datatables.min.js') }}"></script>
         <script src="{{ asset('plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}"></script>
