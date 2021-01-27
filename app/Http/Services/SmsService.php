@@ -4,6 +4,7 @@ namespace App\Http\Services;
 
 use App\SmsCode;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 
 class SmsService
@@ -121,6 +122,13 @@ class SmsService
                 'message' => $responseBody->message
             ];   
         }
+
+        DB::table('login_logs')->insert([
+            'phone_number' => $phoneNumber,
+            'date' => Carbon::now(),
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+        ]);
 
         Session::put('user', [
             'id' => $responseBody->client->id,
