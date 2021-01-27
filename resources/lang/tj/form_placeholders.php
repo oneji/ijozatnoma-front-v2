@@ -37,6 +37,6 @@ return [
     'districtDecisionDate'      => 'Таърихро интихоб кунед',
     'districtDecisionNumber'    => 'Рақами ҳассосии ноҳияро ворид кунед',
     'districtDecisionAddress'   => 'Суроғаи қарори ноҳияро ворид кунед',
-    'registrationNumber'        => 'Рақами сабти номро ворид кунед'
+    'registrationNumber'        => 'Рақамро ворид кунед'
     
 ];
