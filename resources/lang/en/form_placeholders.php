@@ -23,6 +23,7 @@ return [
     'residenceAddress'          => 'Enter residence address',
     'yourName'                  => 'Enter your name',
     'yourPhoneNumber'           => 'Enter your phone number',
+    'notes'                     => 'Enter description',
 
     'companyName'               => 'Enter company name',
     'companyType'               => 'Choose company type',

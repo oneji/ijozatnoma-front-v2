@@ -60,7 +60,8 @@
   color: #717171 !important;
 }
 
-input.custom-control {
+input.custom-control,
+textarea.custom-control {
   outline: none;
   border: 2px solid #f2f2f2;
   padding: 5px 10px;
@@ -69,42 +70,47 @@ input.custom-control {
   border-radius: 0;
 }
 
-input.custom-control:focus {
+input.custom-control:focus,
+textarea.custom-control:focus {
   border-color: #adb5bd;
 }
 
-input.custom-control::-moz-placeholder {
+input.custom-control::-moz-placeholder, textarea.custom-control::-moz-placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #717171;
   opacity: 1;
   /* Firefox */
 }
 
-input.custom-control:-ms-input-placeholder {
+input.custom-control:-ms-input-placeholder, textarea.custom-control:-ms-input-placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #717171;
   opacity: 1;
   /* Firefox */
 }
 
-input.custom-control::placeholder {
+input.custom-control::placeholder,
+textarea.custom-control::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #717171;
   opacity: 1;
   /* Firefox */
 }
 
-input.custom-control:-ms-input-placeholder {
+input.custom-control:-ms-input-placeholder,
+textarea.custom-control:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #717171;
 }
 
-input.custom-control::-ms-input-placeholder {
+input.custom-control::-ms-input-placeholder,
+textarea.custom-control::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #717171;
 }
 
-input.custom-control.datepicker {
+input.custom-control.datepicker,
+textarea.custom-control.datepicker {
   padding-right: 40px;
 }
 

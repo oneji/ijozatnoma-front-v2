@@ -18,15 +18,7 @@
 
         <div class="row">
             <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 offset-lg-3">
-                
-                <div class="form-group">
-                    <div class="custom-select-wrapper">
-                        <select name="term" class="custom-control" required>
-                            <option value="" selected disabled>{{ __('form.term') }}</option>
-                        </select>
-                    </div>
-                </div>
-                
+
                 <div class="form-group">
                     <div class="custom-select-wrapper">
                         <select name="activity_id" class="custom-control" required>
@@ -34,6 +26,18 @@
                             @foreach ($activities as $item)
                                 <option value="{{ $item->id }}">{{ $item->title }}</option>
                             @endforeach
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <textarea name="notes" class="custom-control" placeholder="{{ __('form_placeholders.notes') }}" rows="5"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <div class="custom-select-wrapper">
+                        <select name="term" class="custom-control" required>
+                            <option value="" selected disabled>{{ __('form.term') }}</option>
                         </select>
                     </div>
                 </div>

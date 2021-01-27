@@ -13,6 +13,7 @@ return [
     'acceptedApplications'      => 'Accepted',
     'rights'                    => 'All rights reserved',
     'applicationSuccess'        => 'Success! Application has been successfully sent.',
+    'notes'                     => 'Description',
 
     // Register forms
     'company'                   => 'Entity',

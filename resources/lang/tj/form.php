@@ -38,6 +38,7 @@ return [
     'residenceAddress'          => 'Ҷои истикомат (суроға)',
     'yourName'                  => 'Номи шумо',
     'yourPhoneNumber'           => 'Рақами мобилиӣ шумо',
+    'notes'                     => 'Тавсиф',
 
     'companyName'               => 'Номи ширкат',
     'companyType'               => 'Намуди ширкат',

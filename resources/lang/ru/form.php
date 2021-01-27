@@ -13,6 +13,7 @@ return [
     'acceptedApplications'      => 'Принятые',
     'rights'                    => 'Все права защищены',
     'applicationSuccess'        => 'Успешно! Заявка была успешно отправлена.',
+    'notes'                     => 'Описание',
 
     // Register forms
     'company'                   => 'Юридическое лицо',

@@ -80,9 +80,10 @@ class ApplicationService
 
         if($user['type'] === 'company') {
             $formData = [
+                'activity_id' => $request->activity_id,
+                'notes' => $request->notes,
                 'term' => $request->term,
                 'branch_id' => $request->branch_id,
-                'activity_id' => $request->activity_id,
                 'docs' => $files
             ];
             
@@ -122,8 +123,9 @@ class ApplicationService
             return collect($responseBody);
         } else {
             $formData = [
-                'term' => $request->term,
                 'activity_id' => $request->activity_id,
+                'notes' => $request->notes,
+                'term' => $request->term,
                 'docs' => $files
             ];
 
