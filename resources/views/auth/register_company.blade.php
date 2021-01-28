@@ -300,44 +300,6 @@
                                         </div>
                                         
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="district_decision_date" class="mb-0 text-white">{{ __('form.districtDecisionDate') }}</label>
-                                            <div class="datepicker-wrapper">
-                                                <input
-                                                    type="text"
-                                                    class="auth-form-control datepicker"
-                                                    name="district_decision_date"
-                                                    id="district_decision_date"
-                                                    placeholder="{{ __('form_placeholders.districtDecisionDate') }}"
-                                                    required
-                                                >
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="district_decision_number" class="mb-0 text-white">{{ __('form.districtDecisionNumber') }}</label>
-                                            <input
-                                                type="text"
-                                                class="auth-form-control"
-                                                name="district_decision_number"
-                                                id="district_decision_number"
-                                                placeholder="{{ __('form_placeholders.districtDecisionNumber') }}"
-                                                required
-                                            >
-                                        </div>
-                    
-                                        <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="district_decision_address" class="mb-0 text-white">{{ __('form.districtDecisionAddress') }}</label>
-                                            <input
-                                                type="text"
-                                                class="auth-form-control"
-                                                name="district_decision_address"
-                                                id="district_decision_address"
-                                                placeholder="{{ __('form_placeholders.districtDecisionAddress') }}"
-                                                required
-                                            >
-                                        </div>
-                                        
-                                        <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
                                             <label for="registration_number" class="mb-0 text-white">{{ __('form.registrationNumber') }}</label>
                                             <input
                                                 type="text"
