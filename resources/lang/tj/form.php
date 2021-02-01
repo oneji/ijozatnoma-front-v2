@@ -52,6 +52,7 @@ return [
     'districtDecisionDate'      => 'Қарори Шӯрои ноҳиявӣ (санаи баровардан)',
     'districtDecisionNumber'    => 'Қарори Шӯрои ноҳиявӣ (рақам)',
     'districtDecisionAddress'   => 'Қарори Шӯрои ноҳия (ҷои барориш)',
-    'registrationNumber'        => 'Раками ягонаи мушаххас'
+    'registrationNumber'        => 'Раками ягонаи мушаххас',
+    'propertyType'             => 'Шакли моликият'
     
 ];

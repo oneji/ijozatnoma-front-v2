@@ -30,7 +30,11 @@ class SmsController extends Controller
     {
         $data = $this->smsService->send($request->phone_number);
 
-        if(isset($data['success']) && !$data['success']) {
+        if($data['code'] === 401) {
+            return redirect()->back()->withErrors([
+                $data['message']
+            ]);
+        } else if($data['code'] === 422) {
             return redirect()->route('registerCompany');
         }
 

@@ -106,6 +106,17 @@
                                                 </select>
                                             </div>
                                         </div>
+                                        
+                                        <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                            <label for="company_type_id" class="mb-0 text-white">{{ __('form.propertyType') }}</label>
+                                            <div class="auth-select-wrapper">
+                                                <select class="auth-form-control" name="property_type" required>
+                                                    <option value="first">first</option>
+                                                    <option value="second">second</option>
+                                                    <option value="third">third</option>
+                                                </select>
+                                            </div>
+                                        </div>
                     
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
                                             <label for="director" class="mb-0 text-white">{{ __('form.director') }}</label>

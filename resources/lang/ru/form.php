@@ -52,6 +52,7 @@ return [
     'districtDecisionDate'      => 'Решение районного совета (дата выдачи)',
     'districtDecisionNumber'    => 'Решение районного совета (номер)',
     'districtDecisionAddress'   => 'Решение районного совета (место выдачи)',
-    'registrationNumber'        => 'Единый идентификационный номер'
+    'registrationNumber'        => 'Единый идентификационный номер',
+    'propertyType'             => 'Форма собственности'
 
 ];

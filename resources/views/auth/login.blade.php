@@ -84,8 +84,20 @@
                                         <p class="mb-0">{{ __('page_headers.main') }}</p>
                                     </div>
                                 </div>
-                
+
+                                
                                 <div class="form__body">
+                                    @if ($errors->any())
+                                        <div class="form-group">
+                                            <div class="alert alert-danger">
+                                                <ul class="mb-0 pl-3">
+                                                    @foreach ($errors->all() as $error)
+                                                        <li>{{ $error }}</li>
+                                                    @endforeach
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    @endif
                                     <div class="form-group">
                                         <label for="phone_number" class="auth-form-control">{{ __('form_placeholders.phoneNumber') }}</label>
                                         <input
