@@ -1,11 +1,11 @@
-<div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="createModalLabel" aria-hidden="true">
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <form action="{{ route('clients.store') }}" method="POST" data-parsley-validate id="createForm">
+            <form action="#" method="POST" data-parsley-validate id="editForm">
                 @csrf
 
                 <div class="modal-header">
-                    <h5 class="modal-title" id="createModalLabel">{{ __('form.add') }}</h5>
+                    <h5 class="modal-title" id="editModalLabel">{{ __('form.edit') }}</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>

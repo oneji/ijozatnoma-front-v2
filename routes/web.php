@@ -47,6 +47,10 @@ Route::group([
         // Clients
         Route::get('clients', 'ClientController@index')->name('clients.index');
         Route::post('clients', 'ClientController@store')->name('clients.store');
+        Route::post('clients/{id}', 'ClientController@update')->name('clients.update');
+        Route::post('clients/activate/{id}', 'ClientController@activate')->name('clients.activate');
+        Route::post('clients/deactivate/{id}', 'ClientController@deactivate')->name('clients.deactivate');
+        Route::get('clients/getById/{id}', 'ClientController@getById');
         // Applications
         Route::get('applications', 'ApplicationController@index')->name('applications');
         Route::get('applications/create', 'ApplicationController@create')->name('applications.create');

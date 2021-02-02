@@ -123,11 +123,12 @@
                 let id = editBtn.data('id');
                 let editModal = $('#editModal');
                 let editForm = editModal.find('form');
+                let spinnerClass = 'fa-spin fa-spinner';
+
+                editBtn.find('i').toggleClass(spinnerClass);
 
                 $.get(`/branches/getById/${id}`)
                     .then(({ code, branch }) => {
-                        console.log(branch)
-
                         editForm.find('input[name=name]').val(branch.name);
                         editForm.find('input[name=address]').val(branch.address);
 
@@ -146,6 +147,7 @@
 
                         editForm.attr('action', `branches/${id}`);
 
+                        editBtn.find('i').toggleClass(spinnerClass);
                         editModal.modal('show');
                     })
                     .catch(erro => console.log(error))

@@ -3,11 +3,8 @@
 ])
 
 @section('content')
-    @if (Session::get('user')['type'] === 'company')
-        @include('clients.modals.create')
-    @else
-
-    @endif
+    @include('clients.modals.create')
+    @include('clients.modals.edit')
 
     <div class="row mb-2">
         <div class="col-sm-12">
@@ -35,44 +32,30 @@
     <script src="{{ asset('plugins/parsleyjs/dist/i18n/ru.js') }}"></script>
     <script>
         $(function() {
-            let __REGIONS__ = @json($regions);
-            let __CITIES__ = @json($cities);
+            $('.edit-btn').on('click', function(e) {
+                e.preventDefault();
+                let editBtn = $(this);
+                let id = editBtn.data('id');
+                let editModal = $('#editModal');
+                let editForm = editModal.find('form');
+                let spinnerClass = 'fa-spin fa-spinner';
 
-            clearSelects(true, true);
-            __REGIONS__.map((region, idx) => {
-                if(idx === 0) {
-                    __CITIES__.map(city => {
-                        if(city.region_id == region.id) {
-                            $('#createForm select#city_id').append(`
-                                <option value="${city.id}">${city.name}</option>
-                            `);
-                        }
+                editBtn.find('i').toggleClass(spinnerClass);
+
+                $.get(`/clients/getById/${id}`)
+                    .then(({ code, client }) => {
+                        console.log(client)
+
+                        editForm.find('input[name=name]').val(client.name);
+                        editForm.find('input[name=phone_number]').val(client.phone_number);
+
+                        editForm.attr('action', `clients/${id}`);
+
+                        editBtn.find('i').toggleClass(spinnerClass);                        
+                        editModal.modal('show');
                     })
-                }
-
-                $('#createForm select#region_id').append(`
-                    <option value="${region.id}">${region.name}</option>
-                `);
+                    .catch(erro => console.log(error))
             });
-
-            // Change cities select depending on a region
-            $('#createForm select#region_id').on('change', function() {
-                let region = $(this).val();
-
-                clearSelects(false, true);
-                __CITIES__.map(city => {
-                    if(city.region_id == region) {
-                        $('#createForm select#city_id').append(`
-                            <option value="${city.id}">${city.name}</option>
-                        `);
-                    }
-                })
-            })
-
-            function clearSelects(regions = false, cities = false) {
-                if(regions) $('#createForm select#region_id').html('');
-                if(cities) $('#createForm select#city_id').html('');
-            }
         })
     </script>
 @endsection

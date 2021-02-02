@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ClientRequest;
 use App\Http\Services\ClientService;
 use App\Http\Services\GeneralListService;
-use Illuminate\Support\Facades\Session;
+use Illuminate\Http\Request;
 
 class ClientController extends Controller
 {
@@ -30,9 +30,11 @@ class ClientController extends Controller
      */
     public function index()
     {
-        $dataLists = $this->listService->all();
+        $data = $this->clientService->all();
 
-        return view('clients.index', $dataLists);
+        return view('clients.index', [
+            'clients' => $data
+        ]);
     }
 
     /**
@@ -42,10 +44,67 @@ class ClientController extends Controller
      */
     public function store(ClientRequest $request)
     {
-        return $request->all();
-        
         $data = $this->clientService->store($request);
+        
+        $request->session()->flash('success', $data['message']);
+
+        return redirect()->back();
+    }
+
+    /**
+     * Update a newly create client
+     * 
+     * @param \App\Http\Requests\ClientRequest $request
+     * @param int $id
+     */
+    public function update(ClientRequest $request, $id)
+    {        
+        $data = $this->clientService->update($request, $id);
 
         return $data;
+
+        $request->session()->flash('success', $data['message']);
+
+        return redirect()->back();
+    }
+
+    /**
+     * Activate client
+     * 
+     * @param int $id
+     */
+    public function activate(Request $request, $id)
+    {
+        $data = $this->clientService->activate($id);
+
+        $request->session()->flash('success', $data['message']);
+
+        return redirect()->back();
+    }
+    
+    /**
+     * Deactivate client
+     * 
+     * @param int $id
+     */
+    public function deactivate(Request $request, $id)
+    {
+        $data = $this->clientService->deactivate($id);
+
+        $request->session()->flash('success', $data['message']);
+
+        return redirect()->back();
+    }
+
+    /**
+     * Get by id
+     * 
+     * @param int $id
+     */
+    public function getById($id)
+    {
+        $data = $this->clientService->getById($id);
+
+        return response()->json($data);
     }
 }

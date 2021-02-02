@@ -25,7 +25,7 @@ class ClientRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:100',
-            'phone_number' => 'required|integer'
+            'phone_number' => 'required'
         ];
     }
 }
