@@ -45,9 +45,17 @@ class ClientService
      */
     public function store(ClientRequest $request)
     {
-        $targetId = Session::get('user')['target_id'];
-        $data = $this->httpClient->request('POST', "clients/companies/store/$targetId", $request->all());
-        
+        $user = Session::get('user');
+        $targetId = $user['target_id'];
+
+        if($user['type'] === 'company') {
+            $link = "clients/companies/store/$targetId";
+        } else {
+            $link = "clients/citizens/store/$targetId";
+        }
+
+        $data = $this->httpClient->request('POST', $link);
+
         return $data;
     }
 
@@ -60,7 +68,12 @@ class ClientService
      */
     public function update(ClientRequest $request, $id)
     {
-        $data = $this->httpClient->request('POST', "clients/update/$id", $request->all());
+        $formData = [
+            'name' => $request->name,
+            'phone_number' => $request->phone_number,
+            'target_id' => $id
+        ];
+        $data = $this->httpClient->request('POST', "clients/update/$id", $formData);
         
         return $data;
     }

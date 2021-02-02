@@ -24,22 +24,24 @@
                         <a href="#" data-id="{{ $item->id }}" class="btn btn-primary btn-sm edit-btn">
                             <i class="fas fa-edit"></i>
                         </a>
-                        @if (!$item->status)
-                            <a href="#" onclick="event.preventDefault(); document.getElementById('activateForm{{ $item->id }}').submit();" class="btn btn-success btn-sm">
-                                <i class="fas fa-lock-open"></i>
-                            </a>
+                        @if (Session::get('user')['id'] !== $item->id)
+                            @if (!$item->status)
+                                <a href="#" onclick="event.preventDefault(); document.getElementById('activateForm{{ $item->id }}').submit();" class="btn btn-success btn-sm">
+                                    <i class="fas fa-lock-open"></i>
+                                </a>
 
-                            <form class="d-none" action="{{ route('clients.activate', [$item->id]) }}" method="POST" id="activateForm{{ $item->id }}">
-                                @csrf
-                            </form>
-                        @else
-                            <a href="#" onclick="event.preventDefault(); document.getElementById('deactivateForm{{ $item->id }}').submit();" class="btn btn-danger btn-sm">
-                                <i class="fas fa-lock"></i>
-                            </a>
+                                <form class="d-none" action="{{ route('clients.activate', [$item->id]) }}" method="POST" id="activateForm{{ $item->id }}">
+                                    @csrf
+                                </form>
+                            @else
+                                <a href="#" onclick="event.preventDefault(); document.getElementById('deactivateForm{{ $item->id }}').submit();" class="btn btn-danger btn-sm">
+                                    <i class="fas fa-lock"></i>
+                                </a>
 
-                            <form class="d-none" action="{{ route('clients.deactivate', [$item->id]) }}" method="POST" id="deactivateForm{{ $item->id }}">
-                                @csrf
-                            </form>
+                                <form class="d-none" action="{{ route('clients.deactivate', [$item->id]) }}" method="POST" id="deactivateForm{{ $item->id }}">
+                                    @csrf
+                                </form>
+                            @endif
                         @endif
                     </td>
                 </tr>

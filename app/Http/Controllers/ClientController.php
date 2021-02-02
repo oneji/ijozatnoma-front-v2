@@ -61,8 +61,6 @@ class ClientController extends Controller
     {        
         $data = $this->clientService->update($request, $id);
 
-        return $data;
-
         $request->session()->flash('success', $data['message']);
 
         return redirect()->back();

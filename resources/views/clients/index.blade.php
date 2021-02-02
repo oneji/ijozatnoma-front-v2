@@ -16,11 +16,7 @@
     </div>
     <div class="row">
         <div class="col-sm-12">
-            @if (Session::get('user')['type'] === 'company')
-                @include('clients.partials.company.__clients_table')
-            @else
-                
-            @endif
+            @include('clients.partials.__clients_table')
         </div>
     </div>
 @endsection
