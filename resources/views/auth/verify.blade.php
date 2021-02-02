@@ -15,15 +15,15 @@
     <div class="login" style="background-image: url({{ asset('images/bg/login.jpg') }})">
         <div class="dotted-bg" style="background-image: url({{ asset('images/bg/login-clip.png') }})">
             <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
+                <div class="row justify-content-center">
+                    <div class="col-sm-5">
                         <div class="form-container">
                             <div class="form-container__title">
                                 <img src="{{ asset('images/icons/key.png') }}" alt="">
                                 <p>{{ __('auth.verifyFormTitle') }}</p>
                             </div>
     
-                            <form action="{{ route('verify') }}" method="POST" class="form" data-parsley-validate>
+                            <form action="{{ route('verify') }}" method="POST" class="form" data-parsley-validate style="padding: 25px">
                                 @csrf
                 
                                 @if ($errors->any())
@@ -36,26 +36,24 @@
                                     </div>
                                 @endif
                 
-                                <div class="form__body">
-                                    <p class="text-white text-uppercase text-center">{{ __('form.phoneNumber') }}: {{ Session::get('phone') }} &middot; {{ Session::get('smsCode')['code'] }}</p>
-                                    <div class="form-group">
-                                        <label for="verification_code" class="auth-form-control">{{ __('form_placeholders.verificationCode') }}</label>
-                                        <input
-                                            type="text"
-                                            class="auth-form-control text-center"
-                                            name="verification_code"
-                                            id="verification_code"
-                                            placeholder="{{ __('form_placeholders.example') }}: 999999"
-                                            required
-                                        >
-                                    </div>
-                
-                                    <div class="form-group">
-                                        <button type="submit" class="auth-button btn-block">
-                                            {{ __('auth.login') }}
-                                            <img src="{{ asset('images/icons/fly.png') }}" alt="">
-                                        </button>
-                                    </div>
+                                <p class="text-white text-uppercase text-center">{{ __('form.phoneNumber') }}: {{ Session::get('phone') }} &middot; {{ Session::get('smsCode')['code'] }}</p>
+                                <div class="form-group">
+                                    <label for="verification_code" class="auth-form-control">{{ __('form_placeholders.verificationCode') }}</label>
+                                    <input
+                                        type="text"
+                                        class="auth-form-control text-center"
+                                        name="verification_code"
+                                        id="verification_code"
+                                        placeholder="{{ __('form_placeholders.example') }}: 999999"
+                                        required
+                                    >
+                                </div>
+            
+                                <div class="form-group">
+                                    <button type="submit" class="auth-button btn-block">
+                                        {{ __('auth.login') }}
+                                        <img src="{{ asset('images/icons/fly.png') }}" alt="">
+                                    </button>
                                 </div>
                             </form>
                         </div>

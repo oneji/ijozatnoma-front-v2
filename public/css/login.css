@@ -17,6 +17,10 @@
   max-width: 800px;
 }
 
+.register .form__body {
+  padding: 50px;
+}
+
 .register__type {
   margin-bottom: 30px;
   display: flex;
