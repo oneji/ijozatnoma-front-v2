@@ -67,6 +67,7 @@
                                 
                         @endswitch
                     </div>
+
                     <div class="col-sm-12">
                         <div class="form-container">
                             <div class="form-container__title">
@@ -77,40 +78,47 @@
                             <form action="{{ route('login') }}" method="POST" class="form" data-parsley-validate>
                                 @csrf
                 
-                                <div class="form__header">
+                                {{-- <div class="form__header">
                                     <img src="{{ asset('images/logo.png') }}" class="logo" alt="Logo">
                                     <div class="text">
                                         <p>ВАЗОРАТИ САНОАТ ВА ТЕХНОЛОГИЯҲОИ НАВИ ҶУМҲУРИИ ТОҶИКИСТОН</p>
                                         <p class="mb-0">{{ __('page_headers.main') }}</p>
                                     </div>
-                                </div>
-
+                                </div> --}}
                                 
                                 <div class="form__body">
-                                    @if ($errors->any())
-                                        <div class="form-group">
-                                            <div class="alert alert-danger">
-                                                <ul class="mb-0 pl-3">
-                                                    @foreach ($errors->all() as $error)
-                                                        <li>{{ $error }}</li>
-                                                    @endforeach
-                                                </ul>
-                                            </div>
+                                    <div class="form__body__left">
+                                        <img src="{{ asset('images/logo.png') }}" class="logo" alt="Logo">
+                                        <div class="text">
+                                            <p>ВАЗОРАТИ САНОАТ ВА ТЕХНОЛОГИЯҲОИ НАВИ ҶУМҲУРИИ ТОҶИКИСТОН</p>
+                                            <p class="mb-0">{{ __('page_headers.main') }}</p>
                                         </div>
-                                    @endif
-                                    <div class="form-group">
-                                        <label for="phone_number" class="auth-form-control">{{ __('form_placeholders.phoneNumber') }}</label>
-                                        <input
-                                            type="text"
-                                            class="auth-form-control"
-                                            name="phone_number"
-                                            id="phone_number"
-                                            placeholder="{{ __('form_placeholders.example') }}: 919-00-00-00"
-                                            required
-                                        >
                                     </div>
-                
-                                    <div class="form-group">
+                                    
+                                    <div class="form__body__right">
+                                        @if ($errors->any())
+                                            <div class="form-group">
+                                                <div class="alert alert-danger">
+                                                    <ul class="mb-0 pl-3">
+                                                        @foreach ($errors->all() as $error)
+                                                            <li>{{ $error }}</li>
+                                                        @endforeach
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        @endif
+                                        <div class="form-group">
+                                            <label for="phone_number" class="auth-form-control">{{ __('form_placeholders.phoneNumber') }}</label>
+                                            <input
+                                                type="text"
+                                                class="auth-form-control"
+                                                name="phone_number"
+                                                id="phone_number"
+                                                placeholder="{{ __('form_placeholders.example') }}: 919-00-00-00"
+                                                required
+                                            >
+                                        </div>
+                    
                                         <button type="submit" class="auth-button btn-block">
                                             {{ __('auth.sendSms') }}
                                             <img src="{{ asset('images/icons/fly.png') }}" alt="">

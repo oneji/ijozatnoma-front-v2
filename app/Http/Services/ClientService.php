@@ -54,7 +54,7 @@ class ClientService
             $link = "clients/citizens/store/$targetId";
         }
 
-        $data = $this->httpClient->request('POST', $link);
+        $data = $this->httpClient->request('POST', $link, $request->all());
 
         return $data;
     }

@@ -48,10 +48,6 @@
   background-size: cover;
 }
 
-.login .form-container {
-  max-width: 400px;
-}
-
 .login .footer {
   position: fixed;
   bottom: 0;
@@ -106,36 +102,46 @@
   box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.1);
 }
 
-.form-container .form__header {
+.form-container .form__body {
+  display: flex;
+}
+
+.form-container .form__body__left {
   height: 200px;
   background: #ffb13f;
-  background: linear-gradient(90deg, #ffb13f 0%, #ffaa40 50%, #ffa341 100%);
-  padding: 30px;
-  border-radius: 5px;
-  -webkit-clip-path: polygon(50% 100%, 100% 80%, 100% 0, 0 0, 0 80%);
-          clip-path: polygon(50% 100%, 100% 80%, 100% 0, 0 0, 0 80%);
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 50px 70px;
+  width: 40%;
+  height: 100%;
+  border-radius: 5px;
 }
 
-.form-container .form__header img.logo {
-  width: 120px;
+.form-container .form__body__left img.logo {
+  width: 150px;
   height: auto;
   border: 10px solid rgba(255, 255, 255, 0.1);
   border-radius: 100%;
-  margin-right: 20px;
+  margin-bottom: 40px;
 }
 
-.form-container .form__header .text {
-  font-size: 12px;
+.form-container .form__body__left .text {
+  font-size: 14px;
   color: #fff;
   letter-spacing: 1px;
   font-weight: bold;
 }
 
-.form-container .form__body {
-  padding: 20px 35px;
+.form-container .form__body__right {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 150px;
 }
 
 @media (max-width: 575.98px) {
@@ -147,13 +153,14 @@
     height: 150px;
   }
 
-  .form-container .form__header img.logo {
+  .form-container .form__body__left img.logo {
     width: 80px;
     border-width: 5px;
+    margin-bottom: 10px;
   }
 
   footer,
-  .form-container .form__header .text {
+  .form-container .form__body__left .text {
     font-size: 8px;
   }
 
@@ -170,6 +177,27 @@
   .form-container {
     width: 100%;
     max-width: 100%;
+  }
+
+  .form-container .form__body {
+    flex-direction: column;
+  }
+
+  .form-container .form__body__left {
+    padding: 20px;
+  }
+
+  .form-container .form__body__left .text {
+    font-size: 12px;
+  }
+
+  .form-container .form__body__right {
+    padding: 20px;
+  }
+
+  .form-container .form__body__left,
+  .form-container .form__body__right {
+    width: 100%;
   }
 }
 
