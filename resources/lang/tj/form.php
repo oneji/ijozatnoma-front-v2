@@ -14,6 +14,9 @@ return [
     'rights'                    => 'ҲАМАИ ҲУҚУҚҲО ДАР ТАҲТИ ҲИМОЯ ҚАРОР ДОРАНД',
     'applicationSuccess'        => 'Бомуваффақият! Дархост бомуваффақият фиристода шуд.',
 
+    'add'                       => 'Илова кардан',
+    'edit'                      => 'Иваз кардан', 
+
     // Register forms
     'company'                   => 'Шахси Ҳуқуқӣ',
     'citizen'                   => 'Шахси инфироди',
@@ -53,6 +56,6 @@ return [
     'districtDecisionNumber'    => 'Қарори Шӯрои ноҳиявӣ (рақам)',
     'districtDecisionAddress'   => 'Қарори Шӯрои ноҳия (ҷои барориш)',
     'registrationNumber'        => 'Раками ягонаи мушаххас',
-    'propertyType'             => 'Шакли моликият'
+    'propertyType'             => 'Шакли моликият',
     
 ];

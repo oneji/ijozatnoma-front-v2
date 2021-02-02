@@ -11,6 +11,8 @@ return [
     'go_to_print'               => 'Ready to print',
     'done'                      => 'Done to pick up',
     'removed'                   => 'Removed',
-    'in_protocol'               => 'Submitted for review'
+    'in_protocol'               => 'Submitted for review',
+    'active'                    => 'Active',
+    'non_active'                => 'Non active'
 
 ];

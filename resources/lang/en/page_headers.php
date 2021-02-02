@@ -9,6 +9,8 @@ return [
     'contacts'              => 'Contacts and address',
     'login'                 => 'Log In',
     'register'              => 'Register',
-    'main'                  => 'AUTHORIZATION OFFICE'
+    'main'                  => 'AUTHORIZATION OFFICE',
+    'clients'               => 'Clients',
+    'branches'              => 'Branches'
 
 ];

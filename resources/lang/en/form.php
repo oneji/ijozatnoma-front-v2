@@ -15,6 +15,9 @@ return [
     'applicationSuccess'        => 'Success! Application has been successfully sent.',
     'notes'                     => 'Description',
 
+    'add'                       => 'Add new', 
+    'edit'                      => 'Edit',
+
     // Register forms
     'company'                   => 'Entity',
     'citizen'                   => 'Individual',

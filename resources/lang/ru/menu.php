@@ -10,6 +10,8 @@ return [
     'legislature'           => 'Законодательство',
     'contacts'              => 'Контакты и адрес',
     'siteMap'               => 'Карта сайта',
-    'otherResources'        => 'Другие ресурсы'
+    'otherResources'        => 'Другие ресурсы',
+    'clients'               => 'Клиенты',
+    'branches'              => 'Точки'
 
 ];

@@ -39,6 +39,10 @@
                         <ul class="user__links">
                             @if (Session::has('user'))
                                 <li><a href="#">{{ Session::get('user')['phone_number'] }}</a></li>
+                                <li><a href="{{ route('clients.index') }}">{{ __('menu.clients') }}</a></li>
+                                @if (Session::get('user')['type'] === 'company')
+                                    <li><a href="{{ route('branches.index') }}">{{ __('menu.branches') }}</a></li>
+                                @endif
                                 <li>
                                     <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('auth.logout') }}</a>
                                     
@@ -96,7 +100,6 @@
                                 </div>
                                 @break
                             @default
-                                
                         @endswitch
                     </div>
                 </nav>
@@ -150,6 +153,10 @@
                     <ul class="user__links">
                         @if (Session::has('user'))
                             <li><a href="#">{{ Session::get('user')['phone_number'] }}</a></li>
+                            <li><a href="{{ route('clients.index') }}">{{ __('menu.clients') }}</a></li>
+                            @if (Session::get('user')['type'] === 'company')
+                                <li><a href="{{ route('branches.index') }}">{{ __('menu.branches') }}</a></li>
+                            @endif
                             <li><a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('auth.logout') }}</a></li>
                         @else
                             <li><a href="{{ route('login') }}">{{ __('auth.login') }}</a></li>

@@ -10,6 +10,8 @@ return [
     'legislature'           => 'ҚОНУНГУЗОРӢ',
     'contacts'              => 'ТАМОС ВА СУРОҒА',
     'siteMap'               => 'ХАРИТАИ СОМОНА',
-    'otherResources'        => 'ДИГАР СОМОНАХО'
+    'otherResources'        => 'ДИГАР СОМОНАХО',
+    'clients'               => 'Мизоҷон',
+    'branches'              => 'Филиалҳо'
 
 ];

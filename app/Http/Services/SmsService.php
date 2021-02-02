@@ -134,7 +134,8 @@ class SmsService
             'id' => $responseBody->client->id,
             'name' => $responseBody->client->name,
             'phone_number' => $responseBody->client->phone_number,
-            'type' => $responseBody->client->type
+            'type' => $responseBody->client->type,
+            'target_id' => $responseBody->client->target_id
         ]);
 
         return [

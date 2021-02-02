@@ -37,6 +37,17 @@ Route::group([
     Route::get('laws/download/{file}', 'LegislatureController@download')->name('laws.downloadFile');
     Route::get('doc-types', 'DocTypeController@index')->name('docTypes');
     Route::middleware('auth.session')->group(function() {
+        // Branches
+        Route::get('branches', 'BranchController@index')->name('branches.index');
+        Route::post('branches', 'BranchController@store')->name('branches.store');
+        Route::post('branches/{id}', 'BranchController@update')->name('branches.update');
+        Route::post('branches/activate/{id}', 'BranchController@activate')->name('branches.activate');
+        Route::post('branches/deactivate/{id}', 'BranchController@deactivate')->name('branches.deactivate');
+        Route::get('branches/getById/{id}', 'BranchController@getById');
+        // Clients
+        Route::get('clients', 'ClientController@index')->name('clients.index');
+        Route::post('clients', 'ClientController@store')->name('clients.store');
+        // Applications
         Route::get('applications', 'ApplicationController@index')->name('applications');
         Route::get('applications/create', 'ApplicationController@create')->name('applications.create');
         Route::post('applications', 'ApplicationController@store')->name('applications.store');

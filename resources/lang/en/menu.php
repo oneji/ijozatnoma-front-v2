@@ -10,6 +10,8 @@ return [
     'legislature'           => 'Legislature',
     'contacts'              => 'Contacts and address',
     'siteMap'               => 'Site map',
-    'otherResources'        => 'Other resources'
+    'otherResources'        => 'Other resources',
+    'clients'               => 'Clients',
+    'branches'              => 'Branches'
 
 ];
