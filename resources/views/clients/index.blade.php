@@ -47,7 +47,7 @@
 
                         editForm.attr('action', `clients/${id}`);
 
-                        editBtn.find('i').toggleClass(spinnerClass);                        
+                        editBtn.find('i').toggleClass(spinnerClass);
                         editModal.modal('show');
                     })
                     .catch(erro => console.log(error))

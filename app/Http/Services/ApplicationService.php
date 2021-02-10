@@ -184,4 +184,16 @@ class ApplicationService
 
         return $data;
     }
+    
+    /**
+     * Pay for application
+     * 
+     * @param int $paymentRequestId
+     */
+    public function pay($paymentRequestId)
+    {
+        $data = $this->httpClient->request('GET', "/api/paymentPageLink/$paymentRequestId");
+
+        return $data;
+    }
 }

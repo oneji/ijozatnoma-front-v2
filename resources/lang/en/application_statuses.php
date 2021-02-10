@@ -13,6 +13,9 @@ return [
     'removed'                   => 'Removed',
     'in_protocol'               => 'Submitted for review',
     'active'                    => 'Active',
-    'non_active'                => 'Non active'
+    'non_active'                => 'Non active',
+    'not_paid'                  => 'Not paid',
+    'partially_paid'            => 'Partially paid',
+    'paid'                      => 'Paid'
 
 ];

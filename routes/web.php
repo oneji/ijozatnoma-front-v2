@@ -56,6 +56,7 @@ Route::group([
         Route::get('applications/create', 'ApplicationController@create')->name('applications.create');
         Route::post('applications', 'ApplicationController@store')->name('applications.store');
         Route::post('applications/remove/{id}', 'ApplicationController@remove')->name('applications.remove');
+        Route::get('applications/pay/{id}', 'ApplicationController@pay')->name('applications.pay');
 
         // Logout
         Route::post('logout', 'AuthController@logout')->name('logout');

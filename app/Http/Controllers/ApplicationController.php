@@ -67,4 +67,16 @@ class ApplicationController extends Controller
 
         return redirect()->back();
     }
+
+    /**
+     * Pay for application
+     * 
+     * @param int $paymentRequestId
+     */
+    public function pay($paymentRequestId)
+    {
+        $data = $this->applicationService->pay($paymentRequestId);
+
+        return response()->json($data);
+    }
 }
