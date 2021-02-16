@@ -18,6 +18,7 @@
                             <th>ПАРДОХТ КАРД/ҲАМАГИ</th>
                             <th>ҲОЛАТИ ПАРДОХТ</th>
                             <th>ҲОЛАТ</th>
+                            <th>{{ __('application_statuses.extension') }}</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -42,6 +43,13 @@
                                     <span class="custom-badge {{ $item->status === 'removed' ? 'danger' : 'success'  }}">
                                         {{ __("application_statuses.$item->status") }}
                                     </span>
+                                </td>
+                                <td class="text-center">
+                                    @if ($item->extension)
+                                        {{ __('application_statuses.yes') }}
+                                    @else
+                                        {{ __('application_statuses.no') }}
+                                    @endif
                                 </td>
                                 <td>
                                     @if ($item->status !== 'removed')

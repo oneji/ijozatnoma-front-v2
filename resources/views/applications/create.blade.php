@@ -9,6 +9,47 @@
         #addApplicationForm {
             font-size: 16px;
         }
+
+        #extension {
+            padding: 0;
+            height: initial;
+            width: initial;
+            margin-bottom: 0;
+            display: none;
+            cursor: pointer;
+        }
+
+        #extension ~ #extensionLabel {
+            position: relative;
+            cursor: pointer;
+        }
+
+        #extension ~ #extensionLabel:before {
+            content:'';
+            -webkit-appearance: none;
+            background-color: transparent;
+            border: 2px solid #adb5bd;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+            padding: 8px;
+            display: inline-block;
+            position: relative;
+            vertical-align: middle;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+        #extension:checked + #extensionLabel:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 6px;
+            left: 8px;
+            width: 5px;
+            height: 12px;
+            border: solid #adb5bd;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
     </style>
 @endsection
 
@@ -18,6 +59,10 @@
 
         <div class="row">
             <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 offset-lg-3">
+                <div class="form-group">
+                    <input type="checkbox" name="extension" id="extension">
+                    <label id="extensionLabel" class="mb-0" for="extension">{{ __('application_statuses.extensionFull') }}</label>
+                </div>
 
                 <div class="form-group">
                     <div class="custom-select-wrapper">
@@ -72,10 +117,6 @@
                             {{ __('form.submitBtn') }}
                             <i class="fas fa-share ml-2"></i>
                         </button>
-                        {{-- <button class="btn btn-primary btn-sm text-uppercase" type="reset">
-                            <i class="fas fa-reply mr-2"></i>
-                            { __('form.backBtn') }}
-                        </button> --}}
                     </div>
                 </div>
             </div>

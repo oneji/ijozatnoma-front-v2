@@ -16,6 +16,10 @@ return [
     'non_active'                => 'Non active',
     'not_paid'                  => 'Not paid',
     'partially_paid'            => 'Partially paid',
-    'paid'                      => 'Paid'
+    'paid'                      => 'Paid',
+    'yes'                       => 'Yes',
+    'no'                        => 'No',
+    'extension'                 => 'Extension',
+    'extensionFull'             => 'License term extension'
 
 ];
