@@ -121,17 +121,11 @@
                     </div>
                 </div>
 
-                <ul class="faq">
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">{{ __('menu.siteMap') }}</a></li>
-                    <li><a href="#">{{ __('menu.otherResources') }}</a></li>
-                </ul>
-
                 <nav class="menu">
                     <ul>
                         <li class="{{ Route::currentRouteName() === 'home' ? 'active' : null }}"><a href="{{ route('home') }}">{{ __('menu.home') }}</a></li>
-                        <li class="{{ Route::currentRouteName() === 'applications' ? 'active' : null }}"><a href="{{ route('applications') }}">{{ __('menu.myApplications') }}</a></li>
                         <li class="{{ Route::currentRouteName() === 'applications.create' ? 'active' : null }}"><a href="{{ route('applications.create') }}">{{ __('menu.createApplication') }}</a></li>
+                        <li class="{{ Route::currentRouteName() === 'applications' ? 'active' : null }}"><a href="{{ route('applications') }}">{{ __('menu.myApplications') }}</a></li>
                         <li class="{{ Route::currentRouteName() === 'docTypes' ? 'active' : null }}"><a href="{{ route('docTypes') }}">{{ __('menu.docTypes') }}</a></li>
                         <li class="{{ Route::currentRouteName() === 'legislature' ? 'active' : null }}"><a href="{{ route('legislature') }}">{{ __('menu.legislature') }}</a></li>
                         <li class="{{ Route::currentRouteName() === 'contacts' ? 'active' : null }}"><a href="{{ route('contacts') }}">{{ __('menu.contacts') }}</a></li>

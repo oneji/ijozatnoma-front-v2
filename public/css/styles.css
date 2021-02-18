@@ -355,6 +355,7 @@ header.app-header {
   color: #fff;
   letter-spacing: 1px;
   font-weight: bold;
+  text-align: center;
 }
 
 .user {

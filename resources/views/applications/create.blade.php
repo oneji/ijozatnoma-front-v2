@@ -58,7 +58,7 @@
         @csrf
 
         <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 offset-lg-3">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 offset-md-3">
                 <div class="form-group">
                     <input type="checkbox" name="extension" id="extension">
                     <label id="extensionLabel" class="mb-0" for="extension">{{ __('application_statuses.extensionFull') }}</label>

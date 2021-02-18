@@ -35,7 +35,7 @@
                                 <td>{{ \Carbon\Carbon::parse($item->created_at)->format('d/m/Y') }}</td>
                                 <td class="text-center">{{ $item->sum_payed }}/{{ $item->sum_should_pay }}</td>
                                 <td>
-                                    <span class="custom-badge {{ $item->status === 'not_paid' ? 'danger' : 'success'  }}">
+                                    <span class="custom-badge {{ $item->payment_status === 'not_paid' ? 'danger' : 'success'  }}">
                                         {{ __("application_statuses.$item->payment_status") }}
                                     </span>
                                 </td>

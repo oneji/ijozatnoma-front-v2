@@ -85,6 +85,17 @@
                                         </div>
 
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                            <label for="company_type_id" class="mb-0 text-white">{{ __('form.companyType') }}</label>
+                                            <div class="auth-select-wrapper">
+                                                <select class="auth-form-control" name="company_type_id" required>
+                                                    @foreach ($lists['types'] as $type)
+                                                        <option value="{{ $type->id }}">{{ $type->title }} ({{ $type->short_title }})</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
                                             <label for="name" class="mb-0 text-white">{{ __('form.companyName') }}</label>
                                             <input
                                                 type="text"
@@ -94,17 +105,6 @@
                                                 placeholder="{{ __('form_placeholders.companyName') }}"
                                                 required
                                             >
-                                        </div>
-
-                                        <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="company_type_id" class="mb-0 text-white">{{ __('form.companyType') }}</label>
-                                            <div class="auth-select-wrapper">
-                                                <select class="auth-form-control" name="company_type_id" required>
-                                                    @foreach ($lists['types'] as $type)
-                                                        <option value="{{ $type->id }}">{{ $type->title }} ({{ $type->short_title }})</option>
-                                                    @endforeach
-                                                </select>
-                                            </div>
                                         </div>
                                         
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">

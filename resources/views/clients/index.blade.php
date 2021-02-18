@@ -40,8 +40,6 @@
 
                 $.get(`/clients/getById/${id}`)
                     .then(({ code, client }) => {
-                        console.log(client)
-
                         editForm.find('input[name=name]').val(client.name);
                         editForm.find('input[name=phone_number]').val(client.phone_number);
 
