@@ -39,8 +39,8 @@ return [
     'residenceRegion'           => 'Ҷои истикомат (минтақа)',
     'residenceCity'             => 'Ҷои истикомат (шаҳр)',
     'residenceAddress'          => 'Ҷои истикомат (суроға)',
-    'yourName'                  => 'Номи шумо',
-    'yourPhoneNumber'           => 'Рақами мобилиӣ шумо',
+    'yourName'                  => 'Шахси масьул',
+    'yourPhoneNumber'           => 'Рақами мобилиӣ шахси масьул',
     'notes'                     => 'Тавсиф',
 
     'companyName'               => 'Номи ширкат',

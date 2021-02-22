@@ -40,8 +40,8 @@ return [
     'residenceRegion'           => 'Place of residence (region)',
     'residenceCity'             => 'Place of residence (city)',
     'jobAddress'                => 'Place of residence (address)',
-    'yourName'                  => 'Your name',
-    'yourPhoneNumber'           => 'Your phone number',
+    'yourName'                  => 'Responsible\'s name',
+    'yourPhoneNumber'           => 'Responsible\'s phone number',
 
     'companyName'               => 'Company name',
     'companyType'               => 'Company type',

@@ -40,8 +40,8 @@ return [
     'residenceRegion'           => 'Место проживания (регион)',
     'residenceCity'             => 'Место проживания (город)',
     'residenceAddress'          => 'Место проживания (адрес)',
-    'yourName'                  => 'Ваше имя',
-    'yourPhoneNumber'           => 'Ваш номер телефона',
+    'yourName'                  => 'ФИО ответственного',
+    'yourPhoneNumber'           => 'Номер телефона ответственного',
 
     'companyName'               => 'Название компании',
     'companyType'               => 'Тип компании',

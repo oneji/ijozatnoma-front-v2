@@ -21,8 +21,8 @@ return [
     'jobCity'                   => 'Choose job city',
     'jobAddress'                => 'Enter job address',
     'residenceAddress'          => 'Enter residence address',
-    'yourName'                  => 'Enter your name',
-    'yourPhoneNumber'           => 'Enter your phone number',
+    'yourName'                  => 'Enter name of the responsible',
+    'yourPhoneNumber'           => 'Enter phone number of the responsible',
     'notes'                     => 'Enter description',
 
     'companyName'               => 'Enter company name',
