@@ -56,6 +56,10 @@ return [
     'districtDecisionNumber'    => 'Қарори Шӯрои ноҳиявӣ (рақам)',
     'districtDecisionAddress'   => 'Қарори Шӯрои ноҳия (ҷои барориш)',
     'registrationNumber'        => 'Раками ягонаи мушаххас',
-    'propertyType'             => 'Шакли моликият',
+    'propertyType'              => 'Шакли моликият',
+
+    'propertyTypePrivate'       => 'Хусуси',
+    'propertyTypeShare'         => 'Сахоми',
+    'propertyTypeState'         => 'Давлати',
     
 ];

@@ -56,6 +56,10 @@ return [
     'districtDecisionNumber'    => 'Решение районного совета (номер)',
     'districtDecisionAddress'   => 'Решение районного совета (место выдачи)',
     'registrationNumber'        => 'Единый идентификационный номер',
-    'propertyType'             => 'Форма собственности'
+    'propertyType'              => 'Форма собственности',
+
+    'propertyTypePrivate'       => 'Частная',
+    'propertyTypeShare'         => 'Долевая',
+    'propertyTypeState'         => 'Государственная',
 
 ];

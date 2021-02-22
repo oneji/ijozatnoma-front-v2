@@ -56,6 +56,10 @@ return [
     'districtDecisionNumber'    => 'District decision (number)',
     'districtDecisionAddress'   => 'District decision (address)',
     'registrationNumber'        => 'Registration number',
-    'propertyType'             => 'Property type'
+    'propertyType'              => 'Property type',
+
+    'propertyTypePrivate'       => 'Private',
+    'propertyTypeShare'         => 'Share',
+    'propertyTypeState'         => 'State',
 
 ];

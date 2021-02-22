@@ -111,9 +111,9 @@
                                             <label for="company_type_id" class="mb-0 text-white">{{ __('form.propertyType') }}</label>
                                             <div class="auth-select-wrapper">
                                                 <select class="auth-form-control" name="property_type" required>
-                                                    <option value="first">first</option>
-                                                    <option value="second">second</option>
-                                                    <option value="third">third</option>
+                                                    <option value="private">{{ __('form.propertyTypePrivate') }}</option>
+                                                    <option value="share">{{ __('form.propertyTypeShare') }}</option>
+                                                    <option value="state">{{ __('form.propertyTypeState') }}</option>
                                                 </select>
                                             </div>
                                         </div>

@@ -52,7 +52,7 @@
                                     @endif
                                 </td>
                                 <td>
-                                    @if ($item->status !== 'removed')
+                                    @if ($item->status !== 'removed' && $item->status !== 'paid')
                                         <a href="#" class="btn btn-success btn-sm pay-btn" data-id="{{ $item->payment_request_id }}">
                                             <i class="fas fa-hand-holding-usd"></i>
                                         </a>
@@ -107,10 +107,10 @@
 
                         if(code === 200) {
                             window.open(link);
+                            window.location.href = link;
                         } else {
                             alert('Следующая попытка оплаты доступна только через 15 минут!');
                         }
-
                     })
                     .catch(error => {
                         console.log(error);
