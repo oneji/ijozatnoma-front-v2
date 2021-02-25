@@ -31,6 +31,10 @@
                     <img src="{{ asset('images/slider/5.jpg') }}" alt="Slider photo">
                     <div class="slider__item__text d-none d-sm-flex">САНОАТИ НАСОҶИИ ҶУМҲУРИИ ТОҶИКИСТОН - КОРХОНАҲО ВА ТЕХНОЛОГИЯҲОИ НАВ</div>
                 </div>
+                <div class="slider__item">
+                    <img src="{{ asset('images/slider/6.jpg') }}" alt="Slider photo">
+                    <div class="slider__item__text d-none d-sm-flex">САНОАТИ НАСОҶИИ ҶУМҲУРИИ ТОҶИКИСТОН - КОРХОНАҲО ВА ТЕХНОЛОГИЯҲОИ НАВ</div>
+                </div>
             </div>
         </div>
     </div>
