@@ -12,11 +12,23 @@
         <div class="col-12">
             <div class="slider">
                 <div class="slider__item">
-                    <img src="{{ asset('images/slider/1.png') }}" alt="Slider photo">
+                    <img src="{{ asset('images/slider/1.jpg') }}" alt="Slider photo">
                     <div class="slider__item__text d-none d-sm-flex">САНОАТИ НАСОҶИИ ҶУМҲУРИИ ТОҶИКИСТОН - КОРХОНАҲО ВА ТЕХНОЛОГИЯҲОИ НАВ</div>
                 </div>
                 <div class="slider__item">
-                    <img src="{{ asset('images/slider/1.png') }}" alt="Slider photo">
+                    <img src="{{ asset('images/slider/2.jpg') }}" alt="Slider photo">
+                    <div class="slider__item__text d-none d-sm-flex">САНОАТИ НАСОҶИИ ҶУМҲУРИИ ТОҶИКИСТОН - КОРХОНАҲО ВА ТЕХНОЛОГИЯҲОИ НАВ</div>
+                </div>
+                <div class="slider__item">
+                    <img src="{{ asset('images/slider/3.jpg') }}" alt="Slider photo">
+                    <div class="slider__item__text d-none d-sm-flex">САНОАТИ НАСОҶИИ ҶУМҲУРИИ ТОҶИКИСТОН - КОРХОНАҲО ВА ТЕХНОЛОГИЯҲОИ НАВ</div>
+                </div>
+                <div class="slider__item">
+                    <img src="{{ asset('images/slider/4.jpg') }}" alt="Slider photo">
+                    <div class="slider__item__text d-none d-sm-flex">САНОАТИ НАСОҶИИ ҶУМҲУРИИ ТОҶИКИСТОН - КОРХОНАҲО ВА ТЕХНОЛОГИЯҲОИ НАВ</div>
+                </div>
+                <div class="slider__item">
+                    <img src="{{ asset('images/slider/5.jpg') }}" alt="Slider photo">
                     <div class="slider__item__text d-none d-sm-flex">САНОАТИ НАСОҶИИ ҶУМҲУРИИ ТОҶИКИСТОН - КОРХОНАҲО ВА ТЕХНОЛОГИЯҲОИ НАВ</div>
                 </div>
             </div>
