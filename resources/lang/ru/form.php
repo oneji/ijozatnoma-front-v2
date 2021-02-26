@@ -51,6 +51,7 @@ return [
     'city'                      => 'Город',
     'address'                   => 'Адрес',
     'registrationDocumentNumber'=> 'Номер документа регистрации',
+    'registrationDocumentAddress'=> 'Место выдачи документа регистрации',
     'registrationDocumentDate'  => 'Дата документа регистрации',
     'districtDecisionDate'      => 'Решение районного совета (дата выдачи)',
     'districtDecisionNumber'    => 'Решение районного совета (номер)',

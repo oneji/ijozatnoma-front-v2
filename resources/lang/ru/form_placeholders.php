@@ -33,6 +33,7 @@ return [
     'city'                      => 'Выберите город',
     'address'                   => 'Введите адрес',
     'registrationDocumentNumber'=> 'Введите номер',
+    'registrationDocumentAddress'=> 'Введите адрес',
     'registrationDocumentDate'  => 'Выберите дату',
     'districtDecisionDate'      => 'Выберите дату',
     'districtDecisionNumber'    => 'Введите номер',

@@ -221,6 +221,18 @@
                                                 >
                                             </div>
                                         </div>
+
+                                        <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                            <label for="registration_document_address" class="mb-0 text-white">{{ __('form.registrationDocumentAddress') }}</label>
+                                            <input
+                                                type="text"
+                                                class="auth-form-control"
+                                                name="registration_document_address"
+                                                id="registration_document_address"
+                                                placeholder="{{ __('form_placeholders.registrationDocumentAddress') }}"
+                                                required
+                                            >
+                                        </div>
                                         
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
                                             <label for="itpn_address" class="mb-0 text-white">{{ __('form.innAddress') }}</label>

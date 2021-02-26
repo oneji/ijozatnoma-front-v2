@@ -51,6 +51,7 @@ return [
     'city'                      => 'City',
     'address'                   => 'Address',
     'registrationDocumentNumber'=> 'Registration document (number)',
+    'registrationDocumentAddress'=> 'Registration document (address)',
     'registrationDocumentDate'  => 'Registration document (date)',
     'districtDecisionDate'      => 'District decision (date)',
     'districtDecisionNumber'    => 'District decision (number)',

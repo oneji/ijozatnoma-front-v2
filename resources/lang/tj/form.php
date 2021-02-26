@@ -51,6 +51,7 @@ return [
     'city'                      => 'Шаҳр',
     'address'                   => 'Суроға',
     'registrationDocumentNumber'=> 'Рақами ҳуҷҷати бақайдгирӣ',
+    'registrationDocumentAddress'=> 'Ҷои додашудаи ҳуҷҷати бақайдгирӣ',
     'registrationDocumentDate'  => 'Санаи сабти ҳуҷҷат',
     'districtDecisionDate'      => 'Қарори Шӯрои ноҳиявӣ (санаи баровардан)',
     'districtDecisionNumber'    => 'Қарори Шӯрои ноҳиявӣ (рақам)',

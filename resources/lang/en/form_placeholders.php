@@ -33,6 +33,7 @@ return [
     'city'                      => 'Choose city',
     'address'                   => 'Enter address',
     'registrationDocumentNumber'=> 'Enter number',
+    'registrationDocumentAddress'=> 'Enter address',
     'registrationDocumentDate'  => 'Choose date',
     'districtDecisionDate'      => 'Choose date',
     'districtDecisionNumber'    => 'Enter number',
