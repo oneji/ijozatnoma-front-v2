@@ -63,4 +63,8 @@ return [
     'propertyTypeShare'         => 'Share',
     'propertyTypeState'         => 'State',
 
+    'payIbt'                    => 'Pay by using IBT bank card',
+    'payKortiMilli'             => 'Pay by using Korti Milli card',
+    'paySum'                    => 'Total amount to pay'
+
 ];

@@ -63,4 +63,8 @@ return [
     'propertyTypeShare'         => 'Долевая',
     'propertyTypeState'         => 'Государственная',
 
+    'payIbt'                    => 'Оплатить с помощью карты IBT банка',
+    'payKortiMilli'             => 'Оплатить с помощью карты Корти Милли',
+    'paySum'                    => 'Сумма к оплате'
+
 ];

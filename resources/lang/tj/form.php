@@ -62,5 +62,9 @@ return [
     'propertyTypePrivate'       => 'Хусуси',
     'propertyTypeShare'         => 'Сахоми',
     'propertyTypeState'         => 'Давлати',
+
+    'payIbt'                    => 'Пардохт бо корти бонки IBT',
+    'payKortiMilli'             => 'Пардохт бо Корти Милли',
+    'paySum'                    => 'Маблағи пардохт'
     
 ];

@@ -69,7 +69,14 @@
                         <select name="activity_id" class="custom-control" required>
                             <option value="" selected disabled>{{ __('form.activity') }}</option>
                             @foreach ($activities as $item)
-                                <option value="{{ $item->id }}">{{ $item->title }}</option>
+                                <option value="{{ $item->id }}">
+                                    @if (App::getLocale() === 'tj')
+                                        {{ $item->title }}
+                                    @else
+                                        {{-- {{ $item['title_'.App::getLocale()] }} --}}
+                                        {{ $item->title }}
+                                    @endif
+                                </option>
                             @endforeach
                         </select>
                     </div>

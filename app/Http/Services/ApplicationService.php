@@ -192,9 +192,9 @@ class ApplicationService
      * 
      * @param int $paymentRequestId
      */
-    public function pay($paymentRequestId)
+    public function pay($type, $paymentRequestId)
     {
-        $data = $this->httpClient->request('GET', "/api/paymentPageLink/$paymentRequestId");
+        $data = $this->httpClient->request('GET', "/billing/$type/getLinkForPayment/$paymentRequestId");
 
         return $data;
     }

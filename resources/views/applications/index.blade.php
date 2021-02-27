@@ -4,6 +4,7 @@
 
 @section('content')
     @include('applications.partials.__stats')
+    @include('applications.modals.pay')
     
     <div class="row">
         <div class="col-sm-12">
@@ -53,7 +54,7 @@
                                 </td>
                                 <td>
                                     @if ($item->status !== 'removed' && $item->status !== 'paid')
-                                        <a href="#" class="btn btn-success btn-sm pay-btn" data-id="{{ $item->payment_request_id }}">
+                                        <a href="#" class="btn btn-success btn-sm payModalBtn" data-amount="{{ $item->sum_should_pay - $item->sum_payed }}" data-id="{{ $item->payment_request_id }}">
                                             <i class="fas fa-hand-holding-usd"></i>
                                         </a>
                                     @endif
@@ -81,6 +82,8 @@
 
     <script>
         $(function() {
+            let spinnerClass = 'fa-spin fa-spinner';
+
             $('.remove-btn').on('click', function() {
                 let id = $(this).data('id');
                 let sure = confirm('Вы точно хотите удалить заявку?');
@@ -90,23 +93,35 @@
                 }
             });
 
+            $('.payModalBtn').on('click', function(e) {
+                e.preventDefault();
+
+                let payModal = $('#payModal');
+                let opeyPayModalBtn = $(this);
+                let id = opeyPayModalBtn.data('id');
+                let amount = opeyPayModalBtn.data('amount');
+
+                $('#paySum').text(amount)
+                $('.pay-btn').attr('data-id', id);
+                payModal.modal('show');
+            });
+
             $('.pay-btn').on('click', function(e) {
                 e.preventDefault();
 
                 let payBtn = $(this);
+                let type = payBtn.data('type');
                 let id = payBtn.data('id');
-                let spinnerClass = 'fa-spin fa-spinner';
 
                 payBtn.find('i').toggleClass(spinnerClass);
 
-                $.get(`/applications/pay/${id}`)
+                $.get(`/applications/pay/${type}/${id}`)
                     .then(response => {
                         let { link, code } = response;
 
                         payBtn.find('i').toggleClass(spinnerClass);
 
                         if(code === 200) {
-                            window.open(link);
                             window.location.href = link;
                         } else {
                             alert('Следующая попытка оплаты доступна только через 15 минут!');

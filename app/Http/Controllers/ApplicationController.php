@@ -41,8 +41,6 @@ class ApplicationController extends Controller
     {
         $data = $this->applicationService->companyListData();
 
-        // return $data;
-
         return view('applications.create', $data);
     }
 
@@ -51,7 +49,7 @@ class ApplicationController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $this->applicationService->store($request);
+        $this->applicationService->store($request);
 
         $request->session()->flash('success', __('form.applicationSuccess'));
 
@@ -65,7 +63,7 @@ class ApplicationController extends Controller
      */
     public function remove($id)
     {
-        $data = $this->applicationService->remove($id);
+        $this->applicationService->remove($id);
 
         return redirect()->back();
     }
@@ -73,11 +71,12 @@ class ApplicationController extends Controller
     /**
      * Pay for application
      * 
+     * @param string $type
      * @param int $paymentRequestId
      */
-    public function pay($paymentRequestId)
+    public function pay($type, $paymentRequestId)
     {
-        $data = $this->applicationService->pay($paymentRequestId);
+        $data = $this->applicationService->pay($type, $paymentRequestId);
 
         return response()->json($data);
     }
