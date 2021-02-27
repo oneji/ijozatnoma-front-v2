@@ -41,6 +41,8 @@ class ApplicationController extends Controller
     {
         $data = $this->applicationService->companyListData();
 
+        // return $data;
+
         return view('applications.create', $data);
     }
 

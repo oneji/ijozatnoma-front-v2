@@ -106,7 +106,7 @@
 
                 <div class="logos">
                     <div class="logos__item left">
-                        <img src="{{ asset('images/logo.png') }}" class="logos__img" alt="Logo">
+                        <img src="{{ asset('images/logo_2.png') }}" alt="Logo" style="width: 80px; height: auto; margin-right: 30px">
                         <div class="logos__text">
                             <p>ВАЗОРАТИ САНОАТ <br> ВА ТЕХНОЛОГИЯҲОИ НАВИ ҶУМҲУРИИ <br> ТОҶИКИСТОН</p>
                             <p class="mb-0">РАЁСАТИ ИҶОЗАТНОМАДИҲӢ</p>

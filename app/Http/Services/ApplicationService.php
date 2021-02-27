@@ -44,15 +44,15 @@ class ApplicationService
     public function companyListData()
     {
         $user = session('user');
-        $data = [];
+        $link = '';
 
         if($user['type'] === 'company') {
-            $data = $this->httpClient->request('GET', 'requests/companies/getListInfo/'. $user['phone_number']);
+            $link = 'requests/companies/getListInfo/'. $user['phone_number'];
         } else {
-            $data = $this->httpClient->request('GET', 'requests/citizens/getListInfo');
+            $link = 'requests/citizens/getListInfo';
         }
-
-        return $data;
+        
+        return $this->httpClient->request('GET', $link);
     }
 
     /**

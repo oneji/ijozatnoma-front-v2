@@ -80,11 +80,7 @@
                 </div>
                 
                 <div class="form-group">
-                    <div class="custom-select-wrapper">
-                        <select name="term" class="custom-control" required>
-                            <option value="" selected disabled>{{ __('form.term') }}</option>
-                        </select>
-                    </div>
+                    <input type="number" id="term" name="term" class="custom-control" placeholder="{{ __('form.term') }}" required />
                 </div>
                 
                 @if (isset($branches))
@@ -158,6 +154,7 @@
 
                 activities.map(activity => {
                     if(activity.id == activityId) {
+                        $('#term').attr('min', activity.min_term);
                         $('.docs__files').html('');
                         activity.document_types.map(doc => {
                             $('.docs__files').append(`
