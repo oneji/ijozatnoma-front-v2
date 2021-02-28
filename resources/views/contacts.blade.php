@@ -28,7 +28,7 @@
 
         <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
             <div class="maps-wrapper">
-                <h4>Мо дар харитаи Душанбе:</h4>
+                <h4>{{ __('form.weOnMap') }}:</h4>
 
                 <iframe
                     class="gmap"
