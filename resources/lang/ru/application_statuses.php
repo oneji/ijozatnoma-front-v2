@@ -20,6 +20,8 @@ return [
     'yes'                       => 'Да',
     'no'                        => 'Нет',
     'extension'                 => 'Продление',
-    'extensionFull'             => 'Продление срока лицензии'
+    'extensionFull'             => 'Продление срока лицензии',
+
+    'createApplication'         => 'Подача заявки'
 
 ];

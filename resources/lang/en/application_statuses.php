@@ -20,6 +20,7 @@ return [
     'yes'                       => 'Yes',
     'no'                        => 'No',
     'extension'                 => 'Extension',
-    'extensionFull'             => 'License term extension'
+    'extensionFull'             => 'License term extension',
+    'createApplication'         => 'Create an application'
 
 ];

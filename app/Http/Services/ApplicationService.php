@@ -79,7 +79,7 @@ class ApplicationService
 
         if($user['type'] === 'company') {
             $formData = [
-                'extension' => isset($request->extension) ? 1 : 0,
+                'extension' => $request->extension,
                 'activity_id' => $request->activity_id,
                 'notes' => $request->notes,
                 'term' => $request->term,
@@ -123,7 +123,7 @@ class ApplicationService
             return collect($responseBody);
         } else {
             $formData = [
-                'extension' => isset($request->extension) ? 1 : 0,
+                'extension' => $request->extension,
                 'activity_id' => $request->activity_id,
                 'notes' => $request->notes,
                 'term' => $request->term,
