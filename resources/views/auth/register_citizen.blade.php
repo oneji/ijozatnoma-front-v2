@@ -357,6 +357,7 @@
     <script>
         let __REGIONS__ = @json($lists['regions']);
         let __CITIES__ = @json($lists['cities']);
+        let __LOCALE__ = @json(app()->getLocale());
     </script>
     <script src="{{ asset('js/custom/register.js') }}"></script>
 </body>

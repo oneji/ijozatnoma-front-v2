@@ -73,8 +73,7 @@
                                     @if (App::getLocale() === 'tj')
                                         {{ $item->title }}
                                     @else
-                                        {{-- {{ $item['title_'.App::getLocale()] }} --}}
-                                        {{ $item->title }}
+                                        {{ get_object_vars($item)['title_'.App::getLocale()] }}
                                     @endif
                                 </option>
                             @endforeach

@@ -18,14 +18,14 @@ $(function() {
             __CITIES__.map(city => {
                 if(city.region_id == region.id) {
                     $('#registerForm select#city_id').append(`
-                        <option value="${city.id}">${city.name}</option>
+                        <option value="${city.id}">${__LOCALE__ === 'tj' ? city.name : city[`name_${__LOCALE__}`]}</option>
                     `);
                 }
             })
         }
 
         $('#registerForm select#region_id').append(`
-            <option value="${region.id}">${region.name}</option>
+            <option value="${region.id}">${__LOCALE__ === 'tj' ? region.name : region[`name_${__LOCALE__}`]}</option>
         `);
     });
 
@@ -37,7 +37,7 @@ $(function() {
         __CITIES__.map(city => {
             if(city.region_id == region) {
                 $('#registerForm select#city_id').append(`
-                    <option value="${city.id}">${city.name}</option>
+                    <option value="${city.id}">${__LOCALE__ === 'tj' ? city.name : city[`name_${__LOCALE__}`]}</option>
                 `);
             }
         })
@@ -48,14 +48,14 @@ $(function() {
             __CITIES__.map(city => {
                 if(city.region_id == region.id) {
                     $('#registerForm select#residence_city_id').append(`
-                        <option value="${city.id}">${city.name}</option>
+                        <option value="${city.id}">${__LOCALE__ === 'tj' ? city.name : city[`name_${__LOCALE__}`]}</option>
                     `);
                 }
             })
         }
 
         $('#registerForm select#residence_region_id').append(`
-            <option value="${region.id}">${region.name}</option>
+            <option value="${region.id}">${__LOCALE__ === 'tj' ? region.name : region[`name_${__LOCALE__}`]}</option>
         `);
     });
 
@@ -67,7 +67,7 @@ $(function() {
         __CITIES__.map(city => {
             if(city.region_id == region) {
                 $('#registerForm select#residence_city_id').append(`
-                    <option value="${city.id}">${city.name}</option>
+                    <option value="${city.id}">${__LOCALE__ === 'tj' ? city.name : city[`name_${__LOCALE__}`]}</option>
                 `);
             }
         })

@@ -17,23 +17,13 @@
 
                     <div class="form-group">
                         <div class="custom-select-wrapper">
-                            <select name="region_id" class="custom-control" id="region_id" required>
-                                <option value="" selected disabled>{{ __('form.region') }}</option>
-                                @foreach ($lists['regions'] as $item)
-                                    <option value="{{ $item->id }}">{{ $item->name }}</option>
-                                @endforeach
-                            </select>
+                            <select name="region_id" class="custom-control" id="region_id" required></select>
                         </div>
                     </div>
                     
                     <div class="form-group">
                         <div class="custom-select-wrapper">
-                            <select name="city_id" class="custom-control" id="city_id" required>
-                                <option value="" selected disabled>{{ __('form.city') }}</option>
-                                @foreach ($lists['cities'] as $item)
-                                    <option value="{{ $item->id }}">{{ $item->name }}</option>
-                                @endforeach
-                            </select>
+                            <select name="city_id" class="custom-control" id="city_id" required></select>
                         </div>
                     </div>
 

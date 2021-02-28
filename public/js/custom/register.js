@@ -16,12 +16,12 @@ $(function () {
     if (idx === 0) {
       __CITIES__.map(function (city) {
         if (city.region_id == region.id) {
-          $('#registerForm select#city_id').append("\n                        <option value=\"".concat(city.id, "\">").concat(city.name, "</option>\n                    "));
+          $('#registerForm select#city_id').append("\n                        <option value=\"".concat(city.id, "\">").concat(__LOCALE__ === 'tj' ? city.name : city["name_".concat(__LOCALE__)], "</option>\n                    "));
         }
       });
     }
 
-    $('#registerForm select#region_id').append("\n            <option value=\"".concat(region.id, "\">").concat(region.name, "</option>\n        "));
+    $('#registerForm select#region_id').append("\n            <option value=\"".concat(region.id, "\">").concat(__LOCALE__ === 'tj' ? region.name : region["name_".concat(__LOCALE__)], "</option>\n        "));
   }); // Change cities select depending on a region
 
 
@@ -31,7 +31,7 @@ $(function () {
 
     __CITIES__.map(function (city) {
       if (city.region_id == region) {
-        $('#registerForm select#city_id').append("\n                    <option value=\"".concat(city.id, "\">").concat(city.name, "</option>\n                "));
+        $('#registerForm select#city_id').append("\n                    <option value=\"".concat(city.id, "\">").concat(__LOCALE__ === 'tj' ? city.name : city["name_".concat(__LOCALE__)], "</option>\n                "));
       }
     });
   });
@@ -40,12 +40,12 @@ $(function () {
     if (idx === 0) {
       __CITIES__.map(function (city) {
         if (city.region_id == region.id) {
-          $('#registerForm select#residence_city_id').append("\n                        <option value=\"".concat(city.id, "\">").concat(city.name, "</option>\n                    "));
+          $('#registerForm select#residence_city_id').append("\n                        <option value=\"".concat(city.id, "\">").concat(__LOCALE__ === 'tj' ? city.name : city["name_".concat(__LOCALE__)], "</option>\n                    "));
         }
       });
     }
 
-    $('#registerForm select#residence_region_id').append("\n            <option value=\"".concat(region.id, "\">").concat(region.name, "</option>\n        "));
+    $('#registerForm select#residence_region_id').append("\n            <option value=\"".concat(region.id, "\">").concat(__LOCALE__ === 'tj' ? region.name : region["name_".concat(__LOCALE__)], "</option>\n        "));
   }); // Change cities select depending on a region
 
 
@@ -55,7 +55,7 @@ $(function () {
 
     __CITIES__.map(function (city) {
       if (city.region_id == region) {
-        $('#registerForm select#residence_city_id').append("\n                    <option value=\"".concat(city.id, "\">").concat(city.name, "</option>\n                "));
+        $('#registerForm select#residence_city_id').append("\n                    <option value=\"".concat(city.id, "\">").concat(__LOCALE__ === 'tj' ? city.name : city["name_".concat(__LOCALE__)], "</option>\n                "));
       }
     });
   });
