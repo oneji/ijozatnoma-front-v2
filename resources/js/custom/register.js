@@ -9,7 +9,8 @@ $(function() {
     $('.datepicker').datepicker({
         format: 'd.mm.yyyy',
         autoclose: true,
-        language: 'ru'
+        language: 'ru',
+        mask: true
     });
 
     clearSelects(true, true);

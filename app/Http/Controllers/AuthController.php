@@ -70,7 +70,7 @@ class AuthController extends Controller
      */
     public function registerCompany(RegisterCompanyRequest $request)
     {
-        $data = $this->authService->registerCompany($request);
+        $this->authService->registerCompany($request);
         
         return redirect()->route('loginForm');
     }

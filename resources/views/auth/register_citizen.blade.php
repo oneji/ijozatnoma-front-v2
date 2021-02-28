@@ -150,8 +150,8 @@
                                             <label for="birthday" class="mb-0 text-white">{{ __('form.birthday') }}</label>
                                             <div class="datepicker-wrapper">
                                                 <input
-                                                    type="text"
-                                                    class="auth-form-control datepicker"
+                                                    type="date"
+                                                    class="auth-form-control"
                                                     name="birthday"
                                                     id="birthday"
                                                     placeholder="{{ __('form_placeholders.birthday') }}"
@@ -188,8 +188,8 @@
                                             <label for="itpn_date" class="mb-0 text-white">{{ __('form.innDate') }}</label>
                                             <div class="datepicker-wrapper">
                                                 <input
-                                                    type="text"
-                                                    class="auth-form-control datepicker"
+                                                    type="date"
+                                                    class="auth-form-control"
                                                     name="itpn_date"
                                                     id="itpn_date"
                                                     placeholder="{{ __('form_placeholders.innDate') }}"
@@ -226,8 +226,8 @@
                                             <label for="passport_date" class="mb-0 text-white">{{ __('form.passportDate') }}</label>
                                             <div class="datepicker-wrapper">
                                                 <input
-                                                    type="text"
-                                                    class="auth-form-control datepicker"
+                                                    type="date"
+                                                    class="auth-form-control"
                                                     name="passport_date"
                                                     id="passport_date"
                                                     placeholder="{{ __('form_placeholders.passportDate') }}"
