@@ -54,12 +54,12 @@
                                 </td>
                                 <td>
                                     @if ($item->status !== 'removed' && $item->status !== 'paid')
-                                        <a href="#" class="btn btn-success btn-sm payModalBtn" data-amount="{{ $item->sum_should_pay - $item->sum_payed }}" data-id="{{ $item->payment_request_id }}">
+                                        <a href="#" class="btn btn-success btn-sm m-1 payModalBtn" data-paid="{{ $item->sum_payed }}" data-amount="{{ $item->sum_should_pay - 600 }}" data-id="{{ $item->payment_request_id }}">
                                             <i class="fas fa-hand-holding-usd"></i>
                                         </a>
                                     @endif
                                     @if ($item->status === 'new' || $item->status === 'seen')
-                                        <a href="#" class="btn btn-danger btn-sm remove-btn" data-id="{{ $item->id }}">
+                                        <a href="#" class="btn btn-danger btn-sm m-1 remove-btn" data-id="{{ $item->id }}">
                                             <i class="fas fa-trash"></i>
                                         </a>
 
@@ -100,8 +100,17 @@
                 let opeyPayModalBtn = $(this);
                 let id = opeyPayModalBtn.data('id');
                 let amount = opeyPayModalBtn.data('amount');
+                let amountPaid = opeyPayModalBtn.data('paid');
+                
+                console.log(amountPaid);
+                
+                if(amountPaid === 0) {
+                    $('#paySum').text(600);
 
-                $('#paySum').text(amount)
+                } else {
+                    $('#paySum').text(amount)
+                }
+
                 $('.pay-btn').attr('data-id', id);
                 payModal.modal('show');
             });

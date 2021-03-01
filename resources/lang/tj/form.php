@@ -19,7 +19,7 @@ return [
 
     // Register forms
     'company'                   => 'Шахси Ҳуқуқӣ',
-    'citizen'                   => 'Шахси инфироди',
+    'citizen'                   => 'Cоҳибкори инфироди',
     'name'                      => 'Ном',
     'sName'                     => 'Насаб',
     'fName'                     => 'Номи падар',

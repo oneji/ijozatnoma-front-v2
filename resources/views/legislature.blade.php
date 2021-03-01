@@ -1,5 +1,5 @@
 @extends('layouts.app', [
-    'title' => __('page_headers.legislature')
+    'title' => ''
 ])
 
 @section('content')
