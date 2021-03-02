@@ -116,12 +116,14 @@
                 let id = payBtn.data('id');
 
                 payBtn.find('i').toggleClass(spinnerClass);
+                payBtn.attr('disabled', true);
 
                 $.get(`/applications/pay/${type}/${id}`)
                     .then(response => {
                         let { link, code } = response;
 
                         payBtn.find('i').toggleClass(spinnerClass);
+                        payBtn.attr('disabled', false);
 
                         if(code === 200) {
                             window.location.href = link;
