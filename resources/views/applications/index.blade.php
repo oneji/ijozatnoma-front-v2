@@ -102,7 +102,7 @@
                 let amount = opeyPayModalBtn.data('amount');
                 let amountPaid = opeyPayModalBtn.data('paid');
         
-                $('#paySum').text(amount === 0 ? 600 : amount);
+                $('#paySum').text(amountPaid === 0 ? 600 : amount);
 
                 $('.pay-btn').attr('data-id', id);
                 payModal.modal('show');
