@@ -101,15 +101,8 @@
                 let id = opeyPayModalBtn.data('id');
                 let amount = opeyPayModalBtn.data('amount');
                 let amountPaid = opeyPayModalBtn.data('paid');
-                
-                console.log(amountPaid);
-                
-                if(amountPaid === 0) {
-                    $('#paySum').text(600);
-
-                } else {
-                    $('#paySum').text(amount)
-                }
+        
+                $('#paySum').text(amount === 0 ? 600 : amount);
 
                 $('.pay-btn').attr('data-id', id);
                 payModal.modal('show');

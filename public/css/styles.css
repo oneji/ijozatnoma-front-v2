@@ -651,25 +651,17 @@ header.app-header {
 }
 
 .links-table {
-  list-style-type: none;
   margin-bottom: 0;
-  padding: 0;
   width: 100%;
-}
-
-.links-table__item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  color: #92cb34;
 }
 
 .links-table__item:not(:last-child) {
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 .links-table__item__title,
 .links-table__item__download {
-  margin: 0 15px;
   color: #92cb34;
   text-transform: uppercase;
   letter-spacing: 1px;

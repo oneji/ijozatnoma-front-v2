@@ -655,22 +655,16 @@ header.app-header {
 }
 
 .links-table {
-    list-style-type: none;
     margin-bottom: 0;
-    padding: 0;
     width: 100%;
+    color: $mainGreen;
 
     &__item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
         &:not(:last-child) {
-            margin-bottom: 15px;
+            margin-bottom: 5px;
         }
 
         &__title, &__download {
-            margin: 0 15px;
             color: $mainGreen;
             text-transform: uppercase;
             letter-spacing: 1px;
