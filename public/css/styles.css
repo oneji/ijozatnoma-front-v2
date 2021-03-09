@@ -665,10 +665,10 @@ header.app-header {
   color: #92cb34;
   text-transform: uppercase;
   letter-spacing: 1px;
-  text-decoration: underline;
   transition: 0.3s all ease;
   font-size: 16px;
   font-weight: bold;
+  margin-bottom: 0;
 }
 
 .links-table__item__title i,
