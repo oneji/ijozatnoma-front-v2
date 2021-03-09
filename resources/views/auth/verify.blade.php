@@ -36,7 +36,7 @@
                                     </div>
                                 @endif
                 
-                                <p class="text-white text-uppercase text-center">{{ __('form.phoneNumber') }}: {{ Session::get('phone') }} &middot; {{ Session::get('smsCode')['code'] }}</p>
+                                <p class="text-white text-uppercase text-center">{{ __('form.phoneNumber') }}: {{ Session::get('phone') }}</p>
                                 <div class="form-group">
                                     <label for="verification_code" class="auth-form-control">{{ __('form_placeholders.verificationCode') }}</label>
                                     <input

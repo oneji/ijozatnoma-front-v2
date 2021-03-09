@@ -36,43 +36,45 @@ class SmsService
         
         $smsCode = $oldCode;
 
-        if(!$oldCode) {
-            $randomCode = mt_rand(100000, 999999);
-            $smsCode = new SmsCode();
-            $smsCode->phone_number = $phoneNumber;
-            $smsCode->code = $randomCode;
-            $smsCode->sent_at = $now;
-            $smsCode->expires_at = $threeMinsLater;
-            $smsCode->save();
-            
-            # sms logic
-            // $login = config('app.sms.login');
-            // $from = config('app.sms.sender');
-            // $smsApi =   config('app.sms.server');
-            // $pass_salt_hash = config('app.sms.hash');
-            // $msg = $smsCode->code;
-            // $txn_id = uniqid();
-            // $dlmr = ';';
-            // $str_hash = hash('sha256', $txn_id.$dlmr.$login.$dlmr.$from.$dlmr.$phoneNumber.$dlmr.$pass_salt_hash);
-
-            // // Create a client with a base URI
-            // $client = new \GuzzleHttp\Client();
-            // // API params
-            // $params = [
-            //     'query' => [
-            //         'from' => $from,
-            //         'phone_number' => $phoneNumber,
-            //         'msg' => $msg,
-            //         'login' => $login,
-            //         'str_hash' => $str_hash,
-            //         'txn_id' => $txn_id
-            //     ]
-            // ];
-            
-            // $response = $client->get($smsApi, $params);
-        }
-
         $data = $this->httpClient->request('GET', "checkClient/$phoneNumber");
+
+        if($data['code'] === 200) {
+            if(!$oldCode) {
+                $randomCode = mt_rand(100000, 999999);
+                $smsCode = new SmsCode();
+                $smsCode->phone_number = $phoneNumber;
+                $smsCode->code = $randomCode;
+                $smsCode->sent_at = $now;
+                $smsCode->expires_at = $threeMinsLater;
+                $smsCode->save();
+                
+                # sms logic
+                $login = config('app.sms.login');
+                $from = config('app.sms.sender');
+                $smsApi = config('app.sms.server');
+                $pass_salt_hash = config('app.sms.hash');
+                $msg = $smsCode->code;
+                $txn_id = uniqid();
+                $dlmr = ';';
+                $str_hash = hash('sha256', $txn_id.$dlmr.$login.$dlmr.$from.$dlmr.$phoneNumber.$dlmr.$pass_salt_hash);
+    
+                // Create a client with a base URI
+                $client = new \GuzzleHttp\Client();
+                // API params
+                $params = [
+                    'query' => [
+                        'from' => $from,
+                        'phone_number' => $phoneNumber,
+                        'msg' => $msg,
+                        'login' => $login,
+                        'str_hash' => $str_hash,
+                        'txn_id' => $txn_id
+                    ]
+                ];
+                
+                $client->get($smsApi, $params);
+            }
+        }
 
         Session::put('phone', $phoneNumber);
         Session::put('smsCode', $smsCode);
