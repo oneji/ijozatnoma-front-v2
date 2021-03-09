@@ -37,7 +37,7 @@ return [
     'jobCity'                   => 'Ҷои кор (шаҳр)',
     'jobAddress'                => 'Ҷои кор (суроға)',
     'residenceRegion'           => 'Ҷои истикомат (минтақа)',
-    'residenceCity'             => 'Ҷои истикомат (шаҳр)',
+    'residenceCity'             => 'Ҷои истикомат (шаҳр, нохия, чамоат, дехот)',
     'residenceAddress'          => 'Ҷои истикомат (суроға)',
     'yourName'                  => 'Шахси масьул',
     'yourPhoneNumber'           => 'Рақами мобилиӣ шахси масьул',
