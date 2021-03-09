@@ -252,6 +252,7 @@
         <script src="{{ asset('plugins/parsleyjs/dist/parsley.min.js') }}"></script>
         <script src="{{ asset('plugins/parsleyjs/dist/i18n/ru.js') }}"></script>
         <script src="{{ asset('plugins/toastr/build/toastr.min.js') }}"></script>
+        <script src="//code.jivosite.com/widget/wViF6Tt4K8" async></script>
     @show
 </body>
 </html>
