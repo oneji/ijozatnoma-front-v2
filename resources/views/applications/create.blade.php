@@ -51,7 +51,7 @@
                 </div>
 
                 <div class="form-group">
-                    <textarea name="notes" class="custom-control" placeholder="{{ __('form_placeholders.notes') }}" rows="5"></textarea>
+                    <textarea name="extraction_place" class="custom-control" placeholder="{{ __('form_placeholders.extraction_place') }}" rows="2"></textarea>
                 </div>
                 
                 <div class="form-group">
@@ -80,6 +80,10 @@
                 <div class="docs" style="display: none">
                     <hr class="docs__divider">
                     <div class="docs__files"></div>
+                </div>
+
+                <div class="form-group">
+                    <textarea name="notes" class="custom-control" placeholder="{{ __('form_placeholders.notes') }}" rows="5"></textarea>
                 </div>
                 
                 <div class="form-group">

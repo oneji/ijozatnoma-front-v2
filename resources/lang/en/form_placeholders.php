@@ -24,6 +24,7 @@ return [
     'yourName'                  => 'Enter name of the responsible',
     'yourPhoneNumber'           => 'Enter phone number of the responsible',
     'notes'                     => 'Enter description',
+    'extraction_place'          => 'If you have mining, enter the name and address of the site',
 
     'companyName'               => 'Enter company name',
     'companyType'               => 'Choose company type',

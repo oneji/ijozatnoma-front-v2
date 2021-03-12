@@ -82,6 +82,7 @@ class ApplicationService
                 'extension' => $request->extension,
                 'activity_id' => $request->activity_id,
                 'notes' => $request->notes,
+                'extraction_place' => $request->extraction_place,
                 'term' => $request->term,
                 'branch_id' => $request->branch_id,
                 'docs' => $files
@@ -126,6 +127,7 @@ class ApplicationService
                 'extension' => $request->extension,
                 'activity_id' => $request->activity_id,
                 'notes' => $request->notes,
+                'extraction_place' => $request->extraction_place,
                 'term' => $request->term,
                 'docs' => $files
             ];
