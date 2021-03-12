@@ -39,6 +39,9 @@ return [
     'districtDecisionDate'      => 'Choose date',
     'districtDecisionNumber'    => 'Enter number',
     'districtDecisionAddress'   => 'Enter address',
-    'registrationNumber'        => 'Enter number'
+    'registrationNumber'        => 'Enter number',
+
+    'service_bank'              => 'Enter service bank',
+    'bank_account'              => 'Enter bank account',
     
 ];

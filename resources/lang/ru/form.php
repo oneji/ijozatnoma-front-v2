@@ -58,6 +58,8 @@ return [
     'districtDecisionAddress'   => 'Решение районного совета (место выдачи)',
     'registrationNumber'        => 'Единый идентификационный номер',
     'propertyType'              => 'Форма собственности',
+    'service_bank'              => 'Сервис банк',
+    'bank_account'              => 'Банковский счет',
 
     'propertyTypePrivate'       => 'Частная',
     'propertyTypeShare'         => 'Долевая',

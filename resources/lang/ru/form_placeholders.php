@@ -39,6 +39,9 @@ return [
     'districtDecisionDate'      => 'Выберите дату',
     'districtDecisionNumber'    => 'Введите номер',
     'districtDecisionAddress'   => 'Введите адрес',
-    'registrationNumber'        => 'Введите номер'
+    'registrationNumber'        => 'Введите номер',
+
+    'service_bank'              => 'Введите название сервис банка',
+    'bank_account'              => 'Введите банковский счет',
     
 ];

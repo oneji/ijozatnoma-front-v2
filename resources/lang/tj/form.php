@@ -59,6 +59,9 @@ return [
     'registrationNumber'        => 'Раками ягонаи мушаххас',
     'propertyType'              => 'Шакли моликият',
 
+    'service_bank'              => 'Бонки хизматрасон',
+    'bank_account'              => 'Суратхисоб',
+
     'propertyTypePrivate'       => 'Хусуси',
     'propertyTypeShare'         => 'Сахоми',
     'propertyTypeState'         => 'Давлати',

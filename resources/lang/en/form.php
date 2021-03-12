@@ -58,6 +58,8 @@ return [
     'districtDecisionAddress'   => 'District decision (address)',
     'registrationNumber'        => 'Registration number',
     'propertyType'              => 'Property type',
+    'service_bank'              => 'Service bank',
+    'bank_account'              => 'Bank account',
 
     'propertyTypePrivate'       => 'Private',
     'propertyTypeShare'         => 'Share',

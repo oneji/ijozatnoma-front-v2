@@ -40,6 +40,9 @@ return [
     'districtDecisionDate'      => 'Таърихро интихоб кунед',
     'districtDecisionNumber'    => 'Рақами ҳассосии ноҳияро ворид кунед',
     'districtDecisionAddress'   => 'Суроғаи қарори ноҳияро ворид кунед',
-    'registrationNumber'        => 'Рақамро ворид кунед'
+    'registrationNumber'        => 'Рақамро ворид кунед',
+
+    'service_bank'              => 'Бонки хизматрасонро ворид кунед',
+    'bank_account'              => 'Суратхисобро ворид кунед',
     
 ];

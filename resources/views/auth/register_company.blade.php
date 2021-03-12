@@ -358,6 +358,31 @@
                                                 value="{{ Session::get('phone') }}"
                                             >
                                         </div>
+                                        
+                                        <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                            <label for="service_bank" class="mb-0 text-white">{{ __('form.service_bank') }}</label>
+                                            <input
+                                                type="text"
+                                                class="auth-form-control"
+                                                name="service_bank"
+                                                id="service_bank"
+                                                placeholder="{{ __('form_placeholders.service_bank') }}"
+                                                required
+                                            >
+                                        </div>
+
+                                        <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                            <label for="bank_account" class="mb-0 text-white">{{ __('form.bank_account') }}</label>
+                                            <input
+                                                type="text"
+                                                class="auth-form-control"
+                                                name="bank_account"
+                                                id="bank_account"
+                                                placeholder="{{ __('form_placeholders.bank_account') }}"
+                                                required
+                                                value="{{ Session::get('phone') }}"
+                                            >
+                                        </div>
 
                                         <div class="form-group col-sm-12 col-md-12 col-lg-12 col-xl-12">
                                             <button type="submit" class="auth-button btn-block">{{ __('auth.register') }}</button>
