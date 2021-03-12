@@ -95,9 +95,9 @@ class AuthController extends Controller
      * @param \App\Http\JsonRequests\RegisterCitizenRequest $request
      */
     public function registerCitizen(RegisterCitizenRequest $request)
-    {
+    {        
         $data = $this->authService->registerCitizen($request);
-
+        
         return redirect()->route('loginForm');
     }
 

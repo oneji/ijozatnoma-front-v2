@@ -161,12 +161,12 @@
                                         </div>
                                         
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="itpn_address" class="mb-0 text-white">{{ __('form.innAddress') }}</label>
+                                            <label for="itpn_place" class="mb-0 text-white">{{ __('form.innAddress') }}</label>
                                             <input
                                                 type="text"
                                                 class="auth-form-control"
-                                                name="itpn_address"
-                                                id="itpn_address"
+                                                name="itpn_place"
+                                                id="itpn_place"
                                                 placeholder="{{ __('form_placeholders.innAddress') }}"
                                                 required
                                             >
@@ -237,12 +237,12 @@
                                         </div>
                                         
                                         <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="passport_address" class="mb-0 text-white">{{ __('form.passportAddress') }}</label>
+                                            <label for="passport_place" class="mb-0 text-white">{{ __('form.passportAddress') }}</label>
                                             <input
                                                 type="text"
                                                 class="auth-form-control"
-                                                name="passport_address"
-                                                id="passport_address"
+                                                name="passport_place"
+                                                id="passport_place"
                                                 placeholder="{{ __('form_placeholders.passportAddress') }}"
                                                 required
                                             >
@@ -325,6 +325,81 @@
                                                 placeholder="{{ __('form_placeholders.phoneNumber') }}"
                                                 required
                                                 value="{{ Session::get('phone') }}"
+                                            >
+                                        </div>
+
+                                        <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                            <label for="registration_document_number" class="mb-0 text-white">{{ __('form.registrationDocumentNumber') }}</label>
+                                            <input
+                                                type="text"
+                                                class="auth-form-control"
+                                                name="registration_document_number"
+                                                id="registration_document_number"
+                                                placeholder="{{ __('form_placeholders.registrationDocumentNumber') }}"
+                                                required
+                                            >
+                                        </div>
+                                        
+                                        <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                            <label for="registration_document_date" class="mb-0 text-white">{{ __('form.registrationDocumentDate') }}</label>
+                                            <div class="datepicker-wrapper">
+                                                <input
+                                                    type="date"
+                                                    class="auth-form-control"
+                                                    name="registration_document_date"
+                                                    id="registration_document_date"
+                                                    placeholder="{{ __('form_placeholders.registrationDocumentDate') }}"
+                                                    required
+                                                >
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                            <label for="registration_document_address" class="mb-0 text-white">{{ __('form.registrationDocumentAddress') }}</label>
+                                            <input
+                                                type="text"
+                                                class="auth-form-control"
+                                                name="registration_document_address"
+                                                id="registration_document_address"
+                                                placeholder="{{ __('form_placeholders.registrationDocumentAddress') }}"
+                                                required
+                                            >
+                                        </div>
+
+                                        <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                            <label for="service_bank" class="mb-0 text-white">{{ __('form.service_bank') }}</label>
+                                            <input
+                                                type="text"
+                                                class="auth-form-control"
+                                                name="service_bank"
+                                                id="service_bank"
+                                                placeholder="{{ __('form_placeholders.service_bank') }}"
+                                                required
+                                            >
+                                        </div>
+
+                                        <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                            <label for="bank_account" class="mb-0 text-white">{{ __('form.bank_account') }}</label>
+                                            <input
+                                                type="text"
+                                                class="auth-form-control"
+                                                name="bank_account"
+                                                id="bank_account"
+                                                placeholder="{{ __('form_placeholders.bank_account') }}"
+                                                required
+                                                value="{{ Session::get('phone') }}"
+                                            >
+                                        </div>
+
+                                        <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                            <label for="registration_number" class="mb-0 text-white">{{ __('form.registrationNumber') }}</label>
+                                            <input
+                                                type="text"
+                                                class="auth-form-control"
+                                                name="registration_number"
+                                                id="registration_number"
+                                                placeholder="{{ __('form_placeholders.registrationNumber') }}"
+                                                required
                                             >
                                         </div>
 
